@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="this is a test">
+  <meta name="description" content="A short and concise review">
 
   
   <link rel="alternate" hreflang="en-us" href="https://archana1998.github.io/post/project-1/">
@@ -234,8 +234,8 @@
   
   <meta property="og:site_name" content="Archana Swaminathan">
   <meta property="og:url" content="https://archana1998.github.io/post/project-1/">
-  <meta property="og:title" content="Compressive Image Sensing | Archana Swaminathan">
-  <meta property="og:description" content="this is a test"><meta property="og:image" content="https://archana1998.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:title" content="Understanding Deep Learning requires rethinking generalization | Archana Swaminathan">
+  <meta property="og:description" content="A short and concise review"><meta property="og:image" content="https://archana1998.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://archana1998.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
@@ -267,7 +267,7 @@
     "@type": "WebPage",
     "@id": "https://archana1998.github.io/post/project-1/"
   },
-  "headline": "Compressive Image Sensing",
+  "headline": "Understanding Deep Learning requires rethinking generalization",
   
   "datePublished": "2020-07-18T14:11:22+05:30",
   "dateModified": "2020-07-18T14:11:22+05:30",
@@ -285,7 +285,7 @@
       "url": "https://archana1998.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "this is a test"
+  "description": "A short and concise review"
 }
 </script>
 
@@ -303,7 +303,7 @@
 
 
 
-  <title>Compressive Image Sensing | Archana Swaminathan</title>
+  <title>Understanding Deep Learning requires rethinking generalization | Archana Swaminathan</title>
 
 </head>
 
@@ -578,7 +578,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Compressive Image Sensing</h1>
+  <h1>Understanding Deep Learning requires rethinking generalization</h1>
 
   
 
@@ -606,7 +606,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    3 min read
   </span>
   
 
@@ -633,43 +633,6 @@
 
 
 
-<div class="btn-links mb-3">
-  
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
 
   
 </div>
@@ -679,7 +642,13 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>this is a test</p>
+      <p>The paper starts off with aiming to provide an introspection into what distinguishes networks that generalize well, from those who don’t.
+One of the experiments conducted in the studies of the paper, is checking how well neural networks adapt to training when labels are randomized. Their findings establish that when the true data is completely randomly labelled, the training error that results is zero. Observations from this indicate that the effective capacity of neural networks is more than enough to memorize the entire dataset. Randomization of the labels is only a transformation of the data, and other learning parameters are constant and unchanged still. The resulting training time also increases by only a small factor. However, when this trained network is tested, it does badly. This indicates that just by randomizing labels, the generalization error can shoot up significantly without changing any other parameters of the experiment like the size of the model, the optimizer etc.
+Another experiment conducted was that when the ground truth images were switched with random noise. This resulted in the networks training to zero training error, even faster than the case with the random labels. Varying the amount of randomization resulted in a steady deterioration of the generalization error, as the noise level increased. There were a wide variety of changes introduced into the dataset, that played with degrees and kinds of randomization with the pixels and labels. All of this still resulted in the networks able to fit the training data perfectly. A key takeaway from this is that the neural networks are able to capture the signals remaining in the data, while fitting the noise and randomization with brute force. The question that still remains unanswered after this is why some models generalize better than others, because it is evident that some decisions made while constructing model architectures do make a difference in its ability to generalize.</p>
+<p>Traditional approaches in statistical learning theory such as Rademacher complexity, VC dimension and uniform stability are threatened by the randomization experiments performed.</p>
+<p>Three specific regularizers are then considered to note the impact of explicit regularization, data augmentation, weight decay and dropout. These are tried out on Inception, Alexnet and MLPs on the CIFAR10 dataset, and later with ImageNet. Regularization helps to improve generalization performance, but the models still generalize well enough with the regularizers turned off. It was then inferred that this is more of a tuning parameter than a fundamental cause of good generalization. A similar result was noted with implicit regularization.</p>
+<p>An interesting result proved in the paper was that there two layer depth networks of linear size, that can represent any labelling of the training data. A parallel approach in trying to understand the source of regularization for linear models was also not easy to point out.
+To sum up, this paper presents a thorough insight into how empirically easy optimization does not imply good regularization, and effective capacity of network architectures is better understood and defined.</p>
 
     </div>
 
@@ -703,7 +672,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://archana1998.github.io/post/project-1/&amp;text=Compressive%20Image%20Sensing" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://archana1998.github.io/post/project-1/&amp;text=Understanding%20Deep%20Learning%20requires%20rethinking%20generalization" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -716,7 +685,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://archana1998.github.io/post/project-1/&amp;t=Compressive%20Image%20Sensing" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://archana1998.github.io/post/project-1/&amp;t=Understanding%20Deep%20Learning%20requires%20rethinking%20generalization" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -729,7 +698,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Compressive%20Image%20Sensing&amp;body=https://archana1998.github.io/post/project-1/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Understanding%20Deep%20Learning%20requires%20rethinking%20generalization&amp;body=https://archana1998.github.io/post/project-1/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -742,7 +711,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://archana1998.github.io/post/project-1/&amp;title=Compressive%20Image%20Sensing" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://archana1998.github.io/post/project-1/&amp;title=Understanding%20Deep%20Learning%20requires%20rethinking%20generalization" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -755,7 +724,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=Compressive%20Image%20Sensing%20https://archana1998.github.io/post/project-1/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Understanding%20Deep%20Learning%20requires%20rethinking%20generalization%20https://archana1998.github.io/post/project-1/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -768,7 +737,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://archana1998.github.io/post/project-1/&amp;title=Compressive%20Image%20Sensing" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://archana1998.github.io/post/project-1/&amp;title=Understanding%20Deep%20Learning%20requires%20rethinking%20generalization" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
