@@ -3,8 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://archana1998.github.io/author/archana-swaminathan/</loc>
+    <lastmod>2020-07-18T18:40:47+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://archana1998.github.io/</loc>
-    <lastmod>2020-07-18T14:11:22+05:30</lastmod>
+    <lastmod>2020-07-18T18:40:47+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://archana1998.github.io/authors/</loc>
+    <lastmod>2020-07-18T18:40:47+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://archana1998.github.io/categories/</loc>
+    <lastmod>2020-07-18T18:40:47+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://archana1998.github.io/project/compressive-sensing/</loc>
+    <lastmod>2020-07-18T18:40:47+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://archana1998.github.io/tag/image-processing/</loc>
+    <lastmod>2020-07-18T18:40:47+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://archana1998.github.io/project/</loc>
+    <lastmod>2020-07-18T18:40:47+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://archana1998.github.io/tags/</loc>
+    <lastmod>2020-07-18T18:40:47+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://archana1998.github.io/category/undergraduate-projects/</loc>
+    <lastmod>2020-07-18T18:40:47+05:30</lastmod>
   </url>
   
   <url>
@@ -22,14 +62,6 @@
   </url>
   
   <url>
-    <loc>https://archana1998.github.io/authors/</loc>
-  </url>
-  
-  <url>
-    <loc>https://archana1998.github.io/categories/</loc>
-  </url>
-  
-  <url>
     <loc>https://archana1998.github.io/publication_types/</loc>
   </url>
   
@@ -39,10 +71,6 @@
   
   <url>
     <loc>https://archana1998.github.io/talk/</loc>
-  </url>
-  
-  <url>
-    <loc>https://archana1998.github.io/tags/</loc>
   </url>
   
 </urlset>
