@@ -845,9 +845,9 @@ The orthogonal matching pursuit algorithm is then applied onto the signal Y, and
 
 <p>The K-SVD algorithm is a type of K-means clustering, which has been generalized. The k-
 means clustering is also considered a method of doing representation of sparse signals. This
-implies solving the equation below, to find the best code to represent the signal data $\left{y_{i}\right}_^{M}$</p>
+implies solving the equation below, to find the best code to represent the signal data <span  class="math">\(\left\{y_{i}\right\}_{i=1}^{M}\)</span></p>
 
-<p><span  i="1" class="math">\[\min _{D, X}\left\{\|Y-D X\|_{F}^{2}\right\}, \text { subject to } \forall i,\left\|x_{i}\right\|_{0}=1\]</span></p>
+<p><span  class="math">\[\min _{D, X}\left\{\|Y-D X\|_{F}^{2}\right\}, \text { subject to } \forall i,\left\|x_{i}\right\|_{0}=1\]</span></p>
 
 <p>F here is the Frobenius norm. The K-SVD algorithm is similar to the K-means in terms of the process of construction, but differs in the sense of the relaxation of the sparsity term in the constraint. This helps achieve a linear combination of the dictionary atoms. The relaxation is that the number of entries that are not zero in each column can be greater than 1, but less than a defined number T<sub>0</sub>.</p>
 
