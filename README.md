@@ -1,1 +1,1 @@
-# archana1998.github.io
+# Personal Resume Website made using Hugo, with the Academic Theme
