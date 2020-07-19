@@ -210,7 +210,7 @@ The orthogonal matching pursuit algorithm is then applied onto the signal Y, and
 
 &lt;p&gt;The K-SVD algorithm is a type of K-means clustering, which has been generalized. The k-
 means clustering is also considered a method of doing representation of sparse signals. This
-implies solving the equation below, to find the best code to represent the signal data $\left{y_{i}\right}_^{M}$.&lt;/p&gt;
+implies solving the equation below, to find the best code to represent the signal data $\left{y_{i}\right}_^{M}$&lt;/p&gt;
 
 &lt;p&gt;&lt;span  i=&#34;1&#34; class=&#34;math&#34;&gt;\[\min _{D, X}\left\{\|Y-D X\|_{F}^{2}\right\}, \text { subject to } \forall i,\left\|x_{i}\right\|_{0}=1\]&lt;/span&gt;&lt;/p&gt;
 
