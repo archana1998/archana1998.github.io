@@ -89,8 +89,8 @@
 
 &lt;h3 id=&#34;algorithm&#34;&gt;Algorithm&lt;/h3&gt;
 
-&lt;p&gt;We use the generated Ramanujan Basis to do the sparse reconstruction. First, the sparse signal is obtained by multiplyingthe Ramanujan Basis A with the flattened image vector (here we are using the Cameraman Image that has been resized to 50&lt;em&gt;50).
-Our Ramanujan Basis has dimensions of 2500&lt;/em&gt;2500.&lt;/p&gt;
+&lt;p&gt;We use the generated Ramanujan Basis to do the sparse reconstruction. First, the sparse signal is obtained by multiplyingthe Ramanujan Basis A with the flattened image vector (here we are using the Cameraman Image that has been resized to 50 * 50).
+Our Ramanujan Basis has dimensions of 2500 * 2500.&lt;/p&gt;
 
 &lt;p&gt;Thus,&lt;/p&gt;
 
@@ -210,7 +210,7 @@ The orthogonal matching pursuit algorithm is then applied onto the signal Y, and
 
 &lt;p&gt;The K-SVD algorithm is a type of K-means clustering, which has been generalized. The k-
 means clustering is also considered a method of doing representation of sparse signals. This
-implies solving the equation below, to find the best code to represent the signal data &lt;span  class=&#34;math&#34;&gt;\(\left\{y_{i}\right\}_{i=1}^{M}\)&lt;/span&gt;&lt;/p&gt;
+implies solving the equation below, to find the best code to represent the signal data {y&lt;sub&gt;i&lt;/sub&gt;} from i=1 to M&lt;/p&gt;
 
 &lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\min _{D, X}\left\{\|Y-D X\|_{F}^{2}\right\}, \text { subject to } \forall i,\left\|x_{i}\right\|_{0}=1\]&lt;/span&gt;&lt;/p&gt;
 
