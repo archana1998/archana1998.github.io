@@ -14,9 +14,9 @@
     
     <item>
       <title>Understanding Deep Learning requires rethinking generalization</title>
-      <link>https://archana1998.github.io/post/project-1/</link>
+      <link>https://archana1998.github.io/post/regularization/</link>
       <pubDate>Sat, 18 Jul 2020 14:11:22 +0530</pubDate>
-      <guid>https://archana1998.github.io/post/project-1/</guid>
+      <guid>https://archana1998.github.io/post/regularization/</guid>
       <description>&lt;p&gt;This is a review of the ICLR 2017 paper by Zhang et. al. titled &amp;ldquo;Understanding Deep Learning requires rethinking generalization&amp;quot;&lt;a href = &#34;https://bengio.abracadoudou.com/cv/publications/pdf/zhang_2017_iclr.pdf&#34;&gt; Link to paper &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The paper starts off with aiming to provide an introspection into what distinguishes networks that generalize well, from those who don’t.&lt;/p&gt;
 &lt;p&gt;One of the experiments conducted in the studies of the paper, is checking how well neural networks adapt to training when labels are randomized. Their findings establish that when the true data is completely randomly labelled, the training error that results is zero. Observations from this indicate that the effective capacity of neural networks is more than enough to memorize the entire dataset. Randomization of the labels is only a transformation of the data, and other learning parameters are constant and unchanged still. The resulting training time also increases by only a small factor. However, when this trained network is tested, it does badly. This indicates that just by randomizing labels, the generalization error can shoot up significantly without changing any other parameters of the experiment like the size of the model, the optimizer etc.&lt;/p&gt;
