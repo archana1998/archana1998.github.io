@@ -1,0 +1,1213 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Archana Swaminathan">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Introduction This project is inspired from the schematic described in the paper by I. A. Ismail and Galal H. Galal-Edeen. A multilayer perceptron network is used for both the encryption and decryption of images.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://archana1998.github.io/project/encryption-decryption/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="hsl(339, 90%, 68%)">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://archana1998.github.io/project/encryption-decryption/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Archana Swaminathan">
+  <meta property="og:url" content="https://archana1998.github.io/project/encryption-decryption/">
+  <meta property="og:title" content="Image Encryption and Decryption using Artificial Neural Networks | Archana Swaminathan">
+  <meta property="og:description" content="Introduction This project is inspired from the schematic described in the paper by I. A. Ismail and Galal H. Galal-Edeen. A multilayer perceptron network is used for both the encryption and decryption of images."><meta property="og:image" content="https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-07-30T12:05:59&#43;05:30">
+    
+    <meta property="article:modified_time" content="2020-07-30T12:05:59&#43;05:30">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://archana1998.github.io/project/encryption-decryption/"
+  },
+  "headline": "Image Encryption and Decryption using Artificial Neural Networks",
+  
+  "datePublished": "2020-07-30T12:05:59+05:30",
+  "dateModified": "2020-07-30T12:05:59+05:30",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Archana Swaminathan"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Archana Swaminathan",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Introduction This project is inspired from the schematic described in the paper by I. A. Ismail and Galal H. Galal-Edeen. A multilayer perceptron network is used for both the encryption and decryption of images."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Image Encryption and Decryption using Artificial Neural Networks | Archana Swaminathan</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Archana Swaminathan</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Archana Swaminathan</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/files/cv.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Image Encryption and Decryption using Artificial Neural Networks</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  
+  <span >Archana Swaminathan</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jul 30, 2020
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/undergraduate-projects/">Undergraduate Projects</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="introduction">Introduction</h1>
+<p>This project is inspired from the schematic described in the paper by I. A. Ismail
+and Galal H. Galal-Edeen. A multilayer perceptron network is used for both the
+encryption and decryption of images. The keys used for decryption are the fixed
+bias vectors, which remain constant throughout training. Multiplicative neural
+networks are used to help generate this constant vector, which is derived from a
+vector specified by the sender. The images are sent into the neural network and
+the output of the hidden layer gives the cipher. The cipher on being passed into
+the output layer gives the decrypted image. The weights are trained and updated
+using the backpropagation algorithm for learning, while the bias vector remains
+constant.</p>
+<p>To get the constant bias vectors, the sender of the image specifies a numeric
+vector of the same size as the layer it is a bias of. The vector is broken down
+into subvectors and subsequent permutations of this vector are fed into a
+multiplicative neuron. The output of the multiplicative neural network will be
+added to the initial bias vector specified by the sender of the images. Since the
+bias vector is now a constant that is entirely dependent on the way the initial
+6bias vector is arranged, it provides an additional level of security over the
+existing paradigm that employs a sender specified bias vector without any
+modifications done to it.
+All experiments have been done on, and results have been obtained from
+MATLAB R2018b.</p>
+<h1 id="multiplicative-neural-network">Multiplicative Neural Network</h1>
+<p>A general structure for the multiplicative neuron is given below:</p>
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-structure-of-multiplicative-neuron">
+
+
+
+  <img data-src="/project/encryption-decryption/1_hua14e20862d5f8aa201f826f6aacbb8a3_9020_2000x2000_fit_q90_lanczos.jpg" class="lazyload" alt="" width="485" height="214">
+
+
+
+  
+  
+  <figcaption data-pre="Figure " data-post=":" class="numbered">
+    Structure of multiplicative neuron
+  </figcaption>
+
+
+</figure>
+
+<p>The input vector is (x 1 , x 2 ,&hellip;..,x n ) which is a permutation of the initial specified bias vector. The weights vector is (w 1 , w 2, &hellip;.., wn) and the bias vector (for this multiplicative neural network) is (b 1 , b 2, &hellip;.., bn). Ω is a multiplicative operator and has the formula</p>
+<p>$$\Omega=\prod_{i=1}^{n}\left(w_{i} x_{i}+b_{i}\right)$$</p>
+<p>The output of the neuron is then processed using ƒ(u) which is the logsig function $y=\frac{1}{1+e^{-u}}$.</p>
+<h2 id="training-algorithm">Training Algorithm</h2>
+<p>The standard backpropagation algorithm has been modified for the training of
+the multiplicative neural network, which is used in optimizing the weights and
+biases. It is based on the popular steepest gradient descent approach. The error
+function E is defined as</p>
+<p>$$E=\frac{1}{2 N} \sum_{p=1}^{N}\left(y_{p}-y_{p}^{d}\right)^{2}$$</p>
+<p>where $\ y_{p}^{d}$ is the desired output and y<sub>p</sub> is the actual output for the p th input that is fed into the multiplicative neural network. The weights and biases of the model are updated using the following rules:</p>
+<p>$$\begin{aligned}
+w_{i}^{\text {new}} &amp;=w_{i}^{\text {old}}+\Delta w_{i} \<br>
+b_{i}^{\text {new}} &amp;=b_{i}^{\text {old}}+\Delta b_{i}
+\end{aligned}$$</p>
+<p>where</p>
+<p>$$\begin{aligned}
+\Delta w_{i} &amp;=-\eta \frac{d \boldsymbol{E}}{d w_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}} x_{i}\right) \<br>
+\Delta b_{i} &amp;=-\eta \frac{d \boldsymbol{E}}{d b_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}}\right)
+\end{aligned}$$</p>
+<p>$\eta$ is the learning rate parameter. The main purpose of this parameter is to control the convergent speed as desired.</p>
+<h2 id="procedure">Procedure</h2>
+<p>Two multiplicative neural network structures are used to generate the bias
+vector for the hidden layer and output layer of the multilayer perceptron
+network respectively. It is necessary to have a separate model for each vector as
+the layers are of different dimensions (different number of neurons) and thus,
+the bias vectors will be of different dimensions for both the hidden layer and the
+output layer. The number of elements in the bias vector will be the size of the
+input into the multiplicative neural network model, hence we require two
+different models.</p>
+<p>The sender of the images first specifies a vector containing the same number of
+elements as the number of neurons of the (hidden/output) layer of the MLP.
+This is now broken down into subvectors (if the number of elements is 16, it can
+be broken into 4 subvectors of 4 elements each, etc.). This breaking down is
+essential as it becomes computationally difficult to calculate the permutations of
+a combination of numbers greater than 10. Once the subvectors are obtained, the
+individual permutations of each of the subvectors is stored into a matrix, which
+are then concatenated to form a bigger matrix of size p*q where p is the number
+of subvectors, and q is the dimension of the initially specified bias vector. A
+target vector (dummy vector, but must remain constant and not be generated
+randomly) is also specified by the sender.</p>
+<p>This matrix is now fed into as input to the multiplicative neural network, where
+each row depicts an input sample. The network is trained using the algorithm specified, and the output is stored. This output is now added to the initial vector
+specified by the sender for the MLP, and the result thus becomes the new bias
+vector, which remains a constant throughout the experiment.</p>
+<p>This procedure is repeated for defining and training the second multiplicative
+neural network, which generates the second bias vector for the MLP. Both these
+vectors are essential for proper image encryption and decryption.</p>
+<h1 id="mlp-used-for-image-encryption-and-decryption">MLP used for image encryption and decryption</h1>
+<p>The network has a structure of one input layer, one hidden layer, and one output
+layer. Adding further hidden layers can help in achieving image compression as
+dimensionality of the image is being reduced. The output of the hidden layer gives the cipher and the output of the output layer gives the decipher of the image. There are N elements in the input layer that are fed to the next (hidden layer), which consists of M neurons. The output layer has the same number of neurons as the input layer.</p>
+<p>The MLP structure used in this project is given below.</p>
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-structure-of-mlp">
+
+
+
+  <img data-src="/project/encryption-decryption/2_hubb326033ac04905f65ab4941418dd105_12509_2000x2000_fit_q90_lanczos.jpg" class="lazyload" alt="" width="472" height="413">
+
+
+
+  
+  
+  <figcaption data-pre="Figure " data-post=":" class="numbered">
+    Structure of MLP
+  </figcaption>
+
+
+</figure>
+
+<p>The network configuration is of NxMxN neurons which represent the input layer, hidden layer and output layer respectively. The sigmoid function (logsig) is used to generate the output of the hidden layer, which is defined as</p>
+<p>$$\text { Logsig function: } Z=\frac{1}{1+e^{\left[-\left(\left(\sum_{i=1}^{n} w_{1 i} x_{i}\right)+b_{1 i}\right)\right]}}$$</p>
+<p>where w<sub>1i</sub> denotes the weight vector for the hidden layer, and b<sub>1i</sub> denotes the bias vector for the hidden layer.</p>
+<p>The output of the output layer is calculated using a linear function (purelin in
+MATLAB), which is defined as</p>
+<p>$$\text { Purelin function: } Y=m\left[\left(\sum_{i=1}^{n} w_{2 i} z_{i}\right)+b_{2 i}\right]+c$$</p>
+<p>where w<sub>2i</sub> denotes the weight vector for the output layer, and b<sub>2i</sub> denotes the bias vector for the output layer.</p>
+<h2 id="training-algorithm-1">Training Algorithm</h2>
+<p>The error of the output of the network in each step ‘n’ while training, (the
+difference between the desired value and the actual value) is calculated by the
+following formula.</p>
+<p>$$\Delta(n)=\left[\sum_{i=1}^{N}\left(x_{i}-y_{i}\right)^{2}\right]^{1 / 2}$$</p>
+<p>The weights are calculated using the following rules:</p>
+<ol>
+<li>
+<p>For the hidden-output layer:
+a. The error signal for the q th neuron in the output layer is</p>
+<p>$$\delta_{q}=m\left(x_{q}-y_{q}\right)$$</p>
+<p>b. The updated weight w<sub>2(p, q)</sub> is calculated as:</p>
+<p>$$\begin{array}{c}w_{2(p, q)}(n+1)=w_{2(p, q)}(n)+\Delta w_{2(p, q)}(n+1) \<br>
+\Delta w_{2(p, q)}(n+1)=\eta \delta_{q} z_{p}+\alpha\left[\Delta w_{2(p, q)}(n)\right]\end{array}$$</p>
+</li>
+<li>
+<p>For the input-hidden layer:
+a. The error signal for p<sup>th</sup> hidden neuron is calculated using:</p>
+<p>$$\delta_{p}=z_{p}\left(1-z_{p}\right)\left[\sum_{k=1}^{N} \delta_{k} w_{1(p,k)}\right]$$</p>
+<p>b. The weight vector w<sub>1(i,p)</sub>(n) is calculated similarly as the above
+formula for the adjustment of weights, with z<sub>p</sub> being replaced with
+x<sub>i</sub> and $\delta_{q}$ with $\delta_{p}$ .</p>
+</li>
+<li>
+<p>After one epoch, let $\Delta(n)$ and $\Delta(n+1)$ be the previous and current errors of the outputs of the neural network respectively. The rule that is followed
+whether to decide if the weights are being updated or not, is:
+a. If $\Delta(n+1)&gt;1.04[\Delta(n)]$,
+The new weights, output, keys (always constant), error are
+unchanged, and $\alpha$ is changed to $0.7 \alpha$</p>
+<p>b. If $\Delta(n+1)&lt;=1.04[\Delta(n)]$,
+All the variables except the keys are updated to their new values,
+and $\alpha$ is modified to $1.05 \alpha$</p>
+</li>
+</ol>
+<p>These steps are carried out and repeated in each epoch, until the maximum
+number of epochs has been reached, or the error becomes less than a value that
+is predefined.</p>
+<h2 id="procedure-1">Procedure</h2>
+<p>The keys obtained from the multiplicative neural network are first normalized to
+lie within the range of (0,1). The normalization is simply done by dividing the
+elements of the bias vector by the maximum value of the elements of the vector.</p>
+<p>The images that are fed into the neural network must all be of the same dimension, irrespective of them being training images or test images. For this project, images of various dimensions (256<em>256, 512</em>512 etc) have been scaled down to a dimension of 50<em>50. The images of this specified dimension are now segmented into sub images, of the number L (for the purpose of this project, L=100). The size of each sub image is x</em>x = N pixels, which makes N = 25. The segmentation is done using a custom defined segmentation function, that also converts each sub image into a 1-dimensional vector, and creates a matrix of dimension N<em>L (25</em>100) which is then fed in as input to the neural network.</p>
+<p>Once the network is trained with the training set, it is ready to encrypt and decrypt images. The test images are segmented using the same segmentation function which was used to segment the training images, and are fed into the trained neural network as input.</p>
+<p>The output of the hidden layer is computed using the output function (logsig),
+which was previously defined. Since the size of the input image is NL, the output of the hidden layer is a matrix of size ML. (For this project, N = 25 and M = 16). The encrypted image (cipher) is then obtained after the output matrix is transformed into a 2-D matrix, for which the segmented images must be properly arranged back.</p>
+<p>The decrypted image is obtained when the output of the hidden layer is fed into
+the output layer. In short, it is the final output of the neural network and can
+directly be computed by feeding the input test image into the neural network.</p>
+<h2 id="experiments-and-results">Experiments and results</h2>
+<p>The project was done on MATLAB version R2018b on a computer with Intel
+Core i5 6 th generation processor.</p>
+<p>The neural network was trained using 38 test images, out of which 14 were colour images, all downloaded from the USC Vision Database. The 14 colour images and any subsequent images henceforth used for testing were all converted into single channel images. The test images were segmented and passed into the neural network, which took approximately 40 seconds to train. The initial bias vectors were specified by the programmer and then was input into the two multiplicative neural networks to generate new elements, which were then added with the previous bias vector. Only after this, the bias vector for the MLP was fixed with this value and the MLP was made to train.</p>
+<p>Encryption and decryption of a test image of the Earth was extremely fast, with
+the NPCR and UACI tests giving scores of 99.9665% and 0.34916 respectively. The PSNR ratios for the original image with the decrypted image and the cipher were 39.4156 and 39.3973 respectively.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/cryptography/">Cryptography</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://archana1998.github.io/project/encryption-decryption/&amp;text=Image%20Encryption%20and%20Decryption%20using%20Artificial%20Neural%20Networks" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://archana1998.github.io/project/encryption-decryption/&amp;t=Image%20Encryption%20and%20Decryption%20using%20Artificial%20Neural%20Networks" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Image%20Encryption%20and%20Decryption%20using%20Artificial%20Neural%20Networks&amp;body=https://archana1998.github.io/project/encryption-decryption/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://archana1998.github.io/project/encryption-decryption/&amp;title=Image%20Encryption%20and%20Decryption%20using%20Artificial%20Neural%20Networks" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Image%20Encryption%20and%20Decryption%20using%20Artificial%20Neural%20Networks%20https://archana1998.github.io/project/encryption-decryption/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://archana1998.github.io/project/encryption-decryption/&amp;title=Image%20Encryption%20and%20Decryption%20using%20Artificial%20Neural%20Networks" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/project/compressive-sensing/">Compressive Sensing and Denoising of Images using the Ramanujan Fourier Transform</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.8/mermaid.min.js" integrity="sha256-lyWCDMnMeZiXRi7Zl54sZGKYmgQs4izcT7+tKc+KUBk=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    Archana Swaminathan ©
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

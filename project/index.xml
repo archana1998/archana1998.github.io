@@ -5,12 +5,227 @@
     <link>https://archana1998.github.io/project/</link>
       <atom:link href="https://archana1998.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Sat, 18 Jul 2020 18:40:47 +0530</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Thu, 30 Jul 2020 12:05:59 +0530</lastBuildDate>
     <image>
       <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png</url>
       <title>Projects</title>
       <link>https://archana1998.github.io/project/</link>
     </image>
+    
+    <item>
+      <title>Image Encryption and Decryption using Artificial Neural Networks</title>
+      <link>https://archana1998.github.io/project/encryption-decryption/</link>
+      <pubDate>Thu, 30 Jul 2020 12:05:59 +0530</pubDate>
+      <guid>https://archana1998.github.io/project/encryption-decryption/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;This project is inspired from the schematic described in the paper by I. A. Ismail
+and Galal H. Galal-Edeen. A multilayer perceptron network is used for both the
+encryption and decryption of images. The keys used for decryption are the fixed
+bias vectors, which remain constant throughout training. Multiplicative neural
+networks are used to help generate this constant vector, which is derived from a
+vector specified by the sender. The images are sent into the neural network and
+the output of the hidden layer gives the cipher. The cipher on being passed into
+the output layer gives the decrypted image. The weights are trained and updated
+using the backpropagation algorithm for learning, while the bias vector remains
+constant.&lt;/p&gt;
+&lt;p&gt;To get the constant bias vectors, the sender of the image specifies a numeric
+vector of the same size as the layer it is a bias of. The vector is broken down
+into subvectors and subsequent permutations of this vector are fed into a
+multiplicative neuron. The output of the multiplicative neural network will be
+added to the initial bias vector specified by the sender of the images. Since the
+bias vector is now a constant that is entirely dependent on the way the initial
+6bias vector is arranged, it provides an additional level of security over the
+existing paradigm that employs a sender specified bias vector without any
+modifications done to it.
+All experiments have been done on, and results have been obtained from
+MATLAB R2018b.&lt;/p&gt;
+&lt;h1 id=&#34;multiplicative-neural-network&#34;&gt;Multiplicative Neural Network&lt;/h1&gt;
+&lt;p&gt;A general structure for the multiplicative neuron is given below:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-structure-of-multiplicative-neuron&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/project/encryption-decryption/1_hua14e20862d5f8aa201f826f6aacbb8a3_9020_2000x2000_fit_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;485&#34; height=&#34;214&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Structure of multiplicative neuron
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;The input vector is (x 1 , x 2 ,&amp;hellip;..,x n ) which is a permutation of the initial specified bias vector. The weights vector is (w 1 , w 2, &amp;hellip;.., wn) and the bias vector (for this multiplicative neural network) is (b 1 , b 2, &amp;hellip;.., bn). Ω is a multiplicative operator and has the formula&lt;/p&gt;
+&lt;p&gt;$$\Omega=\prod_{i=1}^{n}\left(w_{i} x_{i}+b_{i}\right)$$&lt;/p&gt;
+&lt;p&gt;The output of the neuron is then processed using ƒ(u) which is the logsig function $y=\frac{1}{1+e^{-u}}$.&lt;/p&gt;
+&lt;h2 id=&#34;training-algorithm&#34;&gt;Training Algorithm&lt;/h2&gt;
+&lt;p&gt;The standard backpropagation algorithm has been modified for the training of
+the multiplicative neural network, which is used in optimizing the weights and
+biases. It is based on the popular steepest gradient descent approach. The error
+function E is defined as&lt;/p&gt;
+&lt;p&gt;$$E=\frac{1}{2 N} \sum_{p=1}^{N}\left(y_{p}-y_{p}^{d}\right)^{2}$$&lt;/p&gt;
+&lt;p&gt;where $\ y_{p}^{d}$ is the desired output and y&lt;sub&gt;p&lt;/sub&gt; is the actual output for the p th input that is fed into the multiplicative neural network. The weights and biases of the model are updated using the following rules:&lt;/p&gt;
+&lt;p&gt;$$\begin{aligned}
+w_{i}^{\text {new}} &amp;amp;=w_{i}^{\text {old}}+\Delta w_{i} \&lt;br&gt;
+b_{i}^{\text {new}} &amp;amp;=b_{i}^{\text {old}}+\Delta b_{i}
+\end{aligned}$$&lt;/p&gt;
+&lt;p&gt;where&lt;/p&gt;
+&lt;p&gt;$$\begin{aligned}
+\Delta w_{i} &amp;amp;=-\eta \frac{d \boldsymbol{E}}{d w_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}} x_{i}\right) \&lt;br&gt;
+\Delta b_{i} &amp;amp;=-\eta \frac{d \boldsymbol{E}}{d b_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}}\right)
+\end{aligned}$$&lt;/p&gt;
+&lt;p&gt;$\eta$ is the learning rate parameter. The main purpose of this parameter is to control the convergent speed as desired.&lt;/p&gt;
+&lt;h2 id=&#34;procedure&#34;&gt;Procedure&lt;/h2&gt;
+&lt;p&gt;Two multiplicative neural network structures are used to generate the bias
+vector for the hidden layer and output layer of the multilayer perceptron
+network respectively. It is necessary to have a separate model for each vector as
+the layers are of different dimensions (different number of neurons) and thus,
+the bias vectors will be of different dimensions for both the hidden layer and the
+output layer. The number of elements in the bias vector will be the size of the
+input into the multiplicative neural network model, hence we require two
+different models.&lt;/p&gt;
+&lt;p&gt;The sender of the images first specifies a vector containing the same number of
+elements as the number of neurons of the (hidden/output) layer of the MLP.
+This is now broken down into subvectors (if the number of elements is 16, it can
+be broken into 4 subvectors of 4 elements each, etc.). This breaking down is
+essential as it becomes computationally difficult to calculate the permutations of
+a combination of numbers greater than 10. Once the subvectors are obtained, the
+individual permutations of each of the subvectors is stored into a matrix, which
+are then concatenated to form a bigger matrix of size p*q where p is the number
+of subvectors, and q is the dimension of the initially specified bias vector. A
+target vector (dummy vector, but must remain constant and not be generated
+randomly) is also specified by the sender.&lt;/p&gt;
+&lt;p&gt;This matrix is now fed into as input to the multiplicative neural network, where
+each row depicts an input sample. The network is trained using the algorithm specified, and the output is stored. This output is now added to the initial vector
+specified by the sender for the MLP, and the result thus becomes the new bias
+vector, which remains a constant throughout the experiment.&lt;/p&gt;
+&lt;p&gt;This procedure is repeated for defining and training the second multiplicative
+neural network, which generates the second bias vector for the MLP. Both these
+vectors are essential for proper image encryption and decryption.&lt;/p&gt;
+&lt;h1 id=&#34;mlp-used-for-image-encryption-and-decryption&#34;&gt;MLP used for image encryption and decryption&lt;/h1&gt;
+&lt;p&gt;The network has a structure of one input layer, one hidden layer, and one output
+layer. Adding further hidden layers can help in achieving image compression as
+dimensionality of the image is being reduced. The output of the hidden layer gives the cipher and the output of the output layer gives the decipher of the image. There are N elements in the input layer that are fed to the next (hidden layer), which consists of M neurons. The output layer has the same number of neurons as the input layer.&lt;/p&gt;
+&lt;p&gt;The MLP structure used in this project is given below.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-structure-of-mlp&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/project/encryption-decryption/2_hubb326033ac04905f65ab4941418dd105_12509_2000x2000_fit_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;472&#34; height=&#34;413&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Structure of MLP
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;The network configuration is of NxMxN neurons which represent the input layer, hidden layer and output layer respectively. The sigmoid function (logsig) is used to generate the output of the hidden layer, which is defined as&lt;/p&gt;
+&lt;p&gt;$$\text { Logsig function: } Z=\frac{1}{1+e^{\left[-\left(\left(\sum_{i=1}^{n} w_{1 i} x_{i}\right)+b_{1 i}\right)\right]}}$$&lt;/p&gt;
+&lt;p&gt;where w&lt;sub&gt;1i&lt;/sub&gt; denotes the weight vector for the hidden layer, and b&lt;sub&gt;1i&lt;/sub&gt; denotes the bias vector for the hidden layer.&lt;/p&gt;
+&lt;p&gt;The output of the output layer is calculated using a linear function (purelin in
+MATLAB), which is defined as&lt;/p&gt;
+&lt;p&gt;$$\text { Purelin function: } Y=m\left[\left(\sum_{i=1}^{n} w_{2 i} z_{i}\right)+b_{2 i}\right]+c$$&lt;/p&gt;
+&lt;p&gt;where w&lt;sub&gt;2i&lt;/sub&gt; denotes the weight vector for the output layer, and b&lt;sub&gt;2i&lt;/sub&gt; denotes the bias vector for the output layer.&lt;/p&gt;
+&lt;h2 id=&#34;training-algorithm-1&#34;&gt;Training Algorithm&lt;/h2&gt;
+&lt;p&gt;The error of the output of the network in each step ‘n’ while training, (the
+difference between the desired value and the actual value) is calculated by the
+following formula.&lt;/p&gt;
+&lt;p&gt;$$\Delta(n)=\left[\sum_{i=1}^{N}\left(x_{i}-y_{i}\right)^{2}\right]^{1 / 2}$$&lt;/p&gt;
+&lt;p&gt;The weights are calculated using the following rules:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;For the hidden-output layer:
+a. The error signal for the q th neuron in the output layer is&lt;/p&gt;
+&lt;p&gt;$$\delta_{q}=m\left(x_{q}-y_{q}\right)$$&lt;/p&gt;
+&lt;p&gt;b. The updated weight w&lt;sub&gt;2(p, q)&lt;/sub&gt; is calculated as:&lt;/p&gt;
+&lt;p&gt;$$\begin{array}{c}w_{2(p, q)}(n+1)=w_{2(p, q)}(n)+\Delta w_{2(p, q)}(n+1) \&lt;br&gt;
+\Delta w_{2(p, q)}(n+1)=\eta \delta_{q} z_{p}+\alpha\left[\Delta w_{2(p, q)}(n)\right]\end{array}$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For the input-hidden layer:
+a. The error signal for p&lt;sup&gt;th&lt;/sup&gt; hidden neuron is calculated using:&lt;/p&gt;
+&lt;p&gt;$$\delta_{p}=z_{p}\left(1-z_{p}\right)\left[\sum_{k=1}^{N} \delta_{k} w_{1(p,k)}\right]$$&lt;/p&gt;
+&lt;p&gt;b. The weight vector w&lt;sub&gt;1(i,p)&lt;/sub&gt;(n) is calculated similarly as the above
+formula for the adjustment of weights, with z&lt;sub&gt;p&lt;/sub&gt; being replaced with
+x&lt;sub&gt;i&lt;/sub&gt; and $\delta_{q}$ with $\delta_{p}$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;After one epoch, let $\Delta(n)$ and $\Delta(n+1)$ be the previous and current errors of the outputs of the neural network respectively. The rule that is followed
+whether to decide if the weights are being updated or not, is:
+a. If $\Delta(n+1)&amp;gt;1.04[\Delta(n)]$,
+The new weights, output, keys (always constant), error are
+unchanged, and $\alpha$ is changed to $0.7 \alpha$&lt;/p&gt;
+&lt;p&gt;b. If $\Delta(n+1)&amp;lt;=1.04[\Delta(n)]$,
+All the variables except the keys are updated to their new values,
+and $\alpha$ is modified to $1.05 \alpha$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These steps are carried out and repeated in each epoch, until the maximum
+number of epochs has been reached, or the error becomes less than a value that
+is predefined.&lt;/p&gt;
+&lt;h2 id=&#34;procedure-1&#34;&gt;Procedure&lt;/h2&gt;
+&lt;p&gt;The keys obtained from the multiplicative neural network are first normalized to
+lie within the range of (0,1). The normalization is simply done by dividing the
+elements of the bias vector by the maximum value of the elements of the vector.&lt;/p&gt;
+&lt;p&gt;The images that are fed into the neural network must all be of the same dimension, irrespective of them being training images or test images. For this project, images of various dimensions (256&lt;em&gt;256, 512&lt;/em&gt;512 etc) have been scaled down to a dimension of 50&lt;em&gt;50. The images of this specified dimension are now segmented into sub images, of the number L (for the purpose of this project, L=100). The size of each sub image is x&lt;/em&gt;x = N pixels, which makes N = 25. The segmentation is done using a custom defined segmentation function, that also converts each sub image into a 1-dimensional vector, and creates a matrix of dimension N&lt;em&gt;L (25&lt;/em&gt;100) which is then fed in as input to the neural network.&lt;/p&gt;
+&lt;p&gt;Once the network is trained with the training set, it is ready to encrypt and decrypt images. The test images are segmented using the same segmentation function which was used to segment the training images, and are fed into the trained neural network as input.&lt;/p&gt;
+&lt;p&gt;The output of the hidden layer is computed using the output function (logsig),
+which was previously defined. Since the size of the input image is NL, the output of the hidden layer is a matrix of size ML. (For this project, N = 25 and M = 16). The encrypted image (cipher) is then obtained after the output matrix is transformed into a 2-D matrix, for which the segmented images must be properly arranged back.&lt;/p&gt;
+&lt;p&gt;The decrypted image is obtained when the output of the hidden layer is fed into
+the output layer. In short, it is the final output of the neural network and can
+directly be computed by feeding the input test image into the neural network.&lt;/p&gt;
+&lt;h2 id=&#34;experiments-and-results&#34;&gt;Experiments and results&lt;/h2&gt;
+&lt;p&gt;The project was done on MATLAB version R2018b on a computer with Intel
+Core i5 6 th generation processor.&lt;/p&gt;
+&lt;p&gt;The neural network was trained using 38 test images, out of which 14 were colour images, all downloaded from the USC Vision Database. The 14 colour images and any subsequent images henceforth used for testing were all converted into single channel images. The test images were segmented and passed into the neural network, which took approximately 40 seconds to train. The initial bias vectors were specified by the programmer and then was input into the two multiplicative neural networks to generate new elements, which were then added with the previous bias vector. Only after this, the bias vector for the MLP was fixed with this value and the MLP was made to train.&lt;/p&gt;
+&lt;p&gt;Encryption and decryption of a test image of the Earth was extremely fast, with
+the NPCR and UACI tests giving scores of 99.9665% and 0.34916 respectively. The PSNR ratios for the original image with the decrypted image and the cipher were 39.4156 and 39.3973 respectively.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Compressive Sensing and Denoising of Images using the Ramanujan Fourier Transform</title>
