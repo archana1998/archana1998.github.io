@@ -90,7 +90,7 @@ function E is defined as&lt;/p&gt;
 &lt;p&gt;$$b_{i}^{\text {new}}=b_{i}^{\text {old}}+\Delta b_{i}$$&lt;/p&gt;
 &lt;p&gt;where&lt;/p&gt;
 &lt;p&gt;$$\Delta w_{i}=-\eta \frac{d \boldsymbol{E}}{d w_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}} x_{i}\right)$$&lt;/p&gt;
-&lt;p&gt;$$\Delta b_{i}=-\eta \frac{d \boldsymbol{E}}{d b_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}}\right)}$$&lt;/p&gt;
+&lt;p&gt;$$\Delta b_{i}=-\eta \frac{d \boldsymbol{E}}{d b_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}}\right)$$&lt;/p&gt;
 &lt;p&gt;$\eta$ is the learning rate parameter. The main purpose of this parameter is to control the convergent speed as desired.&lt;/p&gt;
 &lt;h2 id=&#34;procedure&#34;&gt;Procedure&lt;/h2&gt;
 &lt;p&gt;Two multiplicative neural network structures are used to generate the bias
