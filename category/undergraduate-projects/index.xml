@@ -86,11 +86,11 @@ biases. It is based on the popular steepest gradient descent approach. The error
 function E is defined as&lt;/p&gt;
 &lt;p&gt;$$E=\frac{1}{2 N} \sum_{p=1}^{N}\left(y_{p}-y_{p}^{d}\right)^{2}$$&lt;/p&gt;
 &lt;p&gt;where $\ y_{p}^{d}$ is the desired output and y&lt;sub&gt;p&lt;/sub&gt; is the actual output for the p th input that is fed into the multiplicative neural network. The weights and biases of the model are updated using the following rules:&lt;/p&gt;
-&lt;p&gt;$$w_{i}^{\text {new}} &amp;amp;=w_{i}^{\text {old}}+\Delta w_{i}$$&lt;/p&gt;
-&lt;p&gt;$$b_{i}^{\text {new}} &amp;amp;=b_{i}^{\text {old}}+\Delta b_{i}$$&lt;/p&gt;
+&lt;p&gt;$$w_{i}^{\text {new}}=w_{i}^{\text {old}}+\Delta w_{i}$$&lt;/p&gt;
+&lt;p&gt;$$b_{i}^{\text {new}}=b_{i}^{\text {old}}+\Delta b_{i}$$&lt;/p&gt;
 &lt;p&gt;where&lt;/p&gt;
-&lt;p&gt;$$\Delta w_{i} &amp;amp;=-\eta \frac{d \boldsymbol{E}}{d w_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}} x_{i}\right)$$&lt;/p&gt;
-&lt;p&gt;$$\Delta b_{i} &amp;amp;=-\eta \frac{d \boldsymbol{E}}{d b_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}}\right)}$$&lt;/p&gt;
+&lt;p&gt;$$\Delta w_{i}=-\eta \frac{d \boldsymbol{E}}{d w_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}} x_{i}\right)$$&lt;/p&gt;
+&lt;p&gt;$$\Delta b_{i}=-\eta \frac{d \boldsymbol{E}}{d b_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}}\right)}$$&lt;/p&gt;
 &lt;p&gt;$\eta$ is the learning rate parameter. The main purpose of this parameter is to control the convergent speed as desired.&lt;/p&gt;
 &lt;h2 id=&#34;procedure&#34;&gt;Procedure&lt;/h2&gt;
 &lt;p&gt;Two multiplicative neural network structures are used to generate the bias
@@ -207,7 +207,7 @@ is predefined.&lt;/p&gt;
 &lt;p&gt;The keys obtained from the multiplicative neural network are first normalized to
 lie within the range of (0,1). The normalization is simply done by dividing the
 elements of the bias vector by the maximum value of the elements of the vector.&lt;/p&gt;
-&lt;p&gt;The images that are fed into the neural network must all be of the same dimension, irrespective of them being training images or test images. For this project, images of various dimensions (256&lt;em&gt;256, 512&lt;/em&gt;512 etc) have been scaled down to a dimension of 50&lt;em&gt;50. The images of this specified dimension are now segmented into sub images, of the number L (for the purpose of this project, L=100). The size of each sub image is x&lt;/em&gt;x = N pixels, which makes N = 25. The segmentation is done using a custom defined segmentation function, that also converts each sub image into a 1-dimensional vector, and creates a matrix of dimension N&lt;em&gt;L (25&lt;/em&gt;100) which is then fed in as input to the neural network.&lt;/p&gt;
+&lt;p&gt;The images that are fed into the neural network must all be of the same dimension, irrespective of them being training images or test images. For this project, images of various dimensions (256 x 256, 512 x 512 etc) have been scaled down to a dimension of 50 x 50. The images of this specified dimension are now segmented into sub images, of the number L (for the purpose of this project, L=100). The size of each sub image is x times x = N pixels, which makes N = 25. The segmentation is done using a custom defined segmentation function, that also converts each sub image into a 1-dimensional vector, and creates a matrix of dimension N x L (25 x 100) which is then fed in as input to the neural network.&lt;/p&gt;
 &lt;p&gt;Once the network is trained with the training set, it is ready to encrypt and decrypt images. The test images are segmented using the same segmentation function which was used to segment the training images, and are fed into the trained neural network as input.&lt;/p&gt;
 &lt;p&gt;The output of the hidden layer is computed using the output function (logsig),
 which was previously defined. Since the size of the input image is NL, the output of the hidden layer is a matrix of size ML. (For this project, N = 25 and M = 16). The encrypted image (cipher) is then obtained after the output matrix is transformed into a 2-D matrix, for which the segmented images must be properly arranged back.&lt;/p&gt;
