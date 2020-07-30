@@ -86,15 +86,11 @@ biases. It is based on the popular steepest gradient descent approach. The error
 function E is defined as&lt;/p&gt;
 &lt;p&gt;$$E=\frac{1}{2 N} \sum_{p=1}^{N}\left(y_{p}-y_{p}^{d}\right)^{2}$$&lt;/p&gt;
 &lt;p&gt;where $\ y_{p}^{d}$ is the desired output and y&lt;sub&gt;p&lt;/sub&gt; is the actual output for the p th input that is fed into the multiplicative neural network. The weights and biases of the model are updated using the following rules:&lt;/p&gt;
-&lt;p&gt;$$\begin{aligned}
-w_{i}^{\text {new}} &amp;amp;=w_{i}^{\text {old}}+\Delta w_{i} \&lt;br&gt;
-b_{i}^{\text {new}} &amp;amp;=b_{i}^{\text {old}}+\Delta b_{i}
-\end{aligned}$$&lt;/p&gt;
+&lt;p&gt;$$w_{i}^{\text {new}} &amp;amp;=w_{i}^{\text {old}}+\Delta w_{i}$$&lt;/p&gt;
+&lt;p&gt;$$b_{i}^{\text {new}} &amp;amp;=b_{i}^{\text {old}}+\Delta b_{i}$$&lt;/p&gt;
 &lt;p&gt;where&lt;/p&gt;
-&lt;p&gt;$$\begin{aligned}
-\Delta w_{i} &amp;amp;=-\eta \frac{d \boldsymbol{E}}{d w_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}} x_{i}\right) \&lt;br&gt;
-\Delta b_{i} &amp;amp;=-\eta \frac{d \boldsymbol{E}}{d b_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}}\right)
-\end{aligned}$$&lt;/p&gt;
+&lt;p&gt;$$\Delta w_{i} &amp;amp;=-\eta \frac{d \boldsymbol{E}}{d w_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}} x_{i}\right)$$&lt;/p&gt;
+&lt;p&gt;$$\Delta b_{i} &amp;amp;=-\eta \frac{d \boldsymbol{E}}{d b_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}}\right)}$$&lt;/p&gt;
 &lt;p&gt;$\eta$ is the learning rate parameter. The main purpose of this parameter is to control the convergent speed as desired.&lt;/p&gt;
 &lt;h2 id=&#34;procedure&#34;&gt;Procedure&lt;/h2&gt;
 &lt;p&gt;Two multiplicative neural network structures are used to generate the bias
@@ -178,16 +174,16 @@ following formula.&lt;/p&gt;
 &lt;p&gt;The weights are calculated using the following rules:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;For the hidden-output layer:
-a. The error signal for the q th neuron in the output layer is&lt;/p&gt;
+&lt;p&gt;For the hidden-output layer:&lt;/p&gt;
+&lt;p&gt;a. The error signal for the q th neuron in the output layer is&lt;/p&gt;
 &lt;p&gt;$$\delta_{q}=m\left(x_{q}-y_{q}\right)$$&lt;/p&gt;
 &lt;p&gt;b. The updated weight w&lt;sub&gt;2(p, q)&lt;/sub&gt; is calculated as:&lt;/p&gt;
-&lt;p&gt;$$\begin{array}{c}w_{2(p, q)}(n+1)=w_{2(p, q)}(n)+\Delta w_{2(p, q)}(n+1) \&lt;br&gt;
-\Delta w_{2(p, q)}(n+1)=\eta \delta_{q} z_{p}+\alpha\left[\Delta w_{2(p, q)}(n)\right]\end{array}$$&lt;/p&gt;
+&lt;p&gt;$$\begin{array}{c}w_{2(p, q)}(n+1)=w_{2(p, q)}(n)+\Delta w_{2(p, q)}(n+1)\end{array}$$&lt;/p&gt;
+&lt;p&gt;$$\begin{array}{c}\Delta w_{2(p, q)}(n+1)=\eta \delta_{q} z_{p}+\alpha\left[\Delta w_{2(p, q)}(n)\right]\end{array}$$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;For the input-hidden layer:
-a. The error signal for p&lt;sup&gt;th&lt;/sup&gt; hidden neuron is calculated using:&lt;/p&gt;
+&lt;p&gt;For the input-hidden layer:&lt;/p&gt;
+&lt;p&gt;a. The error signal for p&lt;sup&gt;th&lt;/sup&gt; hidden neuron is calculated using:&lt;/p&gt;
 &lt;p&gt;$$\delta_{p}=z_{p}\left(1-z_{p}\right)\left[\sum_{k=1}^{N} \delta_{k} w_{1(p,k)}\right]$$&lt;/p&gt;
 &lt;p&gt;b. The weight vector w&lt;sub&gt;1(i,p)&lt;/sub&gt;(n) is calculated similarly as the above
 formula for the adjustment of weights, with z&lt;sub&gt;p&lt;/sub&gt; being replaced with
@@ -195,8 +191,8 @@ x&lt;sub&gt;i&lt;/sub&gt; and $\delta_{q}$ with $\delta_{p}$ .&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;After one epoch, let $\Delta(n)$ and $\Delta(n+1)$ be the previous and current errors of the outputs of the neural network respectively. The rule that is followed
-whether to decide if the weights are being updated or not, is:
-a. If $\Delta(n+1)&amp;gt;1.04[\Delta(n)]$,
+whether to decide if the weights are being updated or not, is:&lt;/p&gt;
+&lt;p&gt;a. If $\Delta(n+1)&amp;gt;1.04[\Delta(n)]$,
 The new weights, output, keys (always constant), error are
 unchanged, and $\alpha$ is changed to $0.7 \alpha$&lt;/p&gt;
 &lt;p&gt;b. If $\Delta(n+1)&amp;lt;=1.04[\Delta(n)]$,

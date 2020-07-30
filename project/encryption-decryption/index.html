@@ -724,15 +724,11 @@ biases. It is based on the popular steepest gradient descent approach. The error
 function E is defined as</p>
 <p>$$E=\frac{1}{2 N} \sum_{p=1}^{N}\left(y_{p}-y_{p}^{d}\right)^{2}$$</p>
 <p>where $\ y_{p}^{d}$ is the desired output and y<sub>p</sub> is the actual output for the p th input that is fed into the multiplicative neural network. The weights and biases of the model are updated using the following rules:</p>
-<p>$$\begin{aligned}
-w_{i}^{\text {new}} &amp;=w_{i}^{\text {old}}+\Delta w_{i} \<br>
-b_{i}^{\text {new}} &amp;=b_{i}^{\text {old}}+\Delta b_{i}
-\end{aligned}$$</p>
+<p>$$w_{i}^{\text {new}} &amp;=w_{i}^{\text {old}}+\Delta w_{i}$$</p>
+<p>$$b_{i}^{\text {new}} &amp;=b_{i}^{\text {old}}+\Delta b_{i}$$</p>
 <p>where</p>
-<p>$$\begin{aligned}
-\Delta w_{i} &amp;=-\eta \frac{d \boldsymbol{E}}{d w_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}} x_{i}\right) \<br>
-\Delta b_{i} &amp;=-\eta \frac{d \boldsymbol{E}}{d b_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}}\right)
-\end{aligned}$$</p>
+<p>$$\Delta w_{i} &amp;=-\eta \frac{d \boldsymbol{E}}{d w_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}} x_{i}\right)$$</p>
+<p>$$\Delta b_{i} &amp;=-\eta \frac{d \boldsymbol{E}}{d b_{i}}=-\eta \frac{1}{N} \sum_{p=1}^{N}\left(\left(y_{p}-y_{p}^{d}\right) y_{p}\left(1-y_{p}\right) \frac{u}{w_{i} x_{i}+b_{i}}\right)}$$</p>
 <p>$\eta$ is the learning rate parameter. The main purpose of this parameter is to control the convergent speed as desired.</p>
 <h2 id="procedure">Procedure</h2>
 <p>Two multiplicative neural network structures are used to generate the bias
@@ -816,16 +812,16 @@ following formula.</p>
 <p>The weights are calculated using the following rules:</p>
 <ol>
 <li>
-<p>For the hidden-output layer:
-a. The error signal for the q th neuron in the output layer is</p>
+<p>For the hidden-output layer:</p>
+<p>a. The error signal for the q th neuron in the output layer is</p>
 <p>$$\delta_{q}=m\left(x_{q}-y_{q}\right)$$</p>
 <p>b. The updated weight w<sub>2(p, q)</sub> is calculated as:</p>
-<p>$$\begin{array}{c}w_{2(p, q)}(n+1)=w_{2(p, q)}(n)+\Delta w_{2(p, q)}(n+1) \<br>
-\Delta w_{2(p, q)}(n+1)=\eta \delta_{q} z_{p}+\alpha\left[\Delta w_{2(p, q)}(n)\right]\end{array}$$</p>
+<p>$$\begin{array}{c}w_{2(p, q)}(n+1)=w_{2(p, q)}(n)+\Delta w_{2(p, q)}(n+1)\end{array}$$</p>
+<p>$$\begin{array}{c}\Delta w_{2(p, q)}(n+1)=\eta \delta_{q} z_{p}+\alpha\left[\Delta w_{2(p, q)}(n)\right]\end{array}$$</p>
 </li>
 <li>
-<p>For the input-hidden layer:
-a. The error signal for p<sup>th</sup> hidden neuron is calculated using:</p>
+<p>For the input-hidden layer:</p>
+<p>a. The error signal for p<sup>th</sup> hidden neuron is calculated using:</p>
 <p>$$\delta_{p}=z_{p}\left(1-z_{p}\right)\left[\sum_{k=1}^{N} \delta_{k} w_{1(p,k)}\right]$$</p>
 <p>b. The weight vector w<sub>1(i,p)</sub>(n) is calculated similarly as the above
 formula for the adjustment of weights, with z<sub>p</sub> being replaced with
@@ -833,8 +829,8 @@ x<sub>i</sub> and $\delta_{q}$ with $\delta_{p}$ .</p>
 </li>
 <li>
 <p>After one epoch, let $\Delta(n)$ and $\Delta(n+1)$ be the previous and current errors of the outputs of the neural network respectively. The rule that is followed
-whether to decide if the weights are being updated or not, is:
-a. If $\Delta(n+1)&gt;1.04[\Delta(n)]$,
+whether to decide if the weights are being updated or not, is:</p>
+<p>a. If $\Delta(n+1)&gt;1.04[\Delta(n)]$,
 The new weights, output, keys (always constant), error are
 unchanged, and $\alpha$ is changed to $0.7 \alpha$</p>
 <p>b. If $\Delta(n+1)&lt;=1.04[\Delta(n)]$,
