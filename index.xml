@@ -5,12 +5,21 @@
     <link>https://archana1998.github.io/</link>
       <atom:link href="https://archana1998.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Archana Swaminathan</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Sun, 16 Aug 2020 11:03:12 +0530</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Sun, 16 Aug 2020 21:12:27 +0530</lastBuildDate>
     <image>
       <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png</url>
       <title>Archana Swaminathan</title>
       <link>https://archana1998.github.io/</link>
     </image>
+    
+    <item>
+      <title>Structural Damage Detection using ConvNets</title>
+      <link>https://archana1998.github.io/project/damage-detection/</link>
+      <pubDate>Sun, 16 Aug 2020 21:12:27 +0530</pubDate>
+      <guid>https://archana1998.github.io/project/damage-detection/</guid>
+      <description>&lt;p&gt;Presented our work at the &lt;a href = &#34;https://cmos.in1touch.org/site/congress_home&#34;&gt;  54th Canadian CMOS conference, 2020. &lt;/a&gt; Worked under the supervision of &lt;a href =&#34;https://scholar.google.co.in/citations?user=42ZAdYUAAAAJ&amp;hl=en&#34;&gt;Dr. S Radhika&lt;/a&gt;, of the Department of Electrical and Electronics Engineering, BITS Pilani. Manuscript accepted and to be published.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Contactless Gesture Recognition</title>
