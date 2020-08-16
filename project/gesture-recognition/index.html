@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="Introduction Gesture Recognition Systems are commonly utilized as an interface between computers and humans, along with interacting with many electronic instruments. These systems can be classified into three classes as follows:">
+  <meta name="description" content="A contactless gesture recognition system that uses IR Proximity Sensors to classify different hand gestures. Interfaced with VLC Media player to pause and play videos.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://archana1998.github.io/project/gesture-recognition/">
@@ -237,7 +237,7 @@
   <meta property="og:site_name" content="Archana Swaminathan">
   <meta property="og:url" content="https://archana1998.github.io/project/gesture-recognition/">
   <meta property="og:title" content="Contactless Gesture Recognition | Archana Swaminathan">
-  <meta property="og:description" content="Introduction Gesture Recognition Systems are commonly utilized as an interface between computers and humans, along with interacting with many electronic instruments. These systems can be classified into three classes as follows:"><meta property="og:image" content="https://archana1998.github.io/project/gesture-recognition/featured.jpg">
+  <meta property="og:description" content="A contactless gesture recognition system that uses IR Proximity Sensors to classify different hand gestures. Interfaced with VLC Media player to pause and play videos."><meta property="og:image" content="https://archana1998.github.io/project/gesture-recognition/featured.jpg">
   <meta property="twitter:image" content="https://archana1998.github.io/project/gesture-recognition/featured.jpg"><meta property="og:locale" content="en-us">
   
     
@@ -289,7 +289,7 @@
       "url": "https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Introduction Gesture Recognition Systems are commonly utilized as an interface between computers and humans, along with interacting with many electronic instruments. These systems can be classified into three classes as follows:"
+  "description": "A contactless gesture recognition system that uses IR Proximity Sensors to classify different hand gestures. Interfaced with VLC Media player to pause and play videos."
 }
 </script>
 
@@ -720,14 +720,14 @@
 <h1 id="problem-solving-methodology">Problem Solving Methodology</h1>
 <p>Components Used and Setup:
 The components we used are:
-1. Breadboard
-2. Arduino Uno Microcontroller
-3. 2 digital IR Sensors
-4. Jumper wires
-5. Laptop for interfacing
+- Breadboard
+- Arduino Uno Microcontroller
+- 2 digital IR Sensors
+- Jumper wires
+- Laptop for interfacing
 Languages used:
-1. Arduino IDE (Based on C++)
-2. Python (for interfacing sensor output with VLC)</p>
+- Arduino IDE (Based on C++)
+- Python (for interfacing sensor output with VLC)</p>
 <p>We connected two IR sensors to the Breadboard, placed at a distance of approximately 3 cm from each other. These were then interfaced with the Arduino Uno, which was connected to the laptop.</p>
 <p>Voltage is applied to the pair of IR LEDs, which in succession emit Infrared light. This light propagates through the air and once it hits the hand (or object), which acts as a hurdle, it is reflected back to the receiver. The LED on the diode glows, thus indicating that an object has been detected.</p>
 <p>A digital sensor system consists of the sensor itself, a cable, and a transmitter. The sensor has an electronic chip. The measuring signal is directly converted into a digital signal inside the sensor. The data transmission through the cable is also digital. This digital data transmission is not sensitive to cable length, cable resistance or impedance.</p>
@@ -779,12 +779,12 @@ The recall of our system is = 86.6% (26 TPs and 4 FNs)</p>
 Practical Applications
 We have integrated the recognition system with VLC, to control playback of the video. Similarly, the setup can easily be integrated with any mobile device that is low on resources, as well as used with complex devices, as IR sensors are fundamental in building light reflection systems and are extremely versatile.</p>
 <h1 id="further-scope">Further scope</h1>
-<pre><code>1. Friendly user interface that can be easily understood by any user and eventually its application can be extended to more applications like PDF reader, video games etc.
-2. Computationally inexpensive and low power consuming hardware and software setup, that makes it ideal for integrating with any device, both simple and complex.
+<pre><code>- Friendly user interface that can be easily understood by any user and eventually its application can be extended to more applications like PDF reader, video games etc.
+- Computationally inexpensive and low power consuming hardware and software setup, that makes it ideal for integrating with any device, both simple and complex.
 </code></pre>
 <h1 id="limitations">Limitations</h1>
-<pre><code>1. Ambient light obstructs the functioning as is the case with infrared sensors, as they are extremely sensitive. A proper optical barrier must be used to prevent this.
-2. We have assumed values of time delays between gestures according to what worked well for our test dataset. This leads to the system being slightly inflexible with different speeds of gestures. 
+<pre><code>- Ambient light obstructs the functioning as is the case with infrared sensors, as they are extremely sensitive. A proper optical barrier must be used to prevent this.
+- We have assumed values of time delays between gestures according to what worked well for our test dataset. This leads to the system being slightly inflexible with different speeds of gestures. 
 </code></pre>
 
     </div>
