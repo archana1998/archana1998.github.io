@@ -19,23 +19,25 @@
       <guid>https://archana1998.github.io/project/gesture-recognition/</guid>
       <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Gesture Recognition Systems are commonly utilized as an interface between computers and humans, along with interacting with many electronic instruments. These systems can be classified into three classes as follows:&lt;/p&gt;
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;Motion-based: When the user holds a device or a controller that detects the gesture made.&lt;/li&gt;
 &lt;li&gt;Touch-based: When the system includes a touch-screen and the positions and directions of the finger or equivalent tool of the user are mapped, thus recognizing the gesture.&lt;/li&gt;
 &lt;li&gt;Vision-based: When the system makes use of image and signal processing to detect gestures made without touching any device.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 &lt;p&gt;The first two types of systems need the users to hold and contact certain devices, for the gesture recognition, and vision-based systems use camera setups, image processing and techniques that involve computer vision. These systems are difficult to set up for small scale use and are also expensive and extremely power hungry. For building a system that needs to function when there are limited resources available, it is important that the setup cost, power consumption and ease and size of setup is taken into consideration. Keeping this in mind, we have built a contactless gesture recognition system that consists of a couple of digital infrared sensors, that have been programmed to do the gesture recognition using a custom algorithm, with an Arduino Uno Microcontroller.&lt;/p&gt;
 &lt;h1 id=&#34;problem-solving-methodology&#34;&gt;Problem Solving Methodology&lt;/h1&gt;
 &lt;p&gt;Components Used and Setup:
-The components we used are:
-- Breadboard
-- Arduino Uno Microcontroller
-- 2 digital IR Sensors
-- Jumper wires
-- Laptop for interfacing
-Languages used:
-- Arduino IDE (Based on C++)
-- Python (for interfacing sensor output with VLC)&lt;/p&gt;
+The components we used are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Breadboard&lt;/li&gt;
+&lt;li&gt;Arduino Uno Microcontroller&lt;/li&gt;
+&lt;li&gt;2 digital IR Sensors&lt;/li&gt;
+&lt;li&gt;Jumper wires&lt;/li&gt;
+&lt;li&gt;Laptop for interfacing
+Languages used:&lt;/li&gt;
+&lt;li&gt;Arduino IDE (Based on C++)&lt;/li&gt;
+&lt;li&gt;Python (for interfacing sensor output with VLC)&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;We connected two IR sensors to the Breadboard, placed at a distance of approximately 3 cm from each other. These were then interfaced with the Arduino Uno, which was connected to the laptop.&lt;/p&gt;
 &lt;p&gt;Voltage is applied to the pair of IR LEDs, which in succession emit Infrared light. This light propagates through the air and once it hits the hand (or object), which acts as a hurdle, it is reflected back to the receiver. The LED on the diode glows, thus indicating that an object has been detected.&lt;/p&gt;
 &lt;p&gt;A digital sensor system consists of the sensor itself, a cable, and a transmitter. The sensor has an electronic chip. The measuring signal is directly converted into a digital signal inside the sensor. The data transmission through the cable is also digital. This digital data transmission is not sensitive to cable length, cable resistance or impedance.&lt;/p&gt;
@@ -87,13 +89,15 @@ The recall of our system is = 86.6% (26 TPs and 4 FNs)&lt;/p&gt;
 Practical Applications
 We have integrated the recognition system with VLC, to control playback of the video. Similarly, the setup can easily be integrated with any mobile device that is low on resources, as well as used with complex devices, as IR sensors are fundamental in building light reflection systems and are extremely versatile.&lt;/p&gt;
 &lt;h1 id=&#34;further-scope&#34;&gt;Further scope&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;- Friendly user interface that can be easily understood by any user and eventually its application can be extended to more applications like PDF reader, video games etc.
-- Computationally inexpensive and low power consuming hardware and software setup, that makes it ideal for integrating with any device, both simple and complex.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Friendly user interface that can be easily understood by any user and eventually its application can be extended to more applications like PDF reader, video games etc.&lt;/li&gt;
+&lt;li&gt;Computationally inexpensive and low power consuming hardware and software setup, that makes it ideal for integrating with any device, both simple and complex.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&#34;limitations&#34;&gt;Limitations&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;- Ambient light obstructs the functioning as is the case with infrared sensors, as they are extremely sensitive. A proper optical barrier must be used to prevent this.
-- We have assumed values of time delays between gestures according to what worked well for our test dataset. This leads to the system being slightly inflexible with different speeds of gestures. 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Ambient light obstructs the functioning as is the case with infrared sensors, as they are extremely sensitive. A proper optical barrier must be used to prevent this.&lt;/li&gt;
+&lt;li&gt;We have assumed values of time delays between gestures according to what worked well for our test dataset. This leads to the system being slightly inflexible with different speeds of gestures.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
