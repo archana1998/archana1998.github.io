@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Signal Processing | Archana Swaminathan</title>
+    <link>https://archana1998.github.io/tag/signal-processing/</link>
+      <atom:link href="https://archana1998.github.io/tag/signal-processing/index.xml" rel="self" type="application/rss+xml" />
+    <description>Signal Processing</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Sun, 16 Aug 2020 11:03:12 +0530</lastBuildDate>
+    <image>
+      <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png</url>
+      <title>Signal Processing</title>
+      <link>https://archana1998.github.io/tag/signal-processing/</link>
+    </image>
+    
+    <item>
+      <title>Contactless Gesture Recognition</title>
+      <link>https://archana1998.github.io/project/gesture-recognition/</link>
+      <pubDate>Sun, 16 Aug 2020 11:03:12 +0530</pubDate>
+      <guid>https://archana1998.github.io/project/gesture-recognition/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Gesture Recognition Systems are commonly utilized as an interface between computers and humans, along with interacting with many electronic instruments. These systems can be classified into three classes as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Motion-based: When the user holds a device or a controller that detects the gesture made.&lt;/li&gt;
+&lt;li&gt;Touch-based: When the system includes a touch-screen and the positions and directions of the finger or equivalent tool of the user are mapped, thus recognizing the gesture.&lt;/li&gt;
+&lt;li&gt;Vision-based: When the system makes use of image and signal processing to detect gestures made without touching any device.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The first two types of systems need the users to hold and contact certain devices, for the gesture recognition, and vision-based systems use camera setups, image processing and techniques that involve computer vision. These systems are difficult to set up for small scale use and are also expensive and extremely power hungry. For building a system that needs to function when there are limited resources available, it is important that the setup cost, power consumption and ease and size of setup is taken into consideration. Keeping this in mind, we have built a contactless gesture recognition system that consists of a couple of digital infrared sensors, that have been programmed to do the gesture recognition using a custom algorithm, with an Arduino Uno Microcontroller.&lt;/p&gt;
+&lt;h2 id=&#34;problem-solving-methodology&#34;&gt;Problem Solving Methodology&lt;/h2&gt;
+&lt;p&gt;Components Used and Setup:
+The components we used are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Breadboard&lt;/li&gt;
+&lt;li&gt;Arduino Uno Microcontroller&lt;/li&gt;
+&lt;li&gt;2 digital IR Sensors&lt;/li&gt;
+&lt;li&gt;Jumper wires&lt;/li&gt;
+&lt;li&gt;Laptop for interfacing
+Languages used:&lt;/li&gt;
+&lt;li&gt;Arduino IDE (Based on C++)&lt;/li&gt;
+&lt;li&gt;Python (for interfacing sensor output with VLC)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-setup&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/project/gesture-recognition/setup_hu3c30132babc4cc16104ed6d6062aecb7_271842_2000x2000_fit_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;966&#34; height=&#34;724&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Setup
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;We connected two IR sensors to the Breadboard, placed at a distance of approximately 3 cm from each other. These were then interfaced with the Arduino Uno, which was connected to the laptop.&lt;/p&gt;
+&lt;p&gt;Voltage is applied to the pair of IR LEDs, which in succession emit Infrared light. This light propagates through the air and once it hits the hand (or object), which acts as a hurdle, it is reflected back to the receiver. The LED on the diode glows, thus indicating that an object has been detected.&lt;/p&gt;
+&lt;p&gt;A digital sensor system consists of the sensor itself, a cable, and a transmitter. The sensor has an electronic chip. The measuring signal is directly converted into a digital signal inside the sensor. The data transmission through the cable is also digital. This digital data transmission is not sensitive to cable length, cable resistance or impedance.&lt;/p&gt;
+&lt;p&gt;Using the concept of states and delay as in Digital Design, we have created two states of the two sensors each placed on the left and right. These two states are defined and calibrated using a time delay of a few hundred microseconds in the gesture classification algorithm written using the Arduino IDE.&lt;/p&gt;
+&lt;p&gt;We have taken two states in the algorithm into consideration namely Q(t) and Q(t+d) where d is the delay defined. The algorithm is defined such that left sensor and right sensor digital values are checked first and then after the defined delay, both sensors are checked for their Boolean values again and therefore the gesture is recognized and printed on the screen after running the code in the Arduino software. The chip on the Arduino Uno board plugs straight into the laptop’s USB port and supports the computer as a virtual serial port.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-state-table&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/project/gesture-recognition/table_hu2d1c1a3241fc2a5a508ad4f659b75269_15173_2000x2000_fit_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;486&#34; height=&#34;209&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    State table
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;To make the gesture recognition feature interactive, we have interfaced the output with VLC Media player, so that we can pause, play and rewind/go forward with the playback. To do this interfacing, we have written a Python script, importing the Python library pyautogui, that provides functionality of control of the computer’s keyboard.&lt;/p&gt;
+&lt;h2 id=&#34;results-and-conclusions&#34;&gt;Results and Conclusions&lt;/h2&gt;
+&lt;p&gt;We tested the gesture recognition system for accuracy by using the precision-recall matric. We took in 30 different samples for input.
+The precision is calculated as TP/(TP+FP), where TP denotes the number of true positives and FP denotes the number of false positives.
+The precision of our system is = 90% (27 TPs and 3 FPs)&lt;/p&gt;
+&lt;p&gt;The recall is calculated as TP/(TP+FN), where TP denotes the number of true positives, and FN denotes the number of false negatives.
+The recall of our system is = 86.6% (26 TPs and 4 FNs)&lt;/p&gt;
+&lt;p&gt;High precision implies that there is less chances of getting false alarms, and recall expresses the ability to find all relevant information from the dataset.
+Practical Applications
+We have integrated the recognition system with VLC, to control playback of the video. Similarly, the setup can easily be integrated with any mobile device that is low on resources, as well as used with complex devices, as IR sensors are fundamental in building light reflection systems and are extremely versatile.&lt;/p&gt;
+&lt;h2 id=&#34;further-scope&#34;&gt;Further scope&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Friendly user interface that can be easily understood by any user and eventually its application can be extended to more applications like PDF reader, video games etc.&lt;/li&gt;
+&lt;li&gt;Computationally inexpensive and low power consuming hardware and software setup, that makes it ideal for integrating with any device, both simple and complex.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;limitations&#34;&gt;Limitations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ambient light obstructs the functioning as is the case with infrared sensors, as they are extremely sensitive. A proper optical barrier must be used to prevent this.&lt;/li&gt;
+&lt;li&gt;We have assumed values of time delays between gestures according to what worked well for our test dataset. This leads to the system being slightly inflexible with different speeds of gestures.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Compressive Sensing and Denoising of Images using the Ramanujan Fourier Transform</title>
+      <link>https://archana1998.github.io/project/compressive-sensing/</link>
+      <pubDate>Sat, 18 Jul 2020 18:40:47 +0530</pubDate>
+      <guid>https://archana1998.github.io/project/compressive-sensing/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;The Ramanujan Sums were first proposed by Srinivasan Ramanujan in 1918, and have become exceedingly popular in the fields of signal processing,time-frequency analysis and shape recognition. The sums are by nature, orthogonal. This results in them offering excellent conservation of energy, which is a property shared by Fourier Transform as well.&lt;/p&gt;
+
+&lt;p&gt;We have used Matrix Multiplication to obtain the Ramanujan Basis, for our computation. The Ramanujan Sums are defined as n&lt;sup&gt;th&lt;/sup&gt; powers of q&lt;sup&gt;th&lt;/sup&gt;primitive roots of unity, which can be computed using this simple formula:&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[c_{q}(n)=\mu\left(\frac{q}{g c d(q, n)}\right) \frac{\varphi(q)}{\varphi\left(\frac{q}{g c d(q, n)}\right)}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Where $q=\prod_{i} q_{i}^{a_{i}}$,(q&lt;sub&gt;i&lt;/sub&gt; is prime). Then, $\varphi(q)=q \prod_{i}\left(1-\frac{1}{q i}\right)$.&lt;/p&gt;
+
+&lt;p&gt;$\mu(n)$ is the Mobius function, which is equal to 0 if n contains a square number, 1 if n = 1 and (-1)*k if n is a product of k distinct prime numbers.&lt;/p&gt;
+
+&lt;p&gt;The Ramanujan matrix can be defined as:&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[A(q, j)=\frac{1}{\varphi(q) M} c_{q}(\bmod (j-1, q)+1)\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;The 2-D forward Ramanujan Sum Transform is given as:&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[Y(p, q)=\frac{1}{\varphi(p) \varphi(q)} \frac{1}{M N} \sum_{m=1}^{M} \sum_{n=1}^{N} x(m, n) C_{p}(m) C_{q}(n)\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;which in matrix terms can be defined as&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[Y=A * A^{\top}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;and the inverse 2D Ramanujan transform in matrix terms is:&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[X=A^{-1} Y\left(A^{-1}\right)^{\top}\]&lt;/span&gt;&lt;/p&gt;
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-original-transformed-and-inversed-image&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/project/compressive-sensing/montage1_hu3f8e044785174c9754427187ccca8f30_16041_2000x2000_fit_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;673&#34; height=&#34;184&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Original, Transformed and Inversed Image
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;h2 id=&#34;compressive-sensing&#34;&gt;Compressive Sensing&lt;/h2&gt;
+
+&lt;p&gt;The principle behind the use of compressive sensing as a signal processing technique, is that most test signals are not actually completely comprised of noise, but most have a great degree of redundancy in them. Sparse representation of signals in a particular domain signifies that most of the signal coefficients are either zero or close to zero.&lt;/p&gt;
+
+&lt;p&gt;Compressive measurements, which are a weighed linear combination of signal samples, are first taken in a basis that is different from the sparse basis.&lt;/p&gt;
+
+&lt;h3 id=&#34;algorithm&#34;&gt;Algorithm&lt;/h3&gt;
+
+&lt;p&gt;We use the generated Ramanujan Basis to do the sparse reconstruction. First, the sparse signal is obtained by multiplyingthe Ramanujan Basis A with the flattened image vector (here we are using the Cameraman Image that has been resized to 50 * 50).
+Our Ramanujan Basis has dimensions of 2500 * 2500.&lt;/p&gt;
+
+&lt;p&gt;Thus,&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[Z=A^{*} x\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Where Z is the sparse representation of the cameraman image, and x is the flattened image vector of the original image.
+We next create a random measurement matrix of dimension m*n, where we keep m = 5000 and n = 2500. This measurement matrix (Phi) is then multiplied by the sparse signal z.&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[Y=P h i * Z\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;We then use Orthogonal Matching Pursuit Algorithm, which aims to approximately find the most accurate  projections of data in multiple dimensions on to the span of a redundant or overcomplete dictionary. Here, the overcomplete dictionary we use is the Ramanujan Basis A.
+The orthogonal matching pursuit algorithm is then applied onto the signal Y, and we have considered 1700 iterations.&lt;/p&gt;
+
+&lt;p&gt;The plot of the original sparse representation and the OMP representation is given below:&lt;/p&gt;
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-plot-of-original-sparse-representation-blue-and-omp-representation-red&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/project/compressive-sensing/plot1_hudbf82b9e3e6b647977479df89ebf2cb6_10556_2000x2000_fit_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;628&#34; height=&#34;333&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Plot of original sparse representation (blue) and OMP representation (red)
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;p&gt;The image is then reconstructed by taking the inverse of the Ramanujan Basis, and multiplying it with the OMP sparse representation.&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[R e c  =A^{-1} * x w s r\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Where xwsr is the OMP representation, and Rec is the reconstructed image signal. This is then resized to obtain the final image, which has been compared with the original image below:&lt;/p&gt;
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-original-and-final-image&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/project/compressive-sensing/orgvsfinal_hu69f64e62c985d6a5e0fb9a9c8fbbb991_25782_2000x2000_fit_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;317&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Original and Final image
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
+
+&lt;p&gt;We compare and evaluate the performance of the Compressive Sensing Algorithm by using PSNR, SSIM and MSE image evaluation metrics.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;PSNR: Peak Signal to Noise Ratio&lt;/li&gt;
+&lt;li&gt;SSIM: Structural Similarity Index&lt;/li&gt;
+&lt;li&gt;MSE: Mean Square Error&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ideally, high values of PSNR, SSIM(max=1) and MSE show favourable performance of the reconstruction algorithm.The results obtained for this approach are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;PSNR = 23.1362&lt;/li&gt;
+&lt;li&gt;SSIM = 0.6265&lt;/li&gt;
+&lt;li&gt;MSE = 315.8316&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;image-denoising&#34;&gt;Image Denoising&lt;/h2&gt;
+
+&lt;p&gt;Image denoising is commonly analysed and solved as an inverse problem. A method of doing this is to decompose the image signal in a sparse way, over a dictionary that is overcomplete. We use the Ramanujan Dictionary here to do the denoising, which is trained with three images using the K-SVD algorithm, based on Orthogonal Matching Pursuit (OMP).&lt;/p&gt;
+
+&lt;h3 id=&#34;ksvd-algorithm&#34;&gt;K-SVD Algorithm&lt;/h3&gt;
+
+&lt;p&gt;The K-SVD algorithm is a type of K-means clustering, which has been generalized. The k-
+means clustering is also considered a method of doing representation of sparse signals. This
+implies solving the equation below, to find the best code to represent the signal data {y&lt;sub&gt;i&lt;/sub&gt;} from i=1 to M&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\min _{D, X}\left\{\|Y-D X\|_{F}^{2}\right\}, \text { subject to } \forall i,\left\|x_{i}\right\|_{0}=1\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;F here is the Frobenius norm. The K-SVD algorithm is similar to the K-means in terms of the process of construction, but differs in the sense of the relaxation of the sparsity term in the constraint. This helps achieve a linear combination of the dictionary atoms. The relaxation is that the number of entries that are not zero in each column can be greater than 1, but less than a defined number T&lt;sub&gt;0&lt;/sub&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thus, the objective function hence becomes&lt;/p&gt;
+
+&lt;p&gt;&lt;span  class=&#34;math&#34;&gt;\[\min _{D, X}\left\{\|Y-D X\|_{F}^{2}\right\} \text { , subject to } \forall i,\left\|x_{i}\right\|_{0} \leq T_{0}\]&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;In the algorithm, the dictionary D is first fixed, and the aim is to find the perfect coefficient matrix X. To find this, a pursuit method that does the approximation of the optimal X is used. OMP was chosen as the suitable method to calculate the coefficients of the matrix here.&lt;/p&gt;
+
+&lt;h3 id=&#34;implementation-and-results&#34;&gt;Implementation and Results&lt;/h3&gt;
+
+&lt;p&gt;In the implementation for training the dictionary  nd the sparse data representation, the
+parameters for the training are as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Patch Size = 15&lt;/li&gt;
+&lt;li&gt;Percentage of Overlap = 0.5&lt;/li&gt;
+&lt;li&gt;Sparsity Threshold = 6&lt;/li&gt;
+&lt;li&gt;Error Tolerance = 11.5
+Three images, Boat, Lena and Barbara were used for the dictionary training. Patches were made
+of these images and stacked. The number of iterations was the size of the stacked images that
+formed the training data. In this case, the number was 2883. The dictionary and sparse data
+representation were trained using the K-SVD algorithm and saved, the training process took
+approximately 5.5 hours on an Intel i5 6 th gen processor, with a Nvidia 940mx GPU (personal laptop, using MATLAB R2019a).&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-original-and-reconstructed-boat-image&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/project/compressive-sensing/reconmontage1_hu1cc507d436712babecbb0e0103bd6f3d_16355_2000x2000_fit_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;205&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Original and Reconstructed Boat image
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;p&gt;We added Gaussian Noise to a Lena Image and denoised it using the trained dictionary.&lt;/p&gt;
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-original-noisy-and-denoised-lena-image&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/project/compressive-sensing/denoised_huf16ae9dc124035bdd7e9ad8e397ffe59_15436_2000x2000_fit_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;154&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Original, Noisy and Denoised Lena image
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;MSE for noisy image = 68.0747&lt;/li&gt;
+&lt;li&gt;MSE for denoised image = 55.2772&lt;/li&gt;
+&lt;li&gt;PSNR for noisy image = 29.8009&lt;/li&gt;
+&lt;li&gt;PSNR for denoised image = 29.9672&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;The Ramanujan Transform is a powerful transform and basis dictionary that can be used for sparse representation of an image. It can be trained efficiently and reconstructs images in a
+better way as compared to using DCT dictionary. For compressive sensing algorithm, the training time of the Ramanujan dictionary is more compared to the DCT dictionary training time, but it is more efficient in reconstruction. It is also good at denoising images, and is efficiently trained using the K-SVD algorithm.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

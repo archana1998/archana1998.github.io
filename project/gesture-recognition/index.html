@@ -576,24 +576,18 @@
 
 
 
-
-
-
-
-
-
-
+  
 
   
   
-
-
+  
 <div class="article-container pt-3">
   <h1>Contactless Gesture Recognition</h1>
 
   
 
   
+    
 
 
 <div class="article-metadata">
@@ -638,7 +632,7 @@
 
 </div>
 
-  
+    
 
 
 
@@ -694,14 +688,7 @@
 </div>
 
 
-</div>
-
-
-<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 558px; max-height: 660px;">
-  <div style="position: relative">
-    <img src="/project/gesture-recognition/featured.jpg" alt="" class="featured-image">
-    
-  </div>
+  
 </div>
 
 
@@ -709,7 +696,7 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h1 id="introduction">Introduction</h1>
+      <h2 id="introduction">Introduction</h2>
 <p>Gesture Recognition Systems are commonly utilized as an interface between computers and humans, along with interacting with many electronic instruments. These systems can be classified into three classes as follows:</p>
 <ul>
 <li>Motion-based: When the user holds a device or a controller that detects the gesture made.</li>
@@ -717,7 +704,7 @@
 <li>Vision-based: When the system makes use of image and signal processing to detect gestures made without touching any device.</li>
 </ul>
 <p>The first two types of systems need the users to hold and contact certain devices, for the gesture recognition, and vision-based systems use camera setups, image processing and techniques that involve computer vision. These systems are difficult to set up for small scale use and are also expensive and extremely power hungry. For building a system that needs to function when there are limited resources available, it is important that the setup cost, power consumption and ease and size of setup is taken into consideration. Keeping this in mind, we have built a contactless gesture recognition system that consists of a couple of digital infrared sensors, that have been programmed to do the gesture recognition using a custom algorithm, with an Arduino Uno Microcontroller.</p>
-<h1 id="problem-solving-methodology">Problem Solving Methodology</h1>
+<h2 id="problem-solving-methodology">Problem Solving Methodology</h2>
 <p>Components Used and Setup:
 The components we used are:</p>
 <ul>
@@ -730,12 +717,6 @@ Languages used:</li>
 <li>Arduino IDE (Based on C++)</li>
 <li>Python (for interfacing sensor output with VLC)</li>
 </ul>
-<p>We connected two IR sensors to the Breadboard, placed at a distance of approximately 3 cm from each other. These were then interfaced with the Arduino Uno, which was connected to the laptop.</p>
-<p>Voltage is applied to the pair of IR LEDs, which in succession emit Infrared light. This light propagates through the air and once it hits the hand (or object), which acts as a hurdle, it is reflected back to the receiver. The LED on the diode glows, thus indicating that an object has been detected.</p>
-<p>A digital sensor system consists of the sensor itself, a cable, and a transmitter. The sensor has an electronic chip. The measuring signal is directly converted into a digital signal inside the sensor. The data transmission through the cable is also digital. This digital data transmission is not sensitive to cable length, cable resistance or impedance.</p>
-<p>Using the concept of states and delay as in Digital Design, we have created two states of the two sensors each placed on the left and right. These two states are defined and calibrated using a time delay of a few hundred microseconds in the gesture classification algorithm written using the Arduino IDE.</p>
-<p>We have taken two states in the algorithm into consideration namely Q(t) and Q(t+d) where d is the delay defined. The algorithm is defined such that left sensor and right sensor digital values are checked first and then after the defined delay, both sensors are checked for their Boolean values again and therefore the gesture is recognized and printed on the screen after running the code in the Arduino software. The chip on the Arduino Uno board plugs straight into the laptop’s USB port and supports the computer as a virtual serial port.</p>
-<p>To make the gesture recognition feature interactive, we have interfaced the output with VLC Media player, so that we can pause, play and rewind/go forward with the playback. To do this interfacing, we have written a Python script, importing the Python library pyautogui, that provides functionality of control of the computer’s keyboard.</p>
 
 
 
@@ -771,7 +752,48 @@ Languages used:</li>
 
 </figure>
 
-<h1 id="results-and-conclusions">Results and Conclusions</h1>
+<p>We connected two IR sensors to the Breadboard, placed at a distance of approximately 3 cm from each other. These were then interfaced with the Arduino Uno, which was connected to the laptop.</p>
+<p>Voltage is applied to the pair of IR LEDs, which in succession emit Infrared light. This light propagates through the air and once it hits the hand (or object), which acts as a hurdle, it is reflected back to the receiver. The LED on the diode glows, thus indicating that an object has been detected.</p>
+<p>A digital sensor system consists of the sensor itself, a cable, and a transmitter. The sensor has an electronic chip. The measuring signal is directly converted into a digital signal inside the sensor. The data transmission through the cable is also digital. This digital data transmission is not sensitive to cable length, cable resistance or impedance.</p>
+<p>Using the concept of states and delay as in Digital Design, we have created two states of the two sensors each placed on the left and right. These two states are defined and calibrated using a time delay of a few hundred microseconds in the gesture classification algorithm written using the Arduino IDE.</p>
+<p>We have taken two states in the algorithm into consideration namely Q(t) and Q(t+d) where d is the delay defined. The algorithm is defined such that left sensor and right sensor digital values are checked first and then after the defined delay, both sensors are checked for their Boolean values again and therefore the gesture is recognized and printed on the screen after running the code in the Arduino software. The chip on the Arduino Uno board plugs straight into the laptop’s USB port and supports the computer as a virtual serial port.</p>
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-state-table">
+
+
+
+  <img data-src="/project/gesture-recognition/table_hu2d1c1a3241fc2a5a508ad4f659b75269_15173_2000x2000_fit_q90_lanczos.jpg" class="lazyload" alt="" width="486" height="209">
+
+
+
+  
+  
+  <figcaption data-pre="Figure " data-post=":" class="numbered">
+    State table
+  </figcaption>
+
+
+</figure>
+
+<p>To make the gesture recognition feature interactive, we have interfaced the output with VLC Media player, so that we can pause, play and rewind/go forward with the playback. To do this interfacing, we have written a Python script, importing the Python library pyautogui, that provides functionality of control of the computer’s keyboard.</p>
+<h2 id="results-and-conclusions">Results and Conclusions</h2>
 <p>We tested the gesture recognition system for accuracy by using the precision-recall matric. We took in 30 different samples for input.
 The precision is calculated as TP/(TP+FP), where TP denotes the number of true positives and FP denotes the number of false positives.
 The precision of our system is = 90% (27 TPs and 3 FPs)</p>
@@ -780,12 +802,12 @@ The recall of our system is = 86.6% (26 TPs and 4 FNs)</p>
 <p>High precision implies that there is less chances of getting false alarms, and recall expresses the ability to find all relevant information from the dataset.
 Practical Applications
 We have integrated the recognition system with VLC, to control playback of the video. Similarly, the setup can easily be integrated with any mobile device that is low on resources, as well as used with complex devices, as IR sensors are fundamental in building light reflection systems and are extremely versatile.</p>
-<h1 id="further-scope">Further scope</h1>
+<h2 id="further-scope">Further scope</h2>
 <ul>
 <li>Friendly user interface that can be easily understood by any user and eventually its application can be extended to more applications like PDF reader, video games etc.</li>
 <li>Computationally inexpensive and low power consuming hardware and software setup, that makes it ideal for integrating with any device, both simple and complex.</li>
 </ul>
-<h1 id="limitations">Limitations</h1>
+<h2 id="limitations">Limitations</h2>
 <ul>
 <li>Ambient light obstructs the functioning as is the case with infrared sensors, as they are extremely sensitive. A proper optical barrier must be used to prevent this.</li>
 <li>We have assumed values of time delays between gestures according to what worked well for our test dataset. This leads to the system being slightly inflexible with different speeds of gestures.</li>
@@ -803,6 +825,8 @@ We have integrated the recognition system with VLC, to control playback of the v
 <div class="article-tags">
   
   <a class="badge badge-light" href="/tag/electronics/">Electronics</a>
+  
+  <a class="badge badge-light" href="/tag/signal-processing/">Signal Processing</a>
   
 </div>
 
@@ -933,11 +957,11 @@ We have integrated the recognition system with VLC, to control playback of the v
     <h3>Related</h3>
     <ul>
       
+      <li><a href="/project/compressive-sensing/">Compressive Sensing and Denoising of Images using the Ramanujan Fourier Transform</a></li>
+      
       <li><a href="/project/damage-detection/">Structural Damage Detection using ConvNets</a></li>
       
       <li><a href="/project/encryption-decryption/">Image Encryption and Decryption using Artificial Neural Networks</a></li>
-      
-      <li><a href="/project/compressive-sensing/">Compressive Sensing and Denoising of Images using the Ramanujan Fourier Transform</a></li>
       
     </ul>
   </div>

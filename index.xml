@@ -5,12 +5,264 @@
     <link>https://archana1998.github.io/</link>
       <atom:link href="https://archana1998.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Archana Swaminathan</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Sun, 16 Aug 2020 21:12:27 +0530</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Mon, 17 Aug 2020 17:39:32 +0530</lastBuildDate>
     <image>
       <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png</url>
       <title>Archana Swaminathan</title>
       <link>https://archana1998.github.io/</link>
     </image>
+    
+    <item>
+      <title>Flipkart Grid 2.0 Hackathon</title>
+      <link>https://archana1998.github.io/post/flipkart-grid/</link>
+      <pubDate>Mon, 17 Aug 2020 17:39:32 +0530</pubDate>
+      <guid>https://archana1998.github.io/post/flipkart-grid/</guid>
+      <description>&lt;p&gt;Flipkart recently concluded their 2 month long annual hackathon for students of Indian engineering colleges. This year’s edition saw over 20,000 participants and boasted of a prize pool of around Rs. 300,000 (-4000 USD). Our team (Gradient Ascent) made it to the 3rd round of the competition and I am writing about our experience in this article.&lt;/p&gt;
+&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;
+&lt;p&gt;A fashion retailer wants to source ongoing and upcoming fashion trends from major online fashion portals and online magazines in a consumable and actionable format, so that they are able to effectively and efficiently design an upcoming fashion product portfolio.&lt;/p&gt;
+&lt;p&gt;Deliverables:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Identify products that are better performers (in a rank ordered fashion)&lt;/li&gt;
+&lt;li&gt;Help the user view the products that are both trending and lagging&lt;/li&gt;
+&lt;li&gt;Identify a logic for classifying products as per their trendiness&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We were asked to complete the challenge for just the t-shirt product vertical, but to ensure that our solution would be scalable to other products as well.&lt;/p&gt;
+&lt;h2 id=&#34;initial-analysis&#34;&gt;Initial Analysis&lt;/h2&gt;
+&lt;p&gt;We started off by performing a literature review on current research in the field of fashion with respect to deep learning. We looked at previous attempts of learning attributes from fashion images, modelling trends as timeseries data, fashion image encodings, object detection, etc.&lt;/p&gt;
+&lt;p&gt;After spending some time on our research, we split the problem into the following
+subproblems to tackle independently:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Data Collection&lt;/li&gt;
+&lt;li&gt;Object Detection&lt;/li&gt;
+&lt;li&gt;Attribute/Feature learning&lt;/li&gt;
+&lt;li&gt;Ranking&lt;/li&gt;
+&lt;li&gt;Grouping (trending/lagging)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;data-collection&#34;&gt;Data Collection&lt;/h2&gt;
+&lt;p&gt;According to the problem statement, we had to extract data from e-Commerce sites and other fashion portals and magazines. We tried our best to include data from all those categories to ensure we had a balanced dataset for our classification and ranking later on. After scouring the web for some good resources, we finally settled on the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Flipkart&lt;/li&gt;
+&lt;li&gt;Amazon&lt;/li&gt;
+&lt;li&gt;Pinterest (curated collections of fashion trends)&lt;/li&gt;
+&lt;li&gt;Vogue India&lt;/li&gt;
+&lt;li&gt;Myntra&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We felt this combination of multipurpose e-Commerce sites, well established fashion magazines, social network sites and dedicated fashion shopping sites would ensure we had good representation from all sectors. We collected an average of around 600 images from each website, giving us a total of 3000 to work with.
+Web scraping was done in Python using the Selenium framework. The scripts used to scrape data from any website were pretty similar and any new sites could be added with minor modifications, hence this step was easily scalable.
+From e-commerce sites, we scraped the images, product names, ratings and the number of reviews to with ranking later on. From the other portals, we extracted just the images.&lt;/p&gt;
+&lt;h2 id=&#34;object-detection&#34;&gt;Object Detection&lt;/h2&gt;
+&lt;p&gt;One of the biggest problems we faced when extracting images from fashion magazines and social media sites is that they don’t limit themselves to just t-shirts. When they put out a catalogue/collection, it has everything ranging from skirts to sweaters to scarves. Furthermore, even in pictures where the shirt was the highlight, other features such as the model’s pose, skin colour and distance from the camera could confuse our model in the later stages of this project. Keeping all this in mind, we decided to use an object detection model to filter our data to ensure we had only pictures of t-shirts. Additionally, we cropped the images according to their bounding boxes to counter the other aforementioned problems.
+This was done using a pretrained YOLOv3 model trained on the DeepFashion2 dataset, implemented using PyTorch.&lt;/p&gt;
+&lt;h2 id=&#34;attributefeature-learning&#34;&gt;Attribute/Feature learning&lt;/h2&gt;
+&lt;p&gt;This is where we faced our major setback. Our initial plan was to train a model to learn the attributes (neck type, sleeve length, patterns, etc) and to return them back for later use. We were then going to perform FP growth on our set of attributes of each image to obtain the frequent itemsets which would correspond to the most common combination of features and hence, trending/popular styles.&lt;/p&gt;
+&lt;p&gt;It didn&amp;rsquo;t work out however, as we couldn’t find an appropriate dataset to work with such a task given our time constraints so we had to try out our backup plan.&lt;/p&gt;
+&lt;p&gt;Our plan involved getting numeric encodings for the fashion images in place of the attribute list and performing clustering on the encodings. The largest clusters would correspond to the most popular types of clothes, and similarly, the smallest clusters would represent the lagging ones, assuming our calculated encodings are a fair representation of the original image. Since we were working with just images (unlabeled) data, we had to devise an unsupervised approach for learning the image encodings. After considering various options, we decided to go ahead using an autoencoder based on a CNN architecture. We did this for 2 major reasons:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Convolutional layers would help notice particular features of t-shirts such as the necktype length and patterns if any&lt;/li&gt;
+&lt;li&gt;We can insight on how accurate our encodings to reconstruct the image&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Here’s a summary of the model we used:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-frequent-itemset-mining&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/1_hud8ee6b60bc41ae2f19ca216ed0cbf7e3_180328_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1265&#34; height=&#34;177&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Frequent Itemset Mining
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;We then plotted some of the reconstructed images side by side with their original counterparts and got pretty good results considering the simplicity of the network and size of the dataset. The encodings were able to capture some important features of the clothes in question.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-model-architecture&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/2_huf8d20e2591676411ac2452c151a71b7c_32522_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;352&#34; height=&#34;613&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Model Architecture
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;ranking&#34;&gt;Ranking&lt;/h2&gt;
+&lt;p&gt;As far as e-commerce sites go, there are 2 main criteria used to determine how “good” a product is – the number of reviews and the rating it has. What would you consider to be better? 10 reviews with a 5-star rating? Or 50 reviews with a 4.7-star rating? This was the major question we had to answer to be able to rank these products properly. We needed an effective way of combining these 2 into one reliable metric. After doing some research on this area and tying out different methods of combing them, we settled with an approach based on  a Bayesian view of the beta distribution, described beautifully in this video by &lt;a href =&#34; https://www.youtube.com/watch?v=8idr1WZ1A7Q&amp;feature=emb_logo&#34;&gt;3blue1brown&lt;/a&gt;
+We used this principle to come up with our own “Popularity Metric” which was calculated as follows:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-reconstructed-images-from-encodings&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/3_hua9d9b1a4f907d92d1804ac04cfd1acaa_208064_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1093&#34; height=&#34;234&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Reconstructed Images from encodings
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;We now had a mechanism to compare and rank products effectively and a way to calculate accurate image encodings. We used both of these to train a model which predicts the Popularity Metric of a given clothing item given an input as the image encoding. We envisioned such a model to be extremely useful for designers that are looking for insight as to how their clothes might fair if they were put up for sale on e-commerce websites. Furthermore, the Popularity Metric could be calculated for all the images from magazines and portals like Vogue and Pinterest, so those products can be ranked and compared too!
+The architecture, simplified pipeline and a screenshot of the program in action are shared below.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-popularity-metric&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/4_hu67e707b293e8bb2e83945f78f4b29e05_7331_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;238&#34; height=&#34;51&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Popularity Metric
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;center&gt; (n = number of reviews, s = star rating ) &lt;/center&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-popularity-metric-model&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/5_hu1fc31ec500f87e3d3c214e201fb0429c_18291_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;540&#34; height=&#34;306&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Popularity Metric Model
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;grouping&#34;&gt;Grouping&lt;/h2&gt;
+&lt;p&gt;Since the FP growth idea fell through the roof, we went with clustering as our method of choice for grouping products in such a way that we can obtain the trending and lagging items. To ensure our clustering was done well, we experimented on a variety of clustering algorithms and chose the one with the highest silhouette coefficient. The algorithms tested were –&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;K means&lt;/li&gt;
+&lt;li&gt;Gaussian mixture model&lt;/li&gt;
+&lt;li&gt;DBSCAN&lt;/li&gt;
+&lt;li&gt;Mini batch k means&lt;/li&gt;
+&lt;li&gt;Spectral clustering&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Among those, K means had the highest silhouette efficient so we went ahead with that. We then split the data into clusters according to how many images were being considered for clustering (no. of clusters = no. of images/10). The products in the largest cluster could be inferred as the trending/popular products and those in the smallest clusters would be lagging products. We gave the user the option to spec which sources they wanted to consider for their clustering, giving them more flexibility with regards to analyzing what’s not and what’s not (what’s trending on Vogue might not be popular on Amazon).&lt;/p&gt;
+&lt;p&gt;To conclude, we were able to come up with a way to rank products properly and to group them based on whether they are trending or lagging. We also ensured that our solution is scalable on 2 fronts:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Getting more data can be done easily with minor modifications to the existing script&lt;/li&gt;
+&lt;li&gt;We can expand to different product verticals by changing the object of interest in the object detection model&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The link to the GitHub Repo is at the top of this page.
+Hope you found this interesting, thanks for reading!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Structural Damage Detection using ConvNets</title>
@@ -26,7 +278,7 @@
       <link>https://archana1998.github.io/project/gesture-recognition/</link>
       <pubDate>Sun, 16 Aug 2020 11:03:12 +0530</pubDate>
       <guid>https://archana1998.github.io/project/gesture-recognition/</guid>
-      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Gesture Recognition Systems are commonly utilized as an interface between computers and humans, along with interacting with many electronic instruments. These systems can be classified into three classes as follows:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Motion-based: When the user holds a device or a controller that detects the gesture made.&lt;/li&gt;
@@ -34,7 +286,7 @@
 &lt;li&gt;Vision-based: When the system makes use of image and signal processing to detect gestures made without touching any device.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The first two types of systems need the users to hold and contact certain devices, for the gesture recognition, and vision-based systems use camera setups, image processing and techniques that involve computer vision. These systems are difficult to set up for small scale use and are also expensive and extremely power hungry. For building a system that needs to function when there are limited resources available, it is important that the setup cost, power consumption and ease and size of setup is taken into consideration. Keeping this in mind, we have built a contactless gesture recognition system that consists of a couple of digital infrared sensors, that have been programmed to do the gesture recognition using a custom algorithm, with an Arduino Uno Microcontroller.&lt;/p&gt;
-&lt;h1 id=&#34;problem-solving-methodology&#34;&gt;Problem Solving Methodology&lt;/h1&gt;
+&lt;h2 id=&#34;problem-solving-methodology&#34;&gt;Problem Solving Methodology&lt;/h2&gt;
 &lt;p&gt;Components Used and Setup:
 The components we used are:&lt;/p&gt;
 &lt;ul&gt;
@@ -47,12 +299,6 @@ Languages used:&lt;/li&gt;
 &lt;li&gt;Arduino IDE (Based on C++)&lt;/li&gt;
 &lt;li&gt;Python (for interfacing sensor output with VLC)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;We connected two IR sensors to the Breadboard, placed at a distance of approximately 3 cm from each other. These were then interfaced with the Arduino Uno, which was connected to the laptop.&lt;/p&gt;
-&lt;p&gt;Voltage is applied to the pair of IR LEDs, which in succession emit Infrared light. This light propagates through the air and once it hits the hand (or object), which acts as a hurdle, it is reflected back to the receiver. The LED on the diode glows, thus indicating that an object has been detected.&lt;/p&gt;
-&lt;p&gt;A digital sensor system consists of the sensor itself, a cable, and a transmitter. The sensor has an electronic chip. The measuring signal is directly converted into a digital signal inside the sensor. The data transmission through the cable is also digital. This digital data transmission is not sensitive to cable length, cable resistance or impedance.&lt;/p&gt;
-&lt;p&gt;Using the concept of states and delay as in Digital Design, we have created two states of the two sensors each placed on the left and right. These two states are defined and calibrated using a time delay of a few hundred microseconds in the gesture classification algorithm written using the Arduino IDE.&lt;/p&gt;
-&lt;p&gt;We have taken two states in the algorithm into consideration namely Q(t) and Q(t+d) where d is the delay defined. The algorithm is defined such that left sensor and right sensor digital values are checked first and then after the defined delay, both sensors are checked for their Boolean values again and therefore the gesture is recognized and printed on the screen after running the code in the Arduino software. The chip on the Arduino Uno board plugs straight into the laptop’s USB port and supports the computer as a virtual serial port.&lt;/p&gt;
-&lt;p&gt;To make the gesture recognition feature interactive, we have interfaced the output with VLC Media player, so that we can pause, play and rewind/go forward with the playback. To do this interfacing, we have written a Python script, importing the Python library pyautogui, that provides functionality of control of the computer’s keyboard.&lt;/p&gt;
 
 
 
@@ -88,7 +334,48 @@ Languages used:&lt;/li&gt;
 
 &lt;/figure&gt;
 
-&lt;h1 id=&#34;results-and-conclusions&#34;&gt;Results and Conclusions&lt;/h1&gt;
+&lt;p&gt;We connected two IR sensors to the Breadboard, placed at a distance of approximately 3 cm from each other. These were then interfaced with the Arduino Uno, which was connected to the laptop.&lt;/p&gt;
+&lt;p&gt;Voltage is applied to the pair of IR LEDs, which in succession emit Infrared light. This light propagates through the air and once it hits the hand (or object), which acts as a hurdle, it is reflected back to the receiver. The LED on the diode glows, thus indicating that an object has been detected.&lt;/p&gt;
+&lt;p&gt;A digital sensor system consists of the sensor itself, a cable, and a transmitter. The sensor has an electronic chip. The measuring signal is directly converted into a digital signal inside the sensor. The data transmission through the cable is also digital. This digital data transmission is not sensitive to cable length, cable resistance or impedance.&lt;/p&gt;
+&lt;p&gt;Using the concept of states and delay as in Digital Design, we have created two states of the two sensors each placed on the left and right. These two states are defined and calibrated using a time delay of a few hundred microseconds in the gesture classification algorithm written using the Arduino IDE.&lt;/p&gt;
+&lt;p&gt;We have taken two states in the algorithm into consideration namely Q(t) and Q(t+d) where d is the delay defined. The algorithm is defined such that left sensor and right sensor digital values are checked first and then after the defined delay, both sensors are checked for their Boolean values again and therefore the gesture is recognized and printed on the screen after running the code in the Arduino software. The chip on the Arduino Uno board plugs straight into the laptop’s USB port and supports the computer as a virtual serial port.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-state-table&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/project/gesture-recognition/table_hu2d1c1a3241fc2a5a508ad4f659b75269_15173_2000x2000_fit_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;486&#34; height=&#34;209&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    State table
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;To make the gesture recognition feature interactive, we have interfaced the output with VLC Media player, so that we can pause, play and rewind/go forward with the playback. To do this interfacing, we have written a Python script, importing the Python library pyautogui, that provides functionality of control of the computer’s keyboard.&lt;/p&gt;
+&lt;h2 id=&#34;results-and-conclusions&#34;&gt;Results and Conclusions&lt;/h2&gt;
 &lt;p&gt;We tested the gesture recognition system for accuracy by using the precision-recall matric. We took in 30 different samples for input.
 The precision is calculated as TP/(TP+FP), where TP denotes the number of true positives and FP denotes the number of false positives.
 The precision of our system is = 90% (27 TPs and 3 FPs)&lt;/p&gt;
@@ -97,12 +384,12 @@ The recall of our system is = 86.6% (26 TPs and 4 FNs)&lt;/p&gt;
 &lt;p&gt;High precision implies that there is less chances of getting false alarms, and recall expresses the ability to find all relevant information from the dataset.
 Practical Applications
 We have integrated the recognition system with VLC, to control playback of the video. Similarly, the setup can easily be integrated with any mobile device that is low on resources, as well as used with complex devices, as IR sensors are fundamental in building light reflection systems and are extremely versatile.&lt;/p&gt;
-&lt;h1 id=&#34;further-scope&#34;&gt;Further scope&lt;/h1&gt;
+&lt;h2 id=&#34;further-scope&#34;&gt;Further scope&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Friendly user interface that can be easily understood by any user and eventually its application can be extended to more applications like PDF reader, video games etc.&lt;/li&gt;
 &lt;li&gt;Computationally inexpensive and low power consuming hardware and software setup, that makes it ideal for integrating with any device, both simple and complex.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;limitations&#34;&gt;Limitations&lt;/h1&gt;
+&lt;h2 id=&#34;limitations&#34;&gt;Limitations&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Ambient light obstructs the functioning as is the case with infrared sensors, as they are extremely sensitive. A proper optical barrier must be used to prevent this.&lt;/li&gt;
 &lt;li&gt;We have assumed values of time delays between gestures according to what worked well for our test dataset. This leads to the system being slightly inflexible with different speeds of gestures.&lt;/li&gt;

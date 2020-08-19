@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reviews | Archana Swaminathan</title>
+    <link>https://archana1998.github.io/category/reviews/</link>
+      <atom:link href="https://archana1998.github.io/category/reviews/index.xml" rel="self" type="application/rss+xml" />
+    <description>Reviews</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Sat, 18 Jul 2020 14:11:22 +0530</lastBuildDate>
+    <image>
+      <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png</url>
+      <title>Reviews</title>
+      <link>https://archana1998.github.io/category/reviews/</link>
+    </image>
+    
+    <item>
+      <title>Understanding Deep Learning requires rethinking generalization</title>
+      <link>https://archana1998.github.io/post/regularization/</link>
+      <pubDate>Sat, 18 Jul 2020 14:11:22 +0530</pubDate>
+      <guid>https://archana1998.github.io/post/regularization/</guid>
+      <description>&lt;p&gt;This is a review of the ICLR 2017 paper by Zhang et. al. titled &amp;ldquo;Understanding Deep Learning requires rethinking generalization&amp;quot;&lt;a href = &#34;https://bengio.abracadoudou.com/cv/publications/pdf/zhang_2017_iclr.pdf&#34;&gt; Link to paper &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The paper starts off with aiming to provide an introspection into what distinguishes networks that generalize well, from those who don’t.&lt;/p&gt;
+&lt;p&gt;One of the experiments conducted in the studies of the paper, is checking how well neural networks adapt to training when labels are randomized. Their findings establish that when the true data is completely randomly labelled, the training error that results is zero. Observations from this indicate that the effective capacity of neural networks is more than enough to memorize the entire dataset. Randomization of the labels is only a transformation of the data, and other learning parameters are constant and unchanged still. The resulting training time also increases by only a small factor. However, when this trained network is tested, it does badly. This indicates that just by randomizing labels, the generalization error can shoot up significantly without changing any other parameters of the experiment like the size of the model, the optimizer etc.&lt;/p&gt;
+&lt;p&gt;Another experiment conducted was that when the ground truth images were switched with random noise. This resulted in the networks training to zero training error, even faster than the case with the random labels. Varying the amount of randomization resulted in a steady deterioration of the generalization error, as the noise level increased. There were a wide variety of changes introduced into the dataset, that played with degrees and kinds of randomization with the pixels and labels. All of this still resulted in the networks able to fit the training data perfectly. A key takeaway from this is that the neural networks are able to capture the signals remaining in the data, while fitting the noise and randomization with brute force. The question that still remains unanswered after this is why some models generalize better than others, because it is evident that some decisions made while constructing model architectures do make a difference in its ability to generalize.&lt;/p&gt;
+&lt;p&gt;Traditional approaches in statistical learning theory such as Rademacher complexity, VC dimension and uniform stability are threatened by the randomization experiments performed.&lt;/p&gt;
+&lt;p&gt;Three specific regularizers are then considered to note the impact of explicit regularization, data augmentation, weight decay and dropout. These are tried out on Inception, Alexnet and MLPs on the CIFAR10 dataset, and later with ImageNet. Regularization helps to improve generalization performance, but the models still generalize well enough with the regularizers turned off. It was then inferred that this is more of a tuning parameter than a fundamental cause of good generalization. A similar result was noted with implicit regularization.&lt;/p&gt;
+&lt;p&gt;An interesting result proved in the paper was that there two layer depth networks of linear size, that can represent any labelling of the training data. A parallel approach in trying to understand the source of regularization for linear models was also not easy to point out.
+To sum up, this paper presents a thorough insight into how empirically easy optimization does not imply good regularization, and effective capacity of network architectures is better understood and defined.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
