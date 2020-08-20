@@ -60,12 +60,12 @@ Self supervised imitation learning also uses deep learning, which is the ability
 &lt;/ul&gt;
 &lt;p&gt;This brought in light the desire to have large model architectures that are sparsely activated, that desirably have huge remembering capacity but utilize only a small fraction of the model while testing with individual examples
 An example of this is the Per-Example Routing architecture.&lt;/p&gt;
-&lt;p&gt;Jeff highlighted one of the most major contributions from Google towards deep learning, the introduction of the open-source deep learning library &lt;a href=&#34;https://www.tensorflow.org/&#34;&gt;Tensorflow&lt;/a&gt;. It remains the most popular and most downloaded Deep Learning Library until date, and has a vibrant open-source community, to the extent that only 1/3^{rd} of the current contributors are employees of Google!&lt;/p&gt;
+&lt;p&gt;Jeff highlighted one of the most major contributions from Google towards deep learning, the introduction of the open-source deep learning library &lt;a href=&#34;https://www.tensorflow.org/&#34;&gt;Tensorflow&lt;/a&gt;. It remains the most popular and most downloaded Deep Learning Library until date, and has a vibrant open-source community, to the extent that only 1/3&lt;sup&gt;rd&lt;/sup&gt; of the current contributors are employees of Google!&lt;/p&gt;
 &lt;h3 id=&#34;computer-architecture-for-deep-learning&#34;&gt;Computer architecture for Deep Learning&lt;/h3&gt;
 &lt;p&gt;There was a time in the past where complex problems couldn&amp;rsquo;t be solved because of the lack of computational power. We have finally made strides that do not restrict the power available to us, so optimizing this is an important task.
 Google AI has been focusing on redesigning computers, as Deep Learning has transformed this field completely. They kept two main things in mind while devising a computer to do deep learning:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;First is, reduced precision is okay. The computer does not have to calculate results acccurately to the 10^{th} or 20^{th} decimal point.&lt;/li&gt;
+&lt;li&gt;First is, reduced precision is okay. The computer does not have to calculate results acccurately to the 10&lt;sup&gt;th&lt;/sup&gt; or 20&lt;sup&gt;th&lt;/sup&gt; decimal point.&lt;/li&gt;
 &lt;li&gt;Second is, there are mostly only a handful of specific operations that constitute the math of Deep Learning, for example matrix multiplication, dot products, etc.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Keeping these in mind, Google introduced the &lt;a href=&#34;https://cloud.google.com/tpu/docs/tpus&#34;&gt;Tensor Processing Unit&lt;/a&gt;, that does just this. We can connect TPUs together to form Pods, that are currently available to the public on cloud services. Pods can be connected together to make supercomputers, that can train architectures like ResNet50 and Inceptionv2 in under 30 seconds! TPUs are being designed for edge applications also, to do deep learning on smartphones.&lt;/p&gt;
