@@ -17,10 +17,11 @@
       <link>https://archana1998.github.io/post/opening-keynote/</link>
       <pubDate>Thu, 20 Aug 2020 10:53:53 +0530</pubDate>
       <guid>https://archana1998.github.io/post/opening-keynote/</guid>
-      <description>&lt;p&gt;This article has been written from notes I took throughout the Opening Keynote at the Google AI Summer School. The opening keynote was delivered by Jeff Dean, Head of Google AI and moderated by Manish Gupta, Director of Google AI Research, Bangalore.&lt;/p&gt;
+      <description>&lt;p&gt;This article has been written from notes I took throughout the Opening Keynote at the Google AI Summer School. The opening keynote was delivered by &lt;a href=&#34;https://research.google/people/jeff/&#34;&gt; Jeff Dean&lt;/a&gt;, Head of Google AI and moderated by &lt;a href=&#34;https://research.google/people/106704/&#34;&gt;Manish Gupta&lt;/a&gt;, Director of Google AI Research, Bangalore. The Keynote was titled &lt;b&gt; Deep Learning to Solve Challenging Problems. &lt;/b&gt;&lt;/p&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Jeff Dean is a Senior Fellow at Google and the global head of Google AI. He saved Google at a very critical time and is essential to what contributed to make the Google Search Engine the best and the fastest in the world today. He is currently doing exciting research in the field of explainable AI for problems that the world is facing. He also helped create Tensorflow, the world&amp;rsquo;s most used Machine Learning Library.&lt;/p&gt;
 &lt;h2 id=&#34;notes-from-the-talk&#34;&gt;Notes from the Talk:&lt;/h2&gt;
+&lt;h3 id=&#34;the-marvel-of-deep-learning&#34;&gt;The marvel of Deep Learning&lt;/h3&gt;
 &lt;p&gt;Deep Learning has revolutionized the way of solving challenging problems. There are over 130 new papers on Machine Learning on Arxiv every day. Deep Learning can be considered a modern reincarnation of Artificial Neural Networks. Key benefits and features of Deep Learning are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Availability of new network architectures&lt;/li&gt;
@@ -29,12 +30,69 @@
 &lt;li&gt;No explicit feature engineering required&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Deep Learning architectures are remarkably flexible with taking in inputs and giving outputs of various forms, some examples are getting a categorical label from a pixel input (image), an audio input translating to a phrase that is a string, and language translation from one language to another.&lt;/p&gt;
-&lt;p&gt;Deep Learning has also helped us come up with solutions to problems where the computer can achieve better results than a human. One such example is the Imagenet challenge, that Stanford conducts every year that classifies images into classes.&lt;/p&gt;
+&lt;p&gt;Deep Learning has also helped us come up with solutions to problems where the computer can achieve better results than a human. One such example is the &lt;a href=&#34;http://www.image-net.org/challenges/LSVRC/&#34;&gt;Imagenet challenge&lt;/a&gt;, that Stanford conducts every year that classifies images into classes.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;In 2011, the winner of the challenge was able to achieve 26% error, where humans were able to do the same task with 5% error.&lt;/li&gt;
-&lt;li&gt;In 2012, Geoffrey Hinton and his team used Deep Learning for the very first time in this challenge, and was the pioneer of bringing deep convolutional networks for the image classification task. Following his attempt, Deep Learning became very popular in further editions of the challenge.&lt;/li&gt;
+&lt;li&gt;In 2012, &lt;a href= &#34;https://scholar.google.co.uk/citations?hl=en&amp;user=JicYPdAAAAAJ&#34;&gt;Geoffrey Hinton&lt;/a&gt; and his team used Deep Learning for the very first time in this challenge, and was the pioneer of bringing deep convolutional networks for the image classification task. Following his attempt, Deep Learning became very popular in further editions of the challenge.&lt;/li&gt;
 &lt;li&gt;In 2017, the winner of the challenge was able to achieve 3% error on the Imagenet dataset, finally beating the human error of 5%.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3 id=&#34;deep-learning-to-solve-world-problems&#34;&gt;Deep Learning to solve world problems&lt;/h3&gt;
+&lt;p&gt;One thing that Jeff emphasized on, is how Deep Learning is being used to tackle the &lt;a href=&#34;http://www.engineeringchallenges.org/challenges.aspx&#34;&gt;Grand Engineering Challenges of the 21st century&lt;/a&gt;
+One of the primary challenges that are under focus are restoring and improving urban infrastructure.&lt;/p&gt;
+&lt;p&gt;A key advancement in this field is autonomous driving, which Deep Learning has aided to such an extent that the autonomous driving is far safer than the usual human driver, with 360-degree vision utilizing around 18 cameras to form a dense LiDAR point cloud.&lt;/p&gt;
+&lt;p&gt;Another field that Deep Learning revolutionalized is combining vision with robotics. For the task of a robot arm picking up an unseen object,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In 2015, there was a 65% grasp success rate&lt;/li&gt;
+&lt;li&gt;In 2016, with the robot trained to pick up multiple categories of objects, the accuracy rose up to 78%&lt;/li&gt;
+&lt;li&gt;In 2018, this accuracy shot up to 96% when Deep Learning was introduced into the mix
+Self supervised imitation learning also uses deep learning, which is the ability of a robot to imitate actions from pixels (human footage) without supervision&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Another of these challenges was Advancing Health Informatics. We got an insight into what Google AI is working on for this field.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;One of these is diagnosing diabetic retinopathy, the fastest growing cause of preventable blindness&lt;/li&gt;
+&lt;li&gt;Screening of the individual can prevent blindness, however it is extremely specialized so most MD&amp;rsquo;s cannot do it.&lt;/li&gt;
+&lt;li&gt;Google came up with a &lt;a href=&#34;https://ai.googleblog.com/2018/12/improving-effectiveness-of-diabetic.html&#34;&gt;model&lt;/a&gt; that could diagnose the disease from image scans of the eye, in 2016 it was at par with the performance of general opthamologists, and in 2017 the accuracy became State of the Art, with accuracy matching that of Retinal Specialists&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Many of these challenges and advances in the field of engineering and technology depend on the ability to understand text. The 2017 Tranformer Paper: &lt;a href=&#34;https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf&#34;&gt; Attention is all you need!&lt;/a&gt; was a revolutionary step in this direction, which was followed by &lt;a href=&#34;https://arxiv.org/abs/1810.04805&#34;&gt;BERT&lt;/a&gt; in 2018. BERT introduced principles for training that was very popular and appreciated, that are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pre train a model on the &amp;ldquo;fill in the blanks&amp;rdquo; task, using large amounts of self supervised text.&lt;/li&gt;
+&lt;li&gt;This model is then fine tuned on individual language tasks, on a smaller scale.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This brought in light the desire to have large model architectures that are sparsely activated, that desirably have huge remembering capacity but utilize only a small fraction of the model while testing with individual examples
+An example of this is the Per-Example Routing architecture.&lt;/p&gt;
+&lt;p&gt;Jeff highlighted one of the most major contributions from Google towards deep learning, the introduction of the open-source deep learning library &lt;a href=&#34;https://www.tensorflow.org/&#34;&gt;Tensorflow&lt;/a&gt;. It remains the most popular and most downloaded Deep Learning Library until date, and has a vibrant open-source community, to the extent that only 1/3^{rd} of the current contributors are employees of Google!&lt;/p&gt;
+&lt;h3 id=&#34;computer-architecture-for-deep-learning&#34;&gt;Computer architecture for Deep Learning&lt;/h3&gt;
+&lt;p&gt;There was a time in the past where complex problems couldn&amp;rsquo;t be solved because of the lack of computational power. We have finally made strides that do not restrict the power available to us, so optimizing this is an important task.
+Google AI has been focusing on redesigning computers, as Deep Learning has transformed this field completely. They kept two main things in mind while devising a computer to do deep learning:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First is, reduced precision is okay. The computer does not have to calculate results acccurately to the 10^{th} or 20^{th} decimal point.&lt;/li&gt;
+&lt;li&gt;Second is, there are mostly only a handful of specific operations that constitute the math of Deep Learning, for example matrix multiplication, dot products, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Keeping these in mind, Google introduced the &lt;a href=&#34;https://cloud.google.com/tpu/docs/tpus&#34;&gt;Tensor Processing Unit&lt;/a&gt;, that does just this. We can connect TPUs together to form Pods, that are currently available to the public on cloud services. Pods can be connected together to make supercomputers, that can train architectures like ResNet50 and Inceptionv2 in under 30 seconds! TPUs are being designed for edge applications also, to do deep learning on smartphones.&lt;/p&gt;
+&lt;h3 id=&#34;problems-of-doing-machine-learning-today&#34;&gt;Problems of doing Machine Learning Today&lt;/h3&gt;
+&lt;p&gt;The usual flow of work for a machine learning specialist is to collect the data, use his ML expertise (data augmentation, hyperparameter tuning etc) and train and test the model. A rather new approach that reduces human intervention here is &lt;a href=&#34;https://en.wikipedia.org/wiki/Automated_machine_learning&#34;&gt;AutoML&lt;/a&gt;, where the &amp;ldquo;ML expertise&amp;rdquo; is tuned and tested by automatic methods.&lt;/p&gt;
+&lt;p&gt;Problems that still remain are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We still start with little to no knowledge about the problem and have to rely on random initialization&lt;/li&gt;
+&lt;li&gt;New problems need significant data and compute power&lt;/li&gt;
+&lt;li&gt;Transfer learning and multi-task learning help with this, but are done modestly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;what-is-desired-to-be-achieved&#34;&gt;What is desired to be achieved&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Large but sparsely activated neural network architectures&lt;/li&gt;
+&lt;li&gt;A single model that can be used to solve many tasks, by activating different parts of the network&lt;/li&gt;
+&lt;li&gt;Dynamically adapting to new problems&lt;/li&gt;
+&lt;li&gt;Adding new tasks easily&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thus concluded the Keynote. It was fantastic and insightful. A couple of Q&amp;amp;A that I found interesting have been mentioned below:&lt;/p&gt;
+&lt;p&gt;Q: What advice do you have for young researchers?&lt;/p&gt;
+&lt;p&gt;A: Focus on problems that matter to you, and learn as much as you can. Create a constellation of techniques and ideas that can help you gather and organize your thoughts&lt;/p&gt;
+&lt;p&gt;Q: How do you read new papers and get a gist of it?&lt;/p&gt;
+&lt;p&gt;A: You&amp;rsquo;ll find many discussions on LinkedIn and Twitter about the paper, sometimes just reading this will give you a gist of what&amp;rsquo;s going on in the paper&lt;/p&gt;
+&lt;p&gt;Q: Something unrealistic that you wish would happen in the field of AI in the future?&lt;/p&gt;
+&lt;p&gt;A: The creation of a system that can absorb the world&amp;rsquo;s knowledge and solve all our problems&lt;/p&gt;
+&lt;p&gt;Q: Hyperparameter tuning is expensive for large models, how do researchers work on this?&lt;/p&gt;
+&lt;p&gt;A: Scaling down the problem to probably 1% of it and training and tuning that completely, and marginal scaling up to the level you desire is the best approach&lt;/p&gt;
 </description>
     </item>
     
