@@ -208,6 +208,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175890454-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-175890454-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -827,6 +865,8 @@ To sum up, this paper presents a thorough insight into how empirically easy opti
   <div class="article-widget content-widget-hr">
     <h3>Related</h3>
     <ul>
+      
+      <li><a href="/post/opening-keynote/">Opening Keynote at the Google AI Summer School, 2020</a></li>
       
       <li><a href="/post/flipkart-grid/">Flipkart Grid 2.0 Hackathon</a></li>
       
