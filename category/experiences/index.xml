@@ -5,12 +5,63 @@
     <link>https://archana1998.github.io/category/experiences/</link>
       <atom:link href="https://archana1998.github.io/category/experiences/index.xml" rel="self" type="application/rss+xml" />
     <description>Experiences</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Fri, 21 Aug 2020 19:07:17 +0530</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Fri, 21 Aug 2020 23:11:51 +0530</lastBuildDate>
     <image>
       <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png</url>
       <title>Experiences</title>
       <link>https://archana1998.github.io/category/experiences/</link>
     </image>
+    
+    <item>
+      <title>Summer School Series: Lecture 2 by Neil Houlsby</title>
+      <link>https://archana1998.github.io/post/neil-houlsby/</link>
+      <pubDate>Fri, 21 Aug 2020 23:11:51 +0530</pubDate>
+      <guid>https://archana1998.github.io/post/neil-houlsby/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://research.google/people/NeilHoulsby/&#34;&gt;Neil Houlsby&lt;/a&gt; presented a great talk on Large Scale Visual Representation Learning and how Google has come up with solutions to some classical problems.&lt;/p&gt;
+&lt;h3 id=&#34;evaluation-of-parameters&#34;&gt;Evaluation of parameters&lt;/h3&gt;
+&lt;p&gt;There are two main ways of evaluating parameters from a network, that extracts the parameters. They are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linear Evaluation: We freeze the weights and retrain the head&lt;/li&gt;
+&lt;li&gt;Transfer Evaluation: We retrain end to end with new head&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;visual-task-adaptation-benchmark-vtab&#34;&gt;Visual Task Adaptation Benchmark (VTAB)&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://ai.googleblog.com/2019/11/the-visual-task-adaptation-benchmark.html&#34;&gt;VTAB&lt;/a&gt; is an evaluation protocal designed to measure progress towards general and useful visual representations, and consists of a suite of evaluation vision tasks that a learning algorithm must solve. We mainly have three types of tasks, &lt;b&gt; Natural tasks, Specialized tasks and Structured Datasets. &lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;A query that was posed was how useful ImageNet labels would be for pretrained models to work on these three tasks. It has been seen that ImageNet labels work well for Natural images, and not well for the other two tasks.&lt;/p&gt;
+&lt;p&gt;Representation learners pre-trained on ImageNet can be of three forms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GANs and autoencoders&lt;/li&gt;
+&lt;li&gt;Self-supervised&lt;/li&gt;
+&lt;li&gt;Semi-supervised / Supervised approach&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It has been seen that for natural tasks, representations prove to be more important than obtaining more data, and the supervised approach is far better than the unsupervised approach. For structured tasks, a combination of supervised and self-supervised learning works the best.&lt;/p&gt;
+&lt;p&gt;It was also mentioned that by modern standards, ImageNet is of incredibly small-scale, thus scaling models on ImageNet were not proven to be effective.&lt;/p&gt;
+&lt;p&gt;Something to specifically keep in mind is that upstream can be expensive, but downstream should be cheap (in terms of both data and compute). For the upstream, examples of suitable large datasets are ImageNet-21k for supervised learning, and YouTube-8M for self-supervised learning.&lt;/p&gt;
+&lt;h3 id=&#34;bit-l&#34;&gt;BiT-L&lt;/h3&gt;
+&lt;p&gt;Neil introduced the &lt;a href=&#34;https://blog.tensorflow.org/2020/05/bigtransfer-bit-state-of-art-transfer-learning-computer-vision.html&#34;&gt;Big Transfer Learning (BiT-L)&lt;/a&gt; algorithm and talked about it in detail.
+The first thing he mentioned about BiT-L was that batch normalization was replaced with &lt;b&gt; group normalization &lt;/b&gt; for ultra-large data. Advantages of this were having no train/test discrepancy, and no state which made it easier to co-train with multiple steps.&lt;/p&gt;
+&lt;p&gt;It was highlighted that optimization at scale implies that schedule is crucial and not obvious. Also, early results of models can be misleading.&lt;/p&gt;
+&lt;p&gt;To perform cheap tranfer, we need low compute, few/no validation data and diverse tasks. For doing few-shot transfer, pretraining on ImageNet-21k and JFT-300M helps.&lt;/p&gt;
+&lt;h4 id=&#34;robustness&#34;&gt;Robustness&lt;/h4&gt;
+&lt;p&gt;Models trained with ImageNet aren&amp;rsquo;t necessarily robust most of the times. To test OOD robustness (Out-Of-Distribution), we use datasets like ImageNet C, ImageNet R and ObjectNet.&lt;/p&gt;
+&lt;h4 id=&#34;modern-transfer-learning&#34;&gt;Modern Transfer Learning&lt;/h4&gt;
+&lt;p&gt;Modern Transfer Learning calls for a big, labelled datset, a big model and careful training (using about 10 optimization recipes)
+While testing with OOD, increasing datset size with a fixed model and increasing dataset size leads to an increase in performance, especially in the case of very large models.&lt;/p&gt;
+&lt;p&gt;To summarize, Bigger transfer $\rightarrow$ Better Accuracy $\rightarrow$ Better Robustness&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For checking impact on object &lt;b&gt; location &lt;/b&gt; invariance, we see accuracy improves and becomes more uniform across location&lt;/li&gt;
+&lt;li&gt;This proves to be the same in the case of impact on object &lt;b&gt;size&lt;/b&gt; invariance&lt;/li&gt;
+&lt;li&gt;However, in the case of object rotation invariance for ResNet50, it does not become more uniform across rotation angles, but for ResNet101*3, it maintains uniformity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;Main takeaways from the talk and BiT-L were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Scale is one of the key drivers of representation learning performance&lt;/li&gt;
+&lt;li&gt;Especially effective for few-shot learning and OOD Robustness&lt;/li&gt;
+&lt;li&gt;Also seen and mirrored in language domain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Links to the GitHub repositories are: &lt;a href =&#34;https://github.com/google-research/big_transfer&#34;&gt; Big Transfer &lt;/a&gt; and &lt;a href=&#34;https://github.com/google-research/task_adaptation&#34;&gt; Visual Task Adaptation Benchmark (VTAB)&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Summer School Series: Lecture 1 by Jean-Phillipe Vert</title>
