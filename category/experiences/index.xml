@@ -5,12 +5,269 @@
     <link>https://archana1998.github.io/category/experiences/</link>
       <atom:link href="https://archana1998.github.io/category/experiences/index.xml" rel="self" type="application/rss+xml" />
     <description>Experiences</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Thu, 20 Aug 2020 10:53:53 +0530</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Fri, 21 Aug 2020 19:07:17 +0530</lastBuildDate>
     <image>
       <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png</url>
       <title>Experiences</title>
       <link>https://archana1998.github.io/category/experiences/</link>
     </image>
+    
+    <item>
+      <title>Summer School Series: Lecture 1 by Jean-Phillipe Vert</title>
+      <link>https://archana1998.github.io/post/jean-vert/</link>
+      <pubDate>Fri, 21 Aug 2020 19:07:17 +0530</pubDate>
+      <guid>https://archana1998.github.io/post/jean-vert/</guid>
+      <description>&lt;p&gt;This is an article about what &lt;a href =&#34;http://members.cbio.mines-paristech.fr/~jvert/&#34;&gt;Jean-Phillipe Vert&lt;/a&gt; talked about at the Google Research India-AI Summer School 2020. The lecture was titled &lt;b&gt; Differentiable Ranking and Sorting &lt;/b&gt; and lasted about 2 hours.&lt;/p&gt;
+&lt;h3 id=&#34;differentiable-programming&#34;&gt;Differentiable Programming&lt;/h3&gt;
+&lt;p&gt;What is machine learning and deep learning?&lt;/p&gt;
+&lt;p&gt;Machine learning is just to give trained data to a program and get better results for complex problems. For example:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-a-neural-network-to-recognize-cats-and-dogs&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/fig1_hu2361eef24ba1250aaf0d087e444736ee_322268_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1166&#34; height=&#34;626&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    A neural network to recognize cats and dogs
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;These networks usually use &lt;b&gt;vectors&lt;/b&gt; to do the computations within the network, however in recent research models are getting extended to non-vector objects (strings, graphs etc.)&lt;/p&gt;
+&lt;p&gt;Jean then gave an introduction to permutations and rankings and what he aspired to do, informally. Permutations are not vectors/graphs, but something else entirely. Some data are permutations (input, output etc) and some operations may involve ranking (histogram equalization, quantile normalization)&lt;/p&gt;
+&lt;p&gt;What do these operations aspire to do?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Rank pixels&lt;/li&gt;
+&lt;li&gt;Extract a permutation and assign values to pixels only based on rankings&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;permutations&#34;&gt;Permutations&lt;/h3&gt;
+&lt;p&gt;A permutation is formally defined as a bijection, that is:&lt;/p&gt;
+&lt;p&gt;$$\sigma:[1, N] \rightarrow[1, N]$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Over here, $\sigma(i)=$ rank of item $i$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The composition property is defined as: $\left(\sigma_{1} \sigma_{2}\right)(i)=\sigma_{1}\left(\sigma_{2}(i)\right)$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\mathrm{S}_{N}$ is the symmetric group and&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\left|\mathbb{S}_{N}\right|=N !$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;goal&#34;&gt;Goal&lt;/h3&gt;
+&lt;p&gt;Our primary goal is:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-moving-between-spaces&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/2_huacbb429b45f880db3bfef78880895f1e_33174_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1021&#34; height=&#34;294&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Moving between spaces
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Some definitions here are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Embed:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;To define/optimize $f_{\theta}(\sigma)=g_{\theta}($embed$(\sigma))$ for $\sigma \in \mathbb{S}_{N}$&lt;/li&gt;
+&lt;li&gt;E.g., $\sigma$ given as input or output&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Differentiate:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;To define/optimize $h_{\theta}(x)=f_{\theta}($argsort$(x))$ for $x \in \mathbb{R}^{n}$&lt;/li&gt;
+&lt;li&gt;E.g., normalization layer or rank-based loss&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;argmax&#34;&gt;Argmax&lt;/h3&gt;
+&lt;p&gt;To put it in simple words, the argmax function identifies the dimension in a vector with the largest value. For example, $\operatorname{argmax}(2.1, -0.4, 5.8) = 3$&lt;/p&gt;
+&lt;p&gt;It is not differentiable because:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;As a function, $\mathbb{R}^{n} \rightarrow[1,n]$, the output space is &lt;b&gt; not continuous &lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;It is &lt;b&gt;piecewise constant&lt;/b&gt; (i.e, gradient = 0 almost everywhere even if the output space was continuous)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;softmax&#34;&gt;Softmax&lt;/h3&gt;
+&lt;p&gt;It is a &lt;b&gt;differentiable&lt;/b&gt; function that maps from $\mathbb{R}^{n} \rightarrow \mathbb{R}^{n}$, where&lt;/p&gt;
+&lt;p&gt;$$\operatorname{softmax}_ {\epsilon} (x)_ {i} =\frac{e^{x_{i} / \epsilon}}{\sum_{j=1}^{n} e^{x_{j} / \epsilon}}$$&lt;/p&gt;
+&lt;p&gt;For example, $\operatorname{softmax}(2.1, -0.4, 5.8) = (0.027, 0.02, 0.972)$&lt;/p&gt;
+&lt;h3 id=&#34;moving-from-softmax-to-argmax&#34;&gt;Moving from Softmax to Argmax&lt;/h3&gt;
+&lt;p&gt;$$\lim _ {\epsilon \rightarrow 0} \operatorname{softmax}_{\epsilon}(2.1,-0.4, 5.8)=(0,0,1)=\Psi(3)$$&lt;/p&gt;
+&lt;p&gt;where $\psi:[1, n] \rightarrow \mathbb{R}^{n}$ is the one-hot encoding. More generally,
+$$
+\forall x \in \mathbb{R}^{n}, \quad \lim_ {\epsilon \rightarrow 0} \operatorname{softmax}_{\epsilon}(x)=\Psi(\operatorname{argmax}(x))
+$$&lt;/p&gt;
+&lt;h3 id=&#34;moving-from-argmax-to-softmax&#34;&gt;Moving from Argmax to Softmax&lt;/h3&gt;
+&lt;h4 id=&#34;1-embedding&#34;&gt;1. Embedding&lt;/h4&gt;
+&lt;p&gt;Let the simplex
+$$
+\Delta_{n-1}=\operatorname{conv}({\Psi(y): y \in[1, n]})
+$$
+Then we have a variational characterization (exercice left to us):
+$$
+\Psi(\operatorname{argmax}(x))=\underset{z \in \Delta_{n-1}}{\operatorname{argmax}}\left(x^{\top} z\right)
+$$&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-simplex-representation&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/fig3_hu5c4a640c4ff8ae0e0520f62ab190a639_28338_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;528&#34; height=&#34;371&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Simplex representation
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h4 id=&#34;2a-regularization&#34;&gt;2a. Regularization&lt;/h4&gt;
+&lt;p&gt;Let the entropy be defined as $H(z)=-\sum_{i=1}^{n} z_{i} \ln \left(z_{i}\right)$ for $z_{i} \in \Delta_{n-1}$&lt;/p&gt;
+&lt;p&gt;Then we have (exercise left to us):
+$$
+\operatorname{softmax}_ {\epsilon}(x)=\underset{z \in \Delta_{n-1}}{\operatorname{argmax}}\left[x^{\top} z+\epsilon H(z)\right]
+$$&lt;/p&gt;
+&lt;p&gt;The entropy is maximum at the middle and minimum as the corners, as displayed below&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-entropy-in-the-simplex&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/4_hud40178e92a0e11db369c09c80b6c13e7_135667_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;485&#34; height=&#34;356&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Entropy in the simplex
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h4 id=&#34;2b-pertubation&#34;&gt;2b. Pertubation&lt;/h4&gt;
+&lt;p&gt;Let $G=\left(G_{1}, \ldots, G_{n}\right)$ be i.i.d. Gumbel (0,1) random variables. Then we have (exercice):
+$$
+\operatorname{softmax}_{\epsilon}(x)=E \underset{z \in \Delta_{n-1}}{\operatorname{argmax}}\left[x^{\top}(z+\epsilon G)\right]
+$$&lt;/p&gt;
+&lt;h3 id=&#34;summary&#34;&gt;Summary&lt;/h3&gt;
+&lt;p&gt;From moving between argmax and softmax, we can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Embed, such that
+$$
+\Psi(\operatorname{argmax}(x))=\underset{z \in \Delta_{n-1}}{\operatorname{argmax}}\left(x^{\top} z\right)
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Regularize or pertub:
+$$
+\operatorname{softmax}_ {\epsilon}(x)=\underset{z \in \Delta_{n-1}}{\operatorname{argmax}}\left[x^{\top} z+\epsilon H(z)\right] = E \underset{z \in \Delta_{n-1}}{\operatorname{argmax}}\left[x^{\top}(z+\epsilon G)\right]
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both of these lead to efficient and stochastic Jacobian estimates. We can generalize this to other discrete operations such as rankings, by various techniques, examples being the SUQUAN and Kendall embeddings.&lt;/p&gt;
+&lt;p&gt;We then have to make a differentiable approximation to $\Phi (\operatorname{argsort}(x))$, which can be done using &lt;b&gt;Optimal Transport&lt;/b&gt; and &lt;b&gt;Entropic Regularization&lt;/b&gt;. It has been experimentally proven that this works faster than neural sort for sorting 5 numbers between 0 and 9999.&lt;/p&gt;
+&lt;p&gt;Jean concluded saying that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Machine learning can exist beyond vectors, strings and graphs&lt;/li&gt;
+&lt;li&gt;We can calculate different embeddings of symmetric groups&lt;/li&gt;
+&lt;li&gt;Differentiable sorting and ranking can be done through regularization and perturbation&lt;/li&gt;
+&lt;li&gt;This can be generalized to other discrete operations&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Opening Keynote at the Google AI Summer School, 2020</title>
