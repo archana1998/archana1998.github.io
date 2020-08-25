@@ -5,12 +5,154 @@
     <link>https://archana1998.github.io/tag/machine-learning/</link>
       <atom:link href="https://archana1998.github.io/tag/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Machine Learning</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Fri, 21 Aug 2020 23:11:51 +0530</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Sun, 23 Aug 2020 15:53:16 +0530</lastBuildDate>
     <image>
       <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png</url>
       <title>Machine Learning</title>
       <link>https://archana1998.github.io/tag/machine-learning/</link>
     </image>
+    
+    <item>
+      <title>Summer School Series: Lecture 3 by Vineet Gupta</title>
+      <link>https://archana1998.github.io/post/vineet-gupta/</link>
+      <pubDate>Sun, 23 Aug 2020 15:53:16 +0530</pubDate>
+      <guid>https://archana1998.github.io/post/vineet-gupta/</guid>
+      <description>&lt;p&gt;This talk was delivered by &lt;a href=&#34;http://www-cs-students.stanford.edu/~vgupta/&#34;&gt; Vineet Gupta &lt;/a&gt;, a research scientist at Google Brain, Mountain View California.
+His talk was titled &lt;b&gt;Adaptive Optimization&lt;/b&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;the-optimization-problem&#34;&gt;The optimization problem&lt;/h3&gt;
+&lt;p&gt;The optimization problem aims to learn the best function from a class of functions.
+$$\operatorname{Class} :  { \hat{y} = M(x | w), for \space w \in \mathbb{R}^{n} }\ $$&lt;/p&gt;
+&lt;p&gt;A class is most often specified as a neural network, parameterized by w. If the class is too large, overfitting happens. If the class is too small, well we end up getting bad results.&lt;/p&gt;
+&lt;p&gt;The most common function to find the best function is supervised learning.&lt;/p&gt;
+&lt;p&gt;Training examples: input output pairs such as (x&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;1&lt;/sub&gt;),&amp;hellip;.(x&lt;sub&gt;n&lt;/sub&gt;, y&lt;sub&gt;n&lt;/sub&gt;)&lt;/p&gt;
+&lt;p&gt;Learning rule: Estimating $w$ such that $\hat{y_{i}} = M(x_{i}|w) \approx y_{i}$, and $w$ approximately minimizes $ F(w) = \sum_{i=1}^{n} l(\hat{y_{i}},y_{i})$ (the loss function)&lt;/p&gt;
+&lt;p&gt;In a feed-forward Deep Neural Network, gradient descent for the entire training is expensive. For this reason, we sample points and find the gradient for them.&lt;/p&gt;
+&lt;h3 id=&#34;stochastic-optimization&#34;&gt;Stochastic Optimization&lt;/h3&gt;
+&lt;p&gt;The optimizer starts with the network denoted as $M(x|w)$.&lt;/p&gt;
+&lt;p&gt;At each round t: (the goal is to minimize $F(w)$)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Optimizer has decided upon $w_{t}$&lt;/li&gt;
+&lt;li&gt;Optimizer receives the input $ [x_{i} ]_{i=1}^{k}$&lt;/li&gt;
+&lt;li&gt;Optimizer makes prediction $[\hat{y_{i}}= M(x_{i}|w_{t})]_{i=1}^{k}$&lt;/li&gt;
+&lt;li&gt;Optimizer receives the true outcome&lt;/li&gt;
+&lt;li&gt;Optimizer computes the loss $l_{t} = \sum_{i} l(y_{i},\hat{y_{i}})$ and gradient $g_{t} = \frac{\partial }{\partial w} \sum_{i} l(y_{i},\hat{y_{i}})$&lt;/li&gt;
+&lt;li&gt;Optimizer uses $g_{t}$ to update $w_{t}$ to get $w_{t+1}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We stop when the gradients vanish or run out of time (or epochs).&lt;/p&gt;
+&lt;h3 id=&#34;regret&#34;&gt;Regret&lt;/h3&gt;
+&lt;p&gt;Convergence can be defined as the average loss compared to the optimum $w^{*}$&lt;/p&gt;
+&lt;p&gt;$$ R_{T} = \frac{1}{T} \sum_{t=1}^{T} l_{t} (w_{t}) - \frac{1}{T} \sum_{t=1}^{T} l_{t}(w^{*})$$&lt;/p&gt;
+&lt;p&gt;The proof of convergence can be picked up when $R_{T} \rightarrow 0 \text{ as } T \rightarrow 0$. This is a very &lt;b&gt;strong &lt;/b&gt; requirement, regret tending to 0.&lt;/p&gt;
+&lt;p&gt;In convex optimization, $R_{T}$ can be computed in $O(\frac{1}{\sqrt{T}})$ time. Convex problems in SGD include faster convergence implies better condition number.&lt;/p&gt;
+&lt;h3 id=&#34;momentum&#34;&gt;Momentum&lt;/h3&gt;
+&lt;p&gt;What happens when the gradients become very noisy? To solve this, we can take a running average of the gradients.
+$$ \bar{g_{t}} = \gamma \bar{g_{t}} + (1-\gamma)g_{t}$$
+Thus the momentum step becomes:
+$$w_{t+1} = w_{t}-\eta_{t} \bar{g_{t}}$$
+The momentum approach works very well and is extremely popular, till date.&lt;/p&gt;
+&lt;p&gt;Another way to solve the problem is by using second order methods.
+To minimize $F(w)$,&lt;/p&gt;
+&lt;p&gt;$$F(w) \approx F(w_{t}) + (w - w_{t})^{T} \nabla F(w_{T}) + \frac{1}{2} (w - w_{t})^{T} \nabla^{2} F(w_{t}) (w - w_{t}) $$ (first two terms of the Taylor series).&lt;/p&gt;
+&lt;p&gt;The minimum is at: $w_{t+1} = w_{t} - \nabla^{2} F(w_{t})^{-1} \nabla F(w_{t})$&lt;/p&gt;
+&lt;p&gt;The biggest problem with this is computing the $\nabla^{2} F(w_{t})$ (Hessian) is very expensive, as it is a $n*n$ matrix with $n$ number of parameters.&lt;/p&gt;
+&lt;h3 id=&#34;adagrad&#34;&gt;AdaGrad&lt;/h3&gt;
+&lt;p&gt;For gradient $g_{i}$
+$$ H_{t} = \sqrt{(\sum_{s\leq{t}} g_{s} g_{s}^T)} $$&lt;/p&gt;
+&lt;p&gt;This is used as matrix for the Mahalnobis metric, that will be used.
+$$ \therefore w_{t+1} = \operatorname{argmin}_{w} \frac{1}{2\eta} ||w - w _{t}|| _{H _{t}}^{2} +\hat{l _{t}}(w) $$&lt;/p&gt;
+&lt;p&gt;The AdaGrad update rule is: $w_{t+1} = w_{t} - \eta H_{t}^{-1} g_{t}$.
+This is again very expensive, $O(n^{2})$ storage and $O(n^{3})$ time complexity per step.&lt;/p&gt;
+&lt;h4 id=&#34;the-solution&#34;&gt;The solution&lt;/h4&gt;
+&lt;p&gt;One way to solve this is by the diagonal approximation, by taking only the diagonal matrix of the Hessian instead of the entire matrix. $$H_{t} = \operatorname{diag}{(\sum_{s\leq{t}}g_{s}g_{s}^{T}+\epsilon\operatorname{I})}^{\frac{1}{2}}$$&lt;/p&gt;
+&lt;p&gt;This take $O(n)$ space and $O(n)$ time per step.&lt;/p&gt;
+&lt;p&gt;AdaGrad has been so successful that there have been plenty of variants like AdaDelta/RMS Prop and Adam.&lt;/p&gt;
+&lt;h3 id=&#34;full-matrix-preconditioning&#34;&gt;Full-matrix Preconditioning&lt;/h3&gt;
+&lt;h4 id=&#34;adagrad-preconditioner&#34;&gt;AdaGrad Preconditioner&lt;/h4&gt;
+&lt;p&gt;For $w_{t}$ of size 100 * 200, $g_{t}$ flattens to a 20,000 vector and then becomes 20k * 20k in size.&lt;/p&gt;
+&lt;h4 id=&#34;the-kronecker-product&#34;&gt;The Kronecker Product&lt;/h4&gt;
+&lt;p&gt;Given a $m * n$ matrix $A$ and $p * q$ matrix $B$, their &lt;b&gt;Kronecker Product&lt;/b&gt; $C$ is defined as $$C = A \bigotimes B $$
+This is also called the matrix direct product, and is a $(mp)*(nq)$ matrix (every element of $A$ multiplied with $B$). It commutes with standard matrix product along with exponentials.&lt;/p&gt;
+&lt;h3 id=&#34;the-shampoo-preconditioner&#34;&gt;The Shampoo Preconditioner&lt;/h3&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-decomposed-matrix&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/vineet-gupta/1_hu82cf2efea7539d0f27dd878118672ff1_8584_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Decomposed Matrix
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;the-shampoo-update&#34;&gt;The Shampoo Update:&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;Adagrad update&lt;/b&gt;: ${w} _{t+1} ={w} _{t}-\eta H _{t}^{-1} {g} _{t}$&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Shampoo factorization&lt;/b&gt;: $w_{t+1}=w_{t}-\eta\left(L_{i}^{\frac{1}{4}} \otimes R_{t}^{\frac{1}{4}}\right)^{-1} g_{t}$&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Shampoo update&lt;/b&gt;: $W_{t+1}=W_{t}-\eta L_{t}^{-\frac{1}{4}} G_{t} R_{t}^{-\frac{1}{4}}$
+&lt;b&gt;Theorem (convergence)&lt;/b&gt;:
+If ${G} _{1}, \mathrm{G} _{2}, \ldots, \mathrm{G} _{\mathrm{T}}$ of rank $\leq \mathrm{r},$ then the rate of convergence is:&lt;/p&gt;
+&lt;p&gt;$$\frac{\sqrt{\mathrm{r}}}{\mathrm{T}} \operatorname{Tr}\left(\mathrm{L} _{\mathrm{T}}^{\frac{1}{4}}\right) \operatorname{Tr}\left(\mathrm{R} _{\mathrm{T}}^{\frac{1}{4}}\right)=\mathrm{O}\left(\frac{1}{\sqrt{\mathrm{T}}}\right)$$&lt;/p&gt;
+&lt;p&gt;$$({R_{t}}=\sum_{s \leq t} G_{s}^{\top} G_{s}$ and $L_{t}=\sum_{s \leq t} G_{s} G_{s}^{T})$$&lt;/p&gt;
+&lt;h3 id=&#34;implementing-shampoo&#34;&gt;Implementing Shampoo&lt;/h3&gt;
+&lt;p&gt;The training system can be of two types:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Asynchronous (accelerators don&amp;rsquo;t need to talk to each other, however it is hard for the parameter servers to handle)&lt;/li&gt;
+&lt;li&gt;Synchronous (accelerator sends gradients to all the other accelerators, for them to average and update)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;challenges&#34;&gt;Challenges&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Tensorflow and PyTorch focus on 1&lt;sup&gt;st&lt;/sup&gt; order optimizations&lt;/li&gt;
+&lt;li&gt;Computing $L_{t}^{-\frac{1}{4}}$ and $R_{t}^{-\frac{1}{4}}$ is expensive&lt;/li&gt;
+&lt;li&gt;L, R have large condition numbers (upto the order of 10&lt;sup&gt;13&lt;/sup&gt;).&lt;/li&gt;
+&lt;li&gt;SVD is very expensive: $O(n^{3})$ in largest dimension&lt;/li&gt;
+&lt;li&gt;Large layers are still impossible to precondition&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;solutions&#34;&gt;Solutions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Using high precision arithmetic (float 64), not performing the computations on a TPU.&lt;/li&gt;
+&lt;li&gt;Computing preconditioners every 1000 steps is alright.&lt;/li&gt;
+&lt;li&gt;Replace SVD with an iterative method&lt;/li&gt;
+&lt;li&gt;Only matrix multiplications needed
+&lt;ul&gt;
+&lt;li&gt;Warm start: use previous preconditioner&lt;/li&gt;
+&lt;li&gt;Reduce condition number, remove top singular values&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Optimization for large layers
+&lt;ul&gt;
+&lt;li&gt;Precondition only one dimension&lt;/li&gt;
+&lt;li&gt;Block partioning the layer works better&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;shampoo-implementation-and-conclusion&#34;&gt;Shampoo implementation and conclusion&lt;/h3&gt;
+&lt;p&gt;Shampoo gets implemented on a TPU+CPU. It is a little more expensive than AdaGrad but waay faster (saves 40% of the training time with 1.95 times fewer steps). Shampoo works well in language and speech domains, it isn&amp;rsquo;t suitable for image classication yet (for this Adam and AdaGrad work much better).&lt;/p&gt;
+&lt;p&gt;The Shampoo paper can be found &lt;a href =&#34;https://arxiv.org/abs/1802.09568&#34;&gt; here &lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Summer School Series: Lecture 2 by Neil Houlsby</title>
