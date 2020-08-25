@@ -5,12 +5,226 @@
     <link>https://archana1998.github.io/category/experiences/</link>
       <atom:link href="https://archana1998.github.io/category/experiences/index.xml" rel="self" type="application/rss+xml" />
     <description>Experiences</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Tue, 25 Aug 2020 17:19:29 +0530</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Tue, 25 Aug 2020 19:19:35 +0530</lastBuildDate>
     <image>
       <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png</url>
       <title>Experiences</title>
       <link>https://archana1998.github.io/category/experiences/</link>
     </image>
+    
+    <item>
+      <title>How Google bowled me over with a Googly</title>
+      <link>https://archana1998.github.io/post/summer-school-sumup/</link>
+      <pubDate>Tue, 25 Aug 2020 19:19:35 +0530</pubDate>
+      <guid>https://archana1998.github.io/post/summer-school-sumup/</guid>
+      <description>&lt;p&gt;I recently got the opportunity to attend the AI Summer School conducted by Google Research India. I was one of the 150 people selected to attend it, out of over 75,000 applications. Probably one of my most noteworthy achievements till date, if not the most (?). I remember screaming after getting the acceptance mail for over two hours, it was the happiest I have been in a while. I was selected as part of the Computer Vision track, and I was elated as I knew absolutely nothing about the other two tracks (Natural Language Understanding and AI for Social Good)&lt;/p&gt;
+&lt;p&gt;The summer school happened over three days, between August 20 and 22, 2020. Due to the pandemic that taught us that we can do everything over a computer screen, the summer school was held in a virtual mode. The people at Google made us feel very welcome, and sent out a batch of goodies from Google to all the participants (side note: I&amp;rsquo;m a little salty about this as I haven&amp;rsquo;t gotten mine yet, it got lost on the way). Saying I loved the experience would be an understatement of sorts, I was constantly elated after each and every event.&lt;/p&gt;
+&lt;p&gt;Day 1 started off with a keynote by Jeff Dean, the head of Google AI Research, at 9 am. Waking up so early was a huge achievement for me in a quarantine-home restricted environment where I sleep late and wake up late. Working remotely at a lab in a different country provides insane flexibility, I am my most productive in the afternoons and evenings. I sat in front of my computer and tuned into the YouTube live stream which was engaging and amazing (see my &lt;a href=&#34;https://archana1998.github.io/post/opening-keynote/&#34;&gt; post&lt;/a&gt;)
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-opening-keynote&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/summer-school-sumup/1_hu44f229a9c87ce6272342d7409ef1f45d_159695_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1478&#34; height=&#34;1108&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Opening Keynote
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;After a lunch break, we had our first lecture by Jean-Phillipe Vert, which had so much rigorous math that we were slightly intimidated, however it was a pleasure being taught by someone so amazing all the same. (shameless plug to &lt;a href=&#34;https://archana1998.github.io/post/jean-vert/&#34;&gt; post&lt;/a&gt; again).&lt;/p&gt;
+&lt;p&gt;We had an amazing panel discussion that was titled &lt;b&gt;Why Choose a Career in Research&lt;/b&gt;. The panel consisted of eminent names from Google Research. We had a &amp;ldquo;virtual social&amp;rdquo; after that on GatherTown, which was not the easiest to use on Day 1, but it was quite an experience. We had a second lecture after that by Neil Houlsby, finally on computer vision (I loved it, here&amp;rsquo;s my &lt;a href=&#34;https://archana1998.github.io/post/neil-houlsby/&#34;&gt; post&lt;/a&gt;). And just like that, I was done for the day and had learnt more in these 6 hours than I did in the last semester.&lt;/p&gt;
+&lt;p&gt;Day 2 started off well with a lovely talk by Vineet Gupta, on math again :(. But this was nice math, easy to understand and follow and talked about very interesting theoretical math for machine learning that provided very promising results in optimization (once again, here&amp;rsquo;s my &lt;a href=&#34;https://archana1998.github.io/post/vineet-gupta/&#34;&gt; post&lt;/a&gt;). We had a social before lunch once again, and I got to meet and greet with a lot of people this time, having finally understood how to use the GatherTown UI. I interacted with a lot of my fellow attendees and the Google Lab members, it was super fun.&lt;/p&gt;
+&lt;p&gt;After lunch, we had our first computer vision-centric lecture by Cristian Sminchisescu that was BEAUTIFUL. The fact that it perfectly aligned to my research interests was a cherry on top of the cake. (&lt;a href=&#34;https://archana1998.github.io/post/cristian-sminchisescu/&#34;&gt; post&lt;/a&gt; again). We had a panel discussion titled &amp;ldquo;AI For India&amp;rdquo; after that, which was insightful as well. I was done with my second day of the school, and had learned more than I did in half of my math degree.&lt;/p&gt;
+&lt;p&gt;Day 3 had lovely lectures, by Rahul Sukthankar and Arsha Nagrani who were so, so, good at presenting their work! Rahul&amp;rsquo;s lecture was simple but beautifully presented, and I loved it! (here&amp;rsquo;s my &lt;a href=&#34;https://archana1998.github.io/post/rahul-sukthankar/&#34;&gt; post&lt;/a&gt;). Arsha&amp;rsquo;s talk was about some very interesting research that&amp;rsquo;s probably going to revolutionize multimodal learning (last time, here&amp;rsquo;s my &lt;a href =&#34;https://archana1998.github.io/post/arsha-nagrani/&#34;&gt; post &lt;/a&gt;)
+The summer school concluded with a closing keynote delivered by Manish Gupta, the director of Google Research India, who talked about opportunities in Google Research for us. We then had socials that lasted two hours (last day, woohoo) and I, who had mastered navigating GatherTown by then was a proper social butterfly, talking to everyone and anyone and sending connection requests on LinkedIn to stay in touch.&lt;/p&gt;
+&lt;p&gt;That was it! &lt;em&gt;curtain closes&lt;/em&gt; The experience was CRAZY, and I never knew I could learn so much in just three days. More than learning new concepts, I got an insight into how these amazing people conduct cutting edge research, and the fact that we have to learn so much to get there was a little inspirational too. I was jumping with happiness and rambled nonstop about how much fun I had to my family and my boyfriend, thankfully for me, they shared my enthusiasm :)
+I can&amp;rsquo;t wait to experience more things like this in the future!&lt;/p&gt;
+&lt;p&gt;PS: Still waiting for my goodies @Google. Thanks again for a lovely time.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Summer School Series: Lecture 6 by Arsha Nagrani</title>
+      <link>https://archana1998.github.io/post/arsha-nagrani/</link>
+      <pubDate>Tue, 25 Aug 2020 18:36:00 +0530</pubDate>
+      <guid>https://archana1998.github.io/post/arsha-nagrani/</guid>
+      <description>&lt;p&gt;This final lecture was delivered by &lt;a href =&#34;http://www.robots.ox.ac.uk/~arsha/&#34;&gt;Arsha Nagrani&lt;/a&gt;, a recent Ph.D. graduate from Oxford University&amp;rsquo;s VGG group, and an incoming research scientist at Google Research. Her talk was called &lt;b&gt;Multimodality for Video Understanding&lt;/b&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;video-understanding&#34;&gt;Video Understanding&lt;/h3&gt;
+&lt;p&gt;Videos provide us with far more information than images. Multimodal refers to many mediums for learning, here it can be time, sound and speech. Videos are all around us (30k newly created content videos are uploaded to YouTube every &lt;b&gt;hour&lt;/b&gt;).
+However, these have high dimensionality and are difficult to process and annotate.&lt;/p&gt;
+&lt;h4 id=&#34;complementarity-among-signals&#34;&gt;Complementarity among signals&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Vision (scene)&lt;/li&gt;
+&lt;li&gt;Sound (content of speech)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;redundancy-between-signals&#34;&gt;Redundancy between signals&lt;/h4&gt;
+&lt;p&gt;Helps recognize person, face+sound, thus can be a useful form of weak supervision. The redundant information comes from background sounds, foreground audio, signals identified from speech and the content of speech.&lt;/p&gt;
+&lt;p&gt;Thus, best way to exploit multimodal nature of videos is to work with the complementarity and redundancy.&lt;/p&gt;
+&lt;h4 id=&#34;suitable-tasks&#34;&gt;Suitable tasks&lt;/h4&gt;
+&lt;p&gt;Suitable tasks for video understanding are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Video classification&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;single label&lt;/li&gt;
+&lt;li&gt;infinite number of possible classes&lt;/li&gt;
+&lt;li&gt;ambiguity in the label space&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Action recognition: more fine grained, the motion is important, human centric&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It is important to note that labelling actions in videos is extremely expensive and existing models do not generalize well to new domains.&lt;/p&gt;
+&lt;p&gt;In this context, can we use speech as a form of supervision? For example, narrated video clips and lifestyle Vlogs.&lt;/p&gt;
+&lt;h3 id=&#34;movies&#34;&gt;Movies&lt;/h3&gt;
+&lt;p&gt;General domain of movies: people speak about their actions. However, sometimes speech is completely unrelated, giving us noise. We need to learn when speech matches action. An example of work in this field is &lt;a href =&#34;https://arxiv.org/abs/1912.06430&#34;&gt;End-to-End Learning of Visual Representations from Uncurated Instructional Videos&lt;/a&gt;. This work reduces noise by using the MIL-NCE loss.&lt;/p&gt;
+&lt;p&gt;Can we first train a model to recognize actions and then see if it should be used for supervision? An interesting discovery Arsha made was using Movie Screenplays, that contain both speech segments and scene directions with actions. Using this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We can obtain speech-action pairs&lt;/li&gt;
+&lt;li&gt;Retrieve speech segments with verbs&lt;/li&gt;
+&lt;li&gt;Train the &lt;a href=&#34;https://www.robots.ox.ac.uk/~vgg/research/speech2action/&#34;&gt;Speech2Action&lt;/a&gt; model to predict action, with a BERT-Backbone (movie scripts scraped from IMSDB)&lt;/li&gt;
+&lt;li&gt;Apply to closed captions of unlabelled videos&lt;/li&gt;
+&lt;li&gt;Apply to large movie corpus&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-speech2action-model&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/arsha-nagrani/1_hu3dfb93f108aa0e1c42c1039d245e09c2_102757_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;784&#34; height=&#34;358&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Speech2Action model
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;The Speech2Action model recognizes rare actions, and is a visual classifier on weakly labelled data (S3D-G model with cross-entropy loss)&lt;/p&gt;
+&lt;p&gt;Evaluation is done on the AVA and HMDB-51 (transfer learning) datasets. It gets abstract actions like &lt;b&gt;count&lt;/b&gt; and &lt;b&gt;follow&lt;/b&gt; too.&lt;/p&gt;
+&lt;h3 id=&#34;multimodal-complementarity&#34;&gt;Multimodal Complementarity&lt;/h3&gt;
+&lt;p&gt;This refers to fusing info from multiple modalities for video text retrieval, like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Finding video corresponding to text queries&lt;/li&gt;
+&lt;li&gt;More to videos than just actions like object, scene etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Supervisions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It&amp;rsquo;s not easy to get the complete combination of captions, this is a very subjective task&lt;/li&gt;
+&lt;li&gt;Need extremely large datasets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;What Arsha does is rely on expert models trained for different tasks like object detection, face detection, action recognition, OCR etc. These are all applied to the video and features are extracted. The framework is a joint video text embedding, with the video encoder + text query encoder = joint embedding space (similarity should be really high if related). It is necessary for the video encoder to be discriminative and retain specific information.&lt;/p&gt;
+&lt;h3 id=&#34;collaborative-gating&#34;&gt;Collaborative Gating&lt;/h3&gt;
+&lt;p&gt;For each expert, generate attention mask by looking at the other experts &lt;a href = &#34;https://bmvc2019.org/wp-content/uploads/papers/0363-paper.pdf&#34;&gt; (Use What You Have: Video Retrieval Using Representations From Collaborative Experts, BMVC 2019)&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Trained using bi-directional max margin ranking loss&lt;/li&gt;
+&lt;li&gt;Adding in more experts massively increases performance&lt;/li&gt;
+&lt;li&gt;Main boost is from the object embeddings&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-collaborative-gating&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/arsha-nagrani/2_huc44033e910d0af756e6885ccfb6b6932_14850_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;197&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Collaborative Gating
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Another paper that Arsha discussed was &lt;a href =&#34;https://arxiv.org/abs/2007.10639&#34;&gt; Multi-modal Transformer for Video Retrieval, ECCV 2020 &lt;/a&gt;. This takes features that are taken at different time stamps for each task and aggregrate for the embeddings. The expert and temporal embeddings are added and summed up.&lt;/p&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;More modalities is better (because more complementarity)&lt;/li&gt;
+&lt;li&gt;Time (modelling time along with modalities is interesting, some modalities train faster than the others)&lt;/li&gt;
+&lt;li&gt;Mid fusion is better than late (Attention truly is what you need)&lt;/li&gt;
+&lt;li&gt;Our world is multimodal, it doesn&amp;rsquo;t make sense to work with modalities in isolation&lt;/li&gt;
+&lt;li&gt;Use the redundant and complementary information from vision, audio and speech to massively reduce annotations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;b&gt;Open Research Questions:&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Extended Temporal Sequences (beyond 10s):&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Backprop + memory restricts current video architectures to 64 frames&lt;/li&gt;
+&lt;li&gt;For longer we rely on pre-extracted features&lt;/li&gt;
+&lt;li&gt;Need new datasets to drive innovation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Moving away from supervision: is an upper bound on self supervision being appraoched?&lt;/li&gt;
+&lt;li&gt;The world is multimodal: how do we design good fusion architectures?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Arsha thus concluded a fantastic talk that described the cutting-edge research that her team at Oxford and Google is conducting. It was tremendously insightful and inspirational.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Summer School Series: Lecture 5 by Rahul Sukthankar</title>
@@ -428,6 +642,7 @@ $$\max _{\phi} \sum _{\partial \in \mathcal{D}} \log p _{\phi}(\theta)$$&lt;/li&
 &lt;li&gt;Humans are reasonably consistent at identifying contacts at 9 and 17 region granularity, and contact can be predicted with reasonable accuracy too&lt;/li&gt;
 &lt;li&gt;Contact-constrained 3D human reconstruction produces considerably better and more meaningful estimates, compared to non-contact methods&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Cristian then concluded his wonderful lecture that talked about the most recent advances in Computer Vision in the 3D Deep learning field. It was a very informative and engaging lecture.&lt;/p&gt;
 </description>
     </item>
     
