@@ -5,12 +5,201 @@
     <link>https://archana1998.github.io/post/</link>
       <atom:link href="https://archana1998.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Tue, 25 Aug 2020 16:11:56 +0530</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Tue, 25 Aug 2020 17:19:29 +0530</lastBuildDate>
     <image>
       <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://archana1998.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Summer School Series: Lecture 5 by Rahul Sukthankar</title>
+      <link>https://archana1998.github.io/post/rahul-sukthankar/</link>
+      <pubDate>Tue, 25 Aug 2020 17:19:29 +0530</pubDate>
+      <guid>https://archana1998.github.io/post/rahul-sukthankar/</guid>
+      <description>&lt;p&gt;This Lecture was presented by &lt;a href=&#34;https://research.google/people/RahulSukthankar/&#34;&gt;Rahul Sukthankar&lt;/a&gt;, a research scientist at Google Research and an Adjunct Professor at Carnegie Mellon University. It was titled &lt;b&gt;Deep Learning in Computer Vision&lt;/b&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;popular-computer-vision-tasks&#34;&gt;Popular Computer Vision tasks&lt;/h3&gt;
+&lt;p&gt;Some popular tasks in the domain of computer vision include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Image Classification (assign to one class)&lt;/li&gt;
+&lt;li&gt;Image Labelling/Object Recognition (multiple classes)&lt;/li&gt;
+&lt;li&gt;Object Detection/Localization (predicts bounding box+label, works well for objects but not for fuzzy concepts)&lt;/li&gt;
+&lt;li&gt;Semantic Segmentation (Pixel level dense labelling)&lt;/li&gt;
+&lt;li&gt;Image Captioning (Description of image in text)&lt;/li&gt;
+&lt;li&gt;Human Body Part Segmentation&lt;/li&gt;
+&lt;li&gt;Human Pose Estimation (predicting 2D pose keypoints)&lt;/li&gt;
+&lt;li&gt;Generating 3D Human Pose and Body Models from an image&lt;/li&gt;
+&lt;li&gt;Depth Prediction from a single image (foreground and background semantic segmentation based on a heatmap)&lt;/li&gt;
+&lt;li&gt;3D Scene Understanding&lt;/li&gt;
+&lt;li&gt;Autonomous navigation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While thinking about a particular problem statement:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We need to take in specific considerations (such as semantic segmentation, classicaiton, object detection etc)&lt;/li&gt;
+&lt;li&gt;What is the output? (binary yes/no, bounding box, label/pixel etc)&lt;/li&gt;
+&lt;li&gt;How is the training data labelled? (Fully Supervised/Weakly or Cross-Modal/Self-supervised)&lt;/li&gt;
+&lt;li&gt;Architecture: Usually a Convolutional Neural Network, but what is the final layer?&lt;/li&gt;
+&lt;li&gt;What loss function do we use?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CMU Navlabs (30 years ago) built a self steering car only with an artificial neural network, in the pre-CNN era (&lt;a href= &#34;https://papers.nips.cc/paper/95-alvinn-an-autonomous-land-vehicle-in-a-neural-network.pdf&#34;&gt; ALVINN: AN AUTONOMOUS LAND VEHICLE IN A NEURAL NETWORK&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id=&#34;convolutional-neural-networks&#34;&gt;Convolutional Neural Networks&lt;/h3&gt;
+&lt;p&gt;The structure of a convolutional neural network follows as input + conv, relu, pooling layers (hidden layers) + flatten, fully connected and softmax layers (for classification). Key concepts behind CNNs are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Local connectivity (not connected to every pixel, but just a few)&lt;/li&gt;
+&lt;li&gt;Shared weights (translational invariance)&lt;/li&gt;
+&lt;li&gt;Pooling (reducing dimensions, leads to local patch becoming bigger (filter size))&lt;/li&gt;
+&lt;li&gt;Filter stride (cuts down weights, reduces computations)&lt;/li&gt;
+&lt;li&gt;Multiple feature maps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It is essential to choose the right conv layer, pooling layer, activation function, loss function, optimization and regularization methods, etc.&lt;/p&gt;
+&lt;h4 id=&#34;convolutions&#34;&gt;Convolutions&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;2D vs 3D convolutions: 3D convolutions are used to capture patterns across 3 dimensions, for example Video Understanding and Medical Imaging.&lt;/li&gt;
+&lt;li&gt;1x1 convolution: weighed average across channel axis, feature pooling technique to reduce dimensions&lt;/li&gt;
+&lt;li&gt;Other types of convolutions are dilated convolutions, regular vs depth wise separable convolutions, grouped convolutions (AlexNet uses it, it reduces computation)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;famous-architectures&#34;&gt;Famous architectures&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Inceptionv1 (2014):
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-inception-v1&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/rahul-sukthankar/1_hu0095bbad7d2e55015cc682d2a4670f59_127543_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;762&#34; height=&#34;294&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Inception v1
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ResNet:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Resnet uses skipped connections with residual blocks, the added paths help solve vanishing gradient problems and gives a shorter route for backpropagation&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-residual-blocks&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/rahul-sukthankar/2_hub70c3df55df6f4f2b8fb68ff07d9a5f0_58255_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;557&#34; height=&#34;332&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Residual blocks
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;object-detection-in-images&#34;&gt;Object Detection in Images&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Object Classification: Task of identifying a picture is a dog&lt;/li&gt;
+&lt;li&gt;Object Localization: Involves finding class labels as well as a bounding box to show where an object is located&lt;/li&gt;
+&lt;li&gt;Object Detection: Localizing with box&lt;/li&gt;
+&lt;li&gt;Semantic Segmentation: Dense pixel labelling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are two ways to do detection:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Sliding window approach: computationally expensive and unbalanced&lt;/li&gt;
+&lt;li&gt;Selective search: guessing promising bounding boxes and selecting the best out of them&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;RCNN did this when they extracted region proposals&lt;/li&gt;
+&lt;li&gt;Fast RCNN did class labelling+ bounding box prediction at the same time (softmax+bounding box regression)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bounding box evaluation is commonly done by the Intersection over Union Metric
+$$ \text{Intersection over Union} = \frac{\text{Area of Overlap}}{\text{Area of Union}}$$
+(Ground truth bounding box and predicted bounding box)&lt;/p&gt;
+&lt;h3 id=&#34;classic-cnn-vs-fully-convolutional-net&#34;&gt;Classic CNN vs Fully Convolutional Net&lt;/h3&gt;
+&lt;p&gt;A classic CNN comprises of a conv+Fully Connected Layer, a fully convolutional layer contains convolutional blocks that help us retain the same number of weights no matter what the input image size is. An example of a fully convolutional net is the U-Net, that is used extensively for semantic segmentation.&lt;/p&gt;
+&lt;p&gt;Other applications of a fully convolutional net are : Residual Encoding Decoding, Dense Prediction, Superresolution, Colorization (self supervised)&lt;/p&gt;
+&lt;h3 id=&#34;last-layer-activation-function-and-loss-function-summary&#34;&gt;Last-Layer Activation function and Loss Function Summary&lt;/h3&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-functions-to-use&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/rahul-sukthankar/3_hu44f5fe12bf2e14613e9c883ade35e838_85577_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;712&#34; height=&#34;219&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Functions to use
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Any differentiable function can be used as a loss function: even another neural net! (perceptual loss, GAN loss, differentiable renderer etc)&lt;/p&gt;
+&lt;p&gt;Rahul concluded this introduction lecture focused in Computer Vision using fully supervised deep learning, with key concepts on CNNs and their extensions and the importance of choosing the right loss function. It was a wonderful lecture with all the concepts beautifully explained.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Summer School Series: Lecture 4 by Cristian Sminchisescu</title>
