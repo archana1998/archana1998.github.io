@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3D Reconstruction | Archana Swaminathan</title>
+    <link>https://archana1998.github.io/tag/3d-reconstruction/</link>
+      <atom:link href="https://archana1998.github.io/tag/3d-reconstruction/index.xml" rel="self" type="application/rss+xml" />
+    <description>3D Reconstruction</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan ©</copyright><lastBuildDate>Tue, 25 Aug 2020 16:11:56 +0530</lastBuildDate>
+    <image>
+      <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png</url>
+      <title>3D Reconstruction</title>
+      <link>https://archana1998.github.io/tag/3d-reconstruction/</link>
+    </image>
+    
+    <item>
+      <title>Summer School Series: Lecture 4 by Cristian Sminchisescu</title>
+      <link>https://archana1998.github.io/post/cristian-sminchisescu/</link>
+      <pubDate>Tue, 25 Aug 2020 16:11:56 +0530</pubDate>
+      <guid>https://archana1998.github.io/post/cristian-sminchisescu/</guid>
+      <description>&lt;p&gt;This talk was presented by &lt;a href =&#34;https://research.google/people/CristianSminchisescu/&#34;&gt;Cristian Sminchisescu&lt;/a&gt;, who is a Research Scientist leading a team at Google, and a Professor at Lund University. His talk was titled &lt;b&gt;End-to-end Generative 3D Human Shape and Pose models, and active human sensing&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;3D Human Sensing has many applications, in the field of animation, sports motion, AR/VR, medical industry etc. It is a known fact that humans are very complex, the body has 600 muscles, 200 bones and 200 joints. Clothing that humans wear have folds and wrinkles, there are many different types of garments and cloth-body interactions.&lt;/p&gt;
+&lt;h3 id=&#34;challenges&#34;&gt;Challenges&lt;/h3&gt;
+&lt;p&gt;Typical challenges in 3D human sensing include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;High dimensionality, articulation and deformation&lt;/li&gt;
+&lt;li&gt;Complex appearance variations, clothing and multiple people&lt;/li&gt;
+&lt;li&gt;Self occlusion or occlusion by scene objects&lt;/li&gt;
+&lt;li&gt;Observation (depth) uncertainty (especially in monocular images)&lt;/li&gt;
+&lt;li&gt;Difficult to obtain accurate supervision of humans&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is where we can exploit the power of machine and deep learning, we aim to come up with a learning model that:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Understands large volumes of data&lt;/li&gt;
+&lt;li&gt;Connects between images and 3D models&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;problems-that-need-to-be-solved&#34;&gt;Problems that need to be solved&lt;/h3&gt;
+&lt;p&gt;It is imperative to &lt;b&gt;FIND THE PEOPLE &lt;/b&gt;. We then need to infer their pose, body shape and clothing. The next step would be to recognize actions, behavioral states and social signals that they make, followed by recognizing what objects they use.&lt;/p&gt;
+&lt;h3 id=&#34;visual-human-models&#34;&gt;Visual Human Models&lt;/h3&gt;
+&lt;p&gt;Different Data types we take into consideration are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Multiple Subjects&lt;/li&gt;
+&lt;li&gt;Soft Tissue Dynamics&lt;/li&gt;
+&lt;li&gt;Clothing
+This is all fed into the learning model&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;generative-human-modeling&#34;&gt;Generative Human Modeling&lt;/h3&gt;
+&lt;p&gt;Dynamic Human Scans $\mathbf{\xrightarrow[\text{deep learning}]{\text{end to end}}}$ Full Body articulated generative human models. The Dynamic Human Scans are in the form of very dense 3D Point Clouds.&lt;/p&gt;
+&lt;h3 id=&#34;ghum-and-ghuml&#34;&gt;GHUM and GHUML&lt;/h3&gt;
+&lt;p&gt;Cristian then talked about his paper &lt;a href = &#34;https://openaccess.thecvf.com/content_CVPR_2020/papers/Xu_GHUM__GHUML_Generative_3D_Human_Shape_and_Articulated_Pose_CVPR_2020_paper.pdf&#34;&gt;GHUM &amp;amp; GHUML: Generative 3D Human Shape and Articulated Pose Models&lt;/a&gt;
+GHUM is the moderate generative model with 10168 vertices and GHUML is the light version with 3190 vertices, however both have a shared skeleton that has minimal parameterization and anatomical joint limits.&lt;/p&gt;
+&lt;p&gt;The model faciliates Automatic 3D Landmark detection with multiview renderings, 2D landmark detection and 3D landmark triangulation. Automatic Registration is able to calculate deformations.&lt;/p&gt;
+&lt;h3 id=&#34;end-to-end-training-pipeline&#34;&gt;End to End Training Pipeline&lt;/h3&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-end-to-end-training-pipeline&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/1_hu5ce619d08456037865eced6552c42e7e_329781_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    End To End Training Pipeline
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Once data is mapped to meshes and put into registered format, next step is to encode and decode static shapes (using VAE)&lt;/li&gt;
+&lt;li&gt;Kinematics is learned using Normalizing Flow model&lt;/li&gt;
+&lt;li&gt;Mesh filter (mask): to integrate close up scans with models, fed into the optimization step&lt;/li&gt;
+&lt;li&gt;To train landmarks, we use annotated image data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;evaluation&#34;&gt;Evaluation&lt;/h3&gt;
+&lt;p&gt;For the variational shape and expression autoencoder, VAE works better than OCA, with reconstruction error lying between 0-20mm. Motion Retargeting and Kinematic Priors are done by retargetting models to 2.8M CMU and 2.2M Humans3.6M motion capture frames.&lt;/p&gt;
+&lt;h3 id=&#34;normalizing-flows-for-kinematic-priors&#34;&gt;Normalizing Flows for Kinematic Priors&lt;/h3&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-normalizing-flows-for-kinematic-priors&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/2_huf2e22827a723675b2a79947a570691ce_140050_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;869&#34; height=&#34;244&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Normalizing Flows for Kinematic Priors
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A normalizing flow is a sequence of invertible transformations applied to an original distribution&lt;/li&gt;
+&lt;li&gt;Use a dataset $\mathcal{D}$ of human kinematic poses $\theta$ as statistics for natural human movements&lt;/li&gt;
+&lt;li&gt;Use normalizing flow to warp the distribution of poses into a simple and tractable density function e.g. $\mathbf{z} \sim \mathcal{N}(0 ; \mathbf{I})$&lt;/li&gt;
+&lt;li&gt;The flow is bijective, trained by maximizing data log-likelihood
+$$\max _{\phi} \sum _{\partial \in \mathcal{D}} \log p _{\phi}(\theta)$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ghum-and-smpl&#34;&gt;GHUM and SMPL&lt;/h3&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-ghum-vs-smpl&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/3_hu125e7c529aa96451d645ff796805a88a_150708_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    GHUM vs SMPL
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GHUM is close (slightly better) to SMPL in skinning visual quality&lt;/li&gt;
+&lt;li&gt;The vertex point-to-plane error (body-only) is GHUM: 4.23mm and SMPL: 4.96mm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;An effective Deep Learning Pipeline to build generative, articulated 3D human shape models&lt;/li&gt;
+&lt;li&gt;GHUM and GHUM are two full body human models that are available for research:(&lt;a href=&#34;https://github.com/google-research/google-research/tree/master/ghum)&#34;&gt;https://github.com/google-research/google-research/tree/master/ghum)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;We can jointly sample shape, facial expressions (VAEs) and pose (normalizing flows)&lt;/li&gt;
+&lt;li&gt;We have low res and high res models, that are non-linear (linear as special case)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;other-work&#34;&gt;Other Work&lt;/h3&gt;
+&lt;p&gt;Some other interesting papers that Cristian pointed out were &lt;a href=&#34;https://arxiv.org/abs/2003.10350&#34;&gt; Weakly Supervised 3D Human Pose and Shape Reconstruction with Normalizing Flows&lt;/a&gt; (ECCV 2020) that works on Full Body Reconstruction in Monocular Images, and &lt;a href =&#34;https://arxiv.org/abs/2008.06910&#34;&gt;Neural Descent for Visual 3D Human Pose and Shape &lt;/a&gt; (submitted to NeurIPS 2020) that talks about Self-Supervised 3D Human Shape and Pose Estimation.&lt;/p&gt;
+&lt;h3 id=&#34;human-interactions&#34;&gt;Human Interactions&lt;/h3&gt;
+&lt;p&gt;A problem that many 3D deep learning practitioners face is dealing with human interactions during estimation and reconstruction. Contacts are difficult to estimate correctly because of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Uncertainty in 3D monocular depth prediction&lt;/li&gt;
+&lt;li&gt;Reduced evidence of contact due to occlusion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cristian then talked about his paper &lt;a href=&#34;https://openaccess.thecvf.com/content_CVPR_2020/papers/Fieraru_Three-Dimensional_Reconstruction_of_Human_Interactions_CVPR_2020_paper.pdf&#34;&gt; Three-dimensional Reconstruction of Human Interactions &lt;/a&gt; and to move towards accurate reconstruction of interactions we need to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Detect contact&lt;/li&gt;
+&lt;li&gt;Predict contact interaction signatures&lt;/li&gt;
+&lt;li&gt;3D reconstruction under contact constraints
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-modelling-interactions&#34;&gt;
+
+
+
+  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/4_hud88f9b9f04f1033960e9f73ca89377df_196249_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;930&#34; height=&#34;315&#34;&gt;
+
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Modelling interactions
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;conclusion-interactions&#34;&gt;Conclusion (Interactions)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;New models and datasets for contact detection, contact surface signature prediction, and 3d reconstruction under contact constraints&lt;/li&gt;
+&lt;li&gt;Annotation has an underlying contact ground truth but not always easy to precisely identify from a single image&lt;/li&gt;
+&lt;li&gt;Humans are reasonably consistent at identifying contacts at 9 and 17 region granularity, and contact can be predicted with reasonable accuracy too&lt;/li&gt;
+&lt;li&gt;Contact-constrained 3D human reconstruction produces considerably better and more meaningful estimates, compared to non-contact methods&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
