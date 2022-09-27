@@ -7,7 +7,7 @@
     <description>Image Processing</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan, 2020 ©</copyright><lastBuildDate>Sat, 18 Jul 2020 18:40:47 +0530</lastBuildDate>
     <image>
-      <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png</url>
+      <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_3.png</url>
       <title>Image Processing</title>
       <link>https://archana1998.github.io/tag/image-processing/</link>
     </image>
@@ -175,7 +175,7 @@ implies solving the equation below, to find the best code to represent the signa
 &lt;p&gt;$$\min &lt;em&gt;{D, X}\left{|Y-D X|&lt;/em&gt;{F}^{2}\right}, \text { subject to } \forall i,\left|x_{i}\right|_{0}=1$$&lt;/p&gt;
 &lt;p&gt;F here is the Frobenius norm. The K-SVD algorithm is similar to the K-means in terms of the process of construction, but differs in the sense of the relaxation of the sparsity term in the constraint. This helps achieve a linear combination of the dictionary atoms. The relaxation is that the number of entries that are not zero in each column can be greater than 1, but less than a defined number T&lt;sub&gt;0&lt;/sub&gt;.&lt;/p&gt;
 &lt;p&gt;Thus, the objective function hence becomes&lt;/p&gt;
-&lt;p&gt;$$\min &lt;em&gt;{D, X}\left{|Y-D X|&lt;/em&gt;{F}^{2}\right} \text { , subject to } \forall i,\left|x_{i}\right|_{0} \leq T_{0}$$&lt;/p&gt;
+&lt;p&gt;$$\min &lt;em&gt;{D, X}\left{|Y-D X|&lt;/em&gt;{F}^{2}\right} \text { , subject to } \forall i,\left|x_{i}\right|&lt;em&gt;{0} \leq T&lt;/em&gt;{0}$$&lt;/p&gt;
 &lt;p&gt;In the algorithm, the dictionary D is first fixed, and the aim is to find the perfect coefficient matrix X. To find this, a pursuit method that does the approximation of the optimal X is used. OMP was chosen as the suitable method to calculate the coefficients of the matrix here.&lt;/p&gt;
 &lt;h3 id=&#34;implementation-and-results&#34;&gt;Implementation and Results&lt;/h3&gt;
 &lt;p&gt;In the implementation for training the dictionary  nd the sparse data representation, the

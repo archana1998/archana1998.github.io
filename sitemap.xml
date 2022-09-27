@@ -1,196 +1,118 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://archana1998.github.io/author/archana-swaminathan/</loc>
     <lastmod>2020-08-25T19:19:35+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/</loc>
     <lastmod>2020-08-25T19:19:35+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/authors/</loc>
     <lastmod>2020-08-25T19:19:35+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/categories/</loc>
     <lastmod>2020-08-25T19:19:35+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/category/experiences/</loc>
     <lastmod>2020-08-25T19:19:35+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/category/google-ai-summer-school/</loc>
     <lastmod>2020-08-25T19:19:35+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/post/summer-school-sumup/</loc>
     <lastmod>2020-08-25T19:19:35+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/post/</loc>
     <lastmod>2020-08-25T19:19:35+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/tag/computer-vision/</loc>
     <lastmod>2020-08-25T18:36:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/post/arsha-nagrani/</loc>
     <lastmod>2020-08-25T18:36:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/tags/</loc>
     <lastmod>2020-08-25T18:36:00+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/post/rahul-sukthankar/</loc>
     <lastmod>2020-08-25T17:19:29+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/tag/3d-reconstruction/</loc>
     <lastmod>2020-08-25T16:11:56+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/post/cristian-sminchisescu/</loc>
     <lastmod>2020-08-25T16:11:56+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/tag/machine-learning/</loc>
     <lastmod>2020-08-23T15:53:16+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/tag/mathematics/</loc>
     <lastmod>2020-08-23T15:53:16+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/post/vineet-gupta/</loc>
     <lastmod>2020-08-23T15:53:16+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/post/neil-houlsby/</loc>
     <lastmod>2020-08-21T23:11:51+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/post/jean-vert/</loc>
     <lastmod>2020-08-21T19:07:17+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/tag/deep-learning/</loc>
     <lastmod>2020-08-20T10:53:53+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/post/opening-keynote/</loc>
     <lastmod>2020-08-20T10:53:53+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/post/flipkart-grid/</loc>
     <lastmod>2020-08-17T17:39:32+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/author/rushabh-musthayala/</loc>
     <lastmod>2020-08-17T17:39:32+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/project/</loc>
     <lastmod>2020-08-16T21:12:27+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/project/damage-detection/</loc>
     <lastmod>2020-08-16T21:12:27+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/category/undergraduate-projects/</loc>
     <lastmod>2020-08-16T21:12:27+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/project/gesture-recognition/</loc>
     <lastmod>2020-08-16T11:03:12+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/tag/electronics/</loc>
     <lastmod>2020-08-16T11:03:12+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/tag/signal-processing/</loc>
     <lastmod>2020-08-16T11:03:12+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/tag/cryptography/</loc>
     <lastmod>2020-07-30T12:05:59+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/project/encryption-decryption/</loc>
     <lastmod>2020-07-30T12:05:59+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/project/compressive-sensing/</loc>
     <lastmod>2020-07-18T18:40:47+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/tag/image-processing/</loc>
     <lastmod>2020-07-18T18:40:47+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/category/reviews/</loc>
     <lastmod>2020-07-18T14:11:22+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/post/regularization/</loc>
     <lastmod>2020-07-18T14:11:22+05:30</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/author/archana-swaminathan/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/publication_types/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/publication/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://archana1998.github.io/talk/</loc>
   </url>
-  
 </urlset>

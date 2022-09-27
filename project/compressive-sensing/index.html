@@ -255,8 +255,8 @@
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_192x192_fill_lanczos_center_3.png">
 
   <link rel="canonical" href="https://archana1998.github.io/project/compressive-sensing/">
 
@@ -324,7 +324,7 @@
     "name": "Archana Swaminathan",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_192x192_fill_lanczos_center_2.png"
+      "url": "https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_192x192_fill_lanczos_center_3.png"
     }
   },
   "description": "Used the Ramanujan Fourier Transform to do compressive sensing and denoising of images in the Ramanujan domain"
@@ -892,7 +892,7 @@ implies solving the equation below, to find the best code to represent the signa
 <p>$$\min <em>{D, X}\left{|Y-D X|</em>{F}^{2}\right}, \text { subject to } \forall i,\left|x_{i}\right|_{0}=1$$</p>
 <p>F here is the Frobenius norm. The K-SVD algorithm is similar to the K-means in terms of the process of construction, but differs in the sense of the relaxation of the sparsity term in the constraint. This helps achieve a linear combination of the dictionary atoms. The relaxation is that the number of entries that are not zero in each column can be greater than 1, but less than a defined number T<sub>0</sub>.</p>
 <p>Thus, the objective function hence becomes</p>
-<p>$$\min <em>{D, X}\left{|Y-D X|</em>{F}^{2}\right} \text { , subject to } \forall i,\left|x_{i}\right|_{0} \leq T_{0}$$</p>
+<p>$$\min <em>{D, X}\left{|Y-D X|</em>{F}^{2}\right} \text { , subject to } \forall i,\left|x_{i}\right|<em>{0} \leq T</em>{0}$$</p>
 <p>In the algorithm, the dictionary D is first fixed, and the aim is to find the perfect coefficient matrix X. To find this, a pursuit method that does the approximation of the optimal X is used. OMP was chosen as the suitable method to calculate the coefficients of the matrix here.</p>
 <h3 id="implementation-and-results">Implementation and Results</h3>
 <p>In the implementation for training the dictionary  nd the sparse data representation, the
@@ -1271,7 +1271,7 @@ better way as compared to using DCT dictionary. For compressive sensing algorith
     
     
     
-    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+    <script src="/js/academic.min.cd45a9c0bbdd3dfb1c126917c601c9f2.js"></script>
 
     
 

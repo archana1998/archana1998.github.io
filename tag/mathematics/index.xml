@@ -7,7 +7,7 @@
     <description>Mathematics</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan, 2020 ©</copyright><lastBuildDate>Sun, 23 Aug 2020 15:53:16 +0530</lastBuildDate>
     <image>
-      <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png</url>
+      <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_3.png</url>
       <title>Mathematics</title>
       <link>https://archana1998.github.io/tag/mathematics/</link>
     </image>
@@ -95,7 +95,7 @@ This is also called the matrix direct product, and is a $(mp)*(nq)$ matrix (ever
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/vineet-gupta/1_hu82cf2efea7539d0f27dd878118672ff1_8584_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/vineet-gupta/1_hu82cf2efea7539d0f27dd878118672ff1_8584_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
 
 
 
@@ -185,7 +185,7 @@ If ${G} _{1}, \mathrm{G} _{2}, \ldots, \mathrm{G} _{\mathrm{T}}$ of rank $\leq \
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/fig1_hu2361eef24ba1250aaf0d087e444736ee_322268_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1166&#34; height=&#34;626&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/fig1_hu2361eef24ba1250aaf0d087e444736ee_322268_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1166&#34; height=&#34;626&#34;&gt;
 
 
 
@@ -246,7 +246,7 @@ If ${G} _{1}, \mathrm{G} _{2}, \ldots, \mathrm{G} _{\mathrm{T}}$ of rank $\leq \
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/2_huacbb429b45f880db3bfef78880895f1e_33174_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1021&#34; height=&#34;294&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/2_huacbb429b45f880db3bfef78880895f1e_33174_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1021&#34; height=&#34;294&#34;&gt;
 
 
 
@@ -323,7 +323,7 @@ $$&lt;/p&gt;
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/fig3_hu5c4a640c4ff8ae0e0520f62ab190a639_28338_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;528&#34; height=&#34;371&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/fig3_hu5c4a640c4ff8ae0e0520f62ab190a639_28338_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;528&#34; height=&#34;371&#34;&gt;
 
 
 
@@ -365,7 +365,7 @@ $$&lt;/p&gt;
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/4_hud40178e92a0e11db369c09c80b6c13e7_135667_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;485&#34; height=&#34;356&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/4_hud40178e92a0e11db369c09c80b6c13e7_135667_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;485&#34; height=&#34;356&#34;&gt;
 
 
 
@@ -381,7 +381,7 @@ $$&lt;/p&gt;
 &lt;h4 id=&#34;2b-pertubation&#34;&gt;2b. Pertubation&lt;/h4&gt;
 &lt;p&gt;Let $G=\left(G_{1}, \ldots, G_{n}\right)$ be i.i.d. Gumbel (0,1) random variables. Then we have (exercice):
 $$
-\operatorname{softmax}_{\epsilon}(x)=E \underset{z \in \Delta_{n-1}}{\operatorname{argmax}}\left[x^{\top}(z+\epsilon G)\right]
+\operatorname{softmax}&lt;em&gt;{\epsilon}(x)=E \underset{z \in \Delta&lt;/em&gt;{n-1}}{\operatorname{argmax}}\left[x^{\top}(z+\epsilon G)\right]
 $$&lt;/p&gt;
 &lt;h3 id=&#34;summary&#34;&gt;Summary&lt;/h3&gt;
 &lt;p&gt;From moving between argmax and softmax, we can:&lt;/p&gt;

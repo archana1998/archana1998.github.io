@@ -7,7 +7,7 @@
     <description>Computer Vision</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan, 2020 ©</copyright><lastBuildDate>Tue, 25 Aug 2020 18:36:00 +0530</lastBuildDate>
     <image>
-      <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png</url>
+      <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_3.png</url>
       <title>Computer Vision</title>
       <link>https://archana1998.github.io/tag/computer-vision/</link>
     </image>
@@ -55,39 +55,39 @@ However, these have high dimensionality and are difficult to process and annotat
 &lt;li&gt;Apply to large movie corpus&lt;/li&gt;
 &lt;/ul&gt;
 
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure id=&#34;figure-speech2action-model&#34;&gt;
-
-
-
-  &lt;img data-src=&#34;https://archana1998.github.io/post/arsha-nagrani/1_hu3dfb93f108aa0e1c42c1039d245e09c2_102757_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;784&#34; height=&#34;358&#34;&gt;
-
-
-
-  
-  
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-    Speech2Action model
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
+ 
+ 
+ 
+ 
+   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;figure id=&#34;figure-speech2action-model&#34;&gt;
+ 
+ 
+ 
+   &lt;img data-src=&#34;https://archana1998.github.io/post/arsha-nagrani/1_hu3dfb93f108aa0e1c42c1039d245e09c2_102757_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;784&#34; height=&#34;358&#34;&gt;
+ 
+ 
+ 
+   
+   
+   &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+     Speech2Action model
+   &lt;/figcaption&gt;
+ 
+ 
+ &lt;/figure&gt;
 
 &lt;p&gt;The Speech2Action model recognizes rare actions, and is a visual classifier on weakly labelled data (S3D-G model with cross-entropy loss)&lt;/p&gt;
 &lt;p&gt;Evaluation is done on the AVA and HMDB-51 (transfer learning) datasets. It gets abstract actions like &lt;b&gt;count&lt;/b&gt; and &lt;b&gt;follow&lt;/b&gt; too.&lt;/p&gt;
@@ -111,39 +111,39 @@ However, these have high dimensionality and are difficult to process and annotat
 &lt;li&gt;Main boost is from the object embeddings&lt;/li&gt;
 &lt;/ul&gt;
 
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure id=&#34;figure-collaborative-gating&#34;&gt;
-
-
-
-  &lt;img data-src=&#34;https://archana1998.github.io/post/arsha-nagrani/2_huc44033e910d0af756e6885ccfb6b6932_14850_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;197&#34;&gt;
-
-
-
-  
-  
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-    Collaborative Gating
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
+ 
+ 
+ 
+ 
+   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;figure id=&#34;figure-collaborative-gating&#34;&gt;
+ 
+ 
+ 
+   &lt;img data-src=&#34;https://archana1998.github.io/post/arsha-nagrani/2_huc44033e910d0af756e6885ccfb6b6932_14850_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;197&#34;&gt;
+ 
+ 
+ 
+   
+   
+   &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+     Collaborative Gating
+   &lt;/figcaption&gt;
+ 
+ 
+ &lt;/figure&gt;
 
 &lt;p&gt;Another paper that Arsha discussed was &lt;a href =&#34;https://arxiv.org/abs/2007.10639&#34;&gt; Multi-modal Transformer for Video Retrieval, ECCV 2020 &lt;/a&gt;. This takes features that are taken at different time stamps for each task and aggregrate for the embeddings. The expert and temporal embeddings are added and summed up.&lt;/p&gt;
 &lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
@@ -222,39 +222,39 @@ However, these have high dimensionality and are difficult to process and annotat
 &lt;li&gt;
 &lt;p&gt;Inceptionv1 (2014):
 
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure id=&#34;figure-inception-v1&#34;&gt;
-
-
-
-  &lt;img data-src=&#34;https://archana1998.github.io/post/rahul-sukthankar/1_hu0095bbad7d2e55015cc682d2a4670f59_127543_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;762&#34; height=&#34;294&#34;&gt;
-
-
-
-  
-  
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-    Inception v1
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
+ 
+ 
+ 
+ 
+   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;figure id=&#34;figure-inception-v1&#34;&gt;
+ 
+ 
+ 
+   &lt;img data-src=&#34;https://archana1998.github.io/post/rahul-sukthankar/1_hu0095bbad7d2e55015cc682d2a4670f59_127543_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;762&#34; height=&#34;294&#34;&gt;
+ 
+ 
+ 
+   
+   
+   &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+     Inception v1
+   &lt;/figcaption&gt;
+ 
+ 
+ &lt;/figure&gt;
 &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -263,39 +263,39 @@ However, these have high dimensionality and are difficult to process and annotat
 &lt;/ol&gt;
 &lt;p&gt;Resnet uses skipped connections with residual blocks, the added paths help solve vanishing gradient problems and gives a shorter route for backpropagation&lt;/p&gt;
 
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure id=&#34;figure-residual-blocks&#34;&gt;
-
-
-
-  &lt;img data-src=&#34;https://archana1998.github.io/post/rahul-sukthankar/2_hub70c3df55df6f4f2b8fb68ff07d9a5f0_58255_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;557&#34; height=&#34;332&#34;&gt;
-
-
-
-  
-  
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-    Residual blocks
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
+ 
+ 
+ 
+ 
+   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;figure id=&#34;figure-residual-blocks&#34;&gt;
+ 
+ 
+ 
+   &lt;img data-src=&#34;https://archana1998.github.io/post/rahul-sukthankar/2_hub70c3df55df6f4f2b8fb68ff07d9a5f0_58255_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;557&#34; height=&#34;332&#34;&gt;
+ 
+ 
+ 
+   
+   
+   &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+     Residual blocks
+   &lt;/figcaption&gt;
+ 
+ 
+ &lt;/figure&gt;
 
 &lt;h3 id=&#34;object-detection-in-images&#34;&gt;Object Detection in Images&lt;/h3&gt;
 &lt;ul&gt;
@@ -321,39 +321,39 @@ $$ \text{Intersection over Union} = \frac{\text{Area of Overlap}}{\text{Area of 
 &lt;p&gt;Other applications of a fully convolutional net are : Residual Encoding Decoding, Dense Prediction, Superresolution, Colorization (self supervised)&lt;/p&gt;
 &lt;h3 id=&#34;last-layer-activation-function-and-loss-function-summary&#34;&gt;Last-Layer Activation function and Loss Function Summary&lt;/h3&gt;
 
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure id=&#34;figure-functions-to-use&#34;&gt;
-
-
-
-  &lt;img data-src=&#34;https://archana1998.github.io/post/rahul-sukthankar/3_hu44f5fe12bf2e14613e9c883ade35e838_85577_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;712&#34; height=&#34;219&#34;&gt;
-
-
-
-  
-  
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-    Functions to use
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
+ 
+ 
+ 
+ 
+   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;figure id=&#34;figure-functions-to-use&#34;&gt;
+ 
+ 
+ 
+   &lt;img data-src=&#34;https://archana1998.github.io/post/rahul-sukthankar/3_hu44f5fe12bf2e14613e9c883ade35e838_85577_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;712&#34; height=&#34;219&#34;&gt;
+ 
+ 
+ 
+   
+   
+   &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+     Functions to use
+   &lt;/figcaption&gt;
+ 
+ 
+ &lt;/figure&gt;
 
 &lt;p&gt;Any differentiable function can be used as a loss function: even another neural net! (perceptual loss, GAN loss, differentiable renderer etc)&lt;/p&gt;
 &lt;p&gt;Rahul concluded this introduction lecture focused in Computer Vision using fully supervised deep learning, with key concepts on CNNs and their extensions and the importance of choosing the right loss function. It was a wonderful lecture with all the concepts beautifully explained.&lt;/p&gt;
@@ -420,7 +420,7 @@ GHUM is the moderate generative model with 10168 vertices and GHUML is the light
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/1_hu5ce619d08456037865eced6552c42e7e_329781_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/1_hu5ce619d08456037865eced6552c42e7e_329781_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
 
 
 
@@ -464,7 +464,7 @@ GHUM is the moderate generative model with 10168 vertices and GHUML is the light
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/2_huf2e22827a723675b2a79947a570691ce_140050_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;869&#34; height=&#34;244&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/2_huf2e22827a723675b2a79947a570691ce_140050_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;869&#34; height=&#34;244&#34;&gt;
 
 
 
@@ -507,7 +507,7 @@ $$\max _{\phi} \sum _{\partial \in \mathcal{D}} \log p _{\phi}(\theta)$$&lt;/li&
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/3_hu125e7c529aa96451d645ff796805a88a_150708_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/3_hu125e7c529aa96451d645ff796805a88a_150708_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
 
 
 
@@ -527,7 +527,8 @@ $$\max _{\phi} \sum _{\partial \in \mathcal{D}} \log p _{\phi}(\theta)$$&lt;/li&
 &lt;h3 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;An effective Deep Learning Pipeline to build generative, articulated 3D human shape models&lt;/li&gt;
-&lt;li&gt;GHUM and GHUM are two full body human models that are available for research:(&lt;a href=&#34;https://github.com/google-research/google-research/tree/master/ghum)&#34;&gt;https://github.com/google-research/google-research/tree/master/ghum)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;GHUM and GHUM are two full body human models that are available for research:(
+&lt;a href=&#34;https://github.com/google-research/google-research/tree/master/ghum%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/google-research/google-research/tree/master/ghum)&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;We can jointly sample shape, facial expressions (VAEs) and pose (normalizing flows)&lt;/li&gt;
 &lt;li&gt;We have low res and high res models, that are non-linear (linear as special case)&lt;/li&gt;
 &lt;/ul&gt;
@@ -566,7 +567,7 @@ $$\max _{\phi} \sum _{\partial \in \mathcal{D}} \log p _{\phi}(\theta)$$&lt;/li&
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/4_hud88f9b9f04f1033960e9f73ca89377df_196249_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;930&#34; height=&#34;315&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/4_hud88f9b9f04f1033960e9f73ca89377df_196249_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;930&#34; height=&#34;315&#34;&gt;
 
 
 
@@ -714,7 +715,7 @@ This was done using a pretrained YOLOv3 model trained on the DeepFashion2 datase
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/1_hud8ee6b60bc41ae2f19ca216ed0cbf7e3_180328_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1265&#34; height=&#34;177&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/1_hud8ee6b60bc41ae2f19ca216ed0cbf7e3_180328_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1265&#34; height=&#34;177&#34;&gt;
 
 
 
@@ -750,7 +751,7 @@ This was done using a pretrained YOLOv3 model trained on the DeepFashion2 datase
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/2_huf8d20e2591676411ac2452c151a71b7c_32522_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;352&#34; height=&#34;613&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/2_huf8d20e2591676411ac2452c151a71b7c_32522_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;352&#34; height=&#34;613&#34;&gt;
 
 
 
@@ -788,7 +789,7 @@ We used this principle to come up with our own “Popularity Metric” which was
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/3_hua9d9b1a4f907d92d1804ac04cfd1acaa_208064_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1093&#34; height=&#34;234&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/3_hua9d9b1a4f907d92d1804ac04cfd1acaa_208064_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1093&#34; height=&#34;234&#34;&gt;
 
 
 
@@ -825,7 +826,7 @@ The architecture, simplified pipeline and a screenshot of the program in action 
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/4_hu67e707b293e8bb2e83945f78f4b29e05_7331_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;238&#34; height=&#34;51&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/4_hu67e707b293e8bb2e83945f78f4b29e05_7331_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;238&#34; height=&#34;51&#34;&gt;
 
 
 
@@ -861,7 +862,7 @@ The architecture, simplified pipeline and a screenshot of the program in action 
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/5_hu1fc31ec500f87e3d3c214e201fb0429c_18291_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;540&#34; height=&#34;306&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/5_hu1fc31ec500f87e3d3c214e201fb0429c_18291_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;540&#34; height=&#34;306&#34;&gt;
 
 
 

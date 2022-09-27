@@ -7,7 +7,7 @@
     <description>Posts</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan, 2020 ©</copyright><lastBuildDate>Tue, 25 Aug 2020 19:19:35 +0530</lastBuildDate>
     <image>
-      <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png</url>
+      <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_3.png</url>
       <title>Posts</title>
       <link>https://archana1998.github.io/post/</link>
     </image>
@@ -21,39 +21,39 @@
 &lt;p&gt;The summer school happened over three days, between August 20 and 22, 2020. Due to the pandemic that taught us that we can do everything over a computer screen, the summer school was held in a virtual mode. The people at Google made us feel very welcome, and sent out a batch of goodies from Google to all the participants (side note: I&amp;rsquo;m a little salty about this as I haven&amp;rsquo;t gotten mine yet, it got lost on the way). Saying I loved the experience would be an understatement of sorts, I was constantly elated after each and every event.&lt;/p&gt;
 &lt;p&gt;Day 1 started off with a keynote by Jeff Dean, the head of Google AI Research, at 9 am. Waking up so early was a huge achievement for me in a quarantine-home restricted environment where I sleep late and wake up late. Working remotely at a lab in a different country provides insane flexibility, I am my most productive in the afternoons and evenings. I sat in front of my computer and tuned into the YouTube live stream which was engaging and amazing (see my &lt;a href=&#34;https://archana1998.github.io/post/opening-keynote/&#34;&gt; post&lt;/a&gt;)
 
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure id=&#34;figure-opening-keynote&#34;&gt;
-
-
-
-  &lt;img data-src=&#34;https://archana1998.github.io/post/summer-school-sumup/1_hu44f229a9c87ce6272342d7409ef1f45d_159695_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1478&#34; height=&#34;1108&#34;&gt;
-
-
-
-  
-  
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-    Opening Keynote
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
+ 
+ 
+ 
+ 
+   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;figure id=&#34;figure-opening-keynote&#34;&gt;
+ 
+ 
+ 
+   &lt;img data-src=&#34;https://archana1998.github.io/post/summer-school-sumup/1_hu44f229a9c87ce6272342d7409ef1f45d_159695_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1478&#34; height=&#34;1108&#34;&gt;
+ 
+ 
+ 
+   
+   
+   &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+     Opening Keynote
+   &lt;/figcaption&gt;
+ 
+ 
+ &lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;After a lunch break, we had our first lecture by Jean-Phillipe Vert, which had so much rigorous math that we were slightly intimidated, however it was a pleasure being taught by someone so amazing all the same. (shameless plug to &lt;a href=&#34;https://archana1998.github.io/post/jean-vert/&#34;&gt; post&lt;/a&gt; again).&lt;/p&gt;
 &lt;p&gt;We had an amazing panel discussion that was titled &lt;b&gt;Why Choose a Career in Research&lt;/b&gt;. The panel consisted of eminent names from Google Research. We had a &amp;ldquo;virtual social&amp;rdquo; after that on GatherTown, which was not the easiest to use on Day 1, but it was quite an experience. We had a second lecture after that by Neil Houlsby, finally on computer vision (I loved it, here&amp;rsquo;s my &lt;a href=&#34;https://archana1998.github.io/post/neil-houlsby/&#34;&gt; post&lt;/a&gt;). And just like that, I was done for the day and had learnt more in these 6 hours than I did in the last semester.&lt;/p&gt;
@@ -110,39 +110,39 @@ However, these have high dimensionality and are difficult to process and annotat
 &lt;li&gt;Apply to large movie corpus&lt;/li&gt;
 &lt;/ul&gt;
 
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure id=&#34;figure-speech2action-model&#34;&gt;
-
-
-
-  &lt;img data-src=&#34;https://archana1998.github.io/post/arsha-nagrani/1_hu3dfb93f108aa0e1c42c1039d245e09c2_102757_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;784&#34; height=&#34;358&#34;&gt;
-
-
-
-  
-  
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-    Speech2Action model
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
+ 
+ 
+ 
+ 
+   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;figure id=&#34;figure-speech2action-model&#34;&gt;
+ 
+ 
+ 
+   &lt;img data-src=&#34;https://archana1998.github.io/post/arsha-nagrani/1_hu3dfb93f108aa0e1c42c1039d245e09c2_102757_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;784&#34; height=&#34;358&#34;&gt;
+ 
+ 
+ 
+   
+   
+   &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+     Speech2Action model
+   &lt;/figcaption&gt;
+ 
+ 
+ &lt;/figure&gt;
 
 &lt;p&gt;The Speech2Action model recognizes rare actions, and is a visual classifier on weakly labelled data (S3D-G model with cross-entropy loss)&lt;/p&gt;
 &lt;p&gt;Evaluation is done on the AVA and HMDB-51 (transfer learning) datasets. It gets abstract actions like &lt;b&gt;count&lt;/b&gt; and &lt;b&gt;follow&lt;/b&gt; too.&lt;/p&gt;
@@ -166,39 +166,39 @@ However, these have high dimensionality and are difficult to process and annotat
 &lt;li&gt;Main boost is from the object embeddings&lt;/li&gt;
 &lt;/ul&gt;
 
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure id=&#34;figure-collaborative-gating&#34;&gt;
-
-
-
-  &lt;img data-src=&#34;https://archana1998.github.io/post/arsha-nagrani/2_huc44033e910d0af756e6885ccfb6b6932_14850_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;197&#34;&gt;
-
-
-
-  
-  
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-    Collaborative Gating
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
+ 
+ 
+ 
+ 
+   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;figure id=&#34;figure-collaborative-gating&#34;&gt;
+ 
+ 
+ 
+   &lt;img data-src=&#34;https://archana1998.github.io/post/arsha-nagrani/2_huc44033e910d0af756e6885ccfb6b6932_14850_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;150&#34; height=&#34;197&#34;&gt;
+ 
+ 
+ 
+   
+   
+   &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+     Collaborative Gating
+   &lt;/figcaption&gt;
+ 
+ 
+ &lt;/figure&gt;
 
 &lt;p&gt;Another paper that Arsha discussed was &lt;a href =&#34;https://arxiv.org/abs/2007.10639&#34;&gt; Multi-modal Transformer for Video Retrieval, ECCV 2020 &lt;/a&gt;. This takes features that are taken at different time stamps for each task and aggregrate for the embeddings. The expert and temporal embeddings are added and summed up.&lt;/p&gt;
 &lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
@@ -277,39 +277,39 @@ However, these have high dimensionality and are difficult to process and annotat
 &lt;li&gt;
 &lt;p&gt;Inceptionv1 (2014):
 
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure id=&#34;figure-inception-v1&#34;&gt;
-
-
-
-  &lt;img data-src=&#34;https://archana1998.github.io/post/rahul-sukthankar/1_hu0095bbad7d2e55015cc682d2a4670f59_127543_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;762&#34; height=&#34;294&#34;&gt;
-
-
-
-  
-  
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-    Inception v1
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
+ 
+ 
+ 
+ 
+   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;figure id=&#34;figure-inception-v1&#34;&gt;
+ 
+ 
+ 
+   &lt;img data-src=&#34;https://archana1998.github.io/post/rahul-sukthankar/1_hu0095bbad7d2e55015cc682d2a4670f59_127543_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;762&#34; height=&#34;294&#34;&gt;
+ 
+ 
+ 
+   
+   
+   &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+     Inception v1
+   &lt;/figcaption&gt;
+ 
+ 
+ &lt;/figure&gt;
 &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -318,39 +318,39 @@ However, these have high dimensionality and are difficult to process and annotat
 &lt;/ol&gt;
 &lt;p&gt;Resnet uses skipped connections with residual blocks, the added paths help solve vanishing gradient problems and gives a shorter route for backpropagation&lt;/p&gt;
 
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure id=&#34;figure-residual-blocks&#34;&gt;
-
-
-
-  &lt;img data-src=&#34;https://archana1998.github.io/post/rahul-sukthankar/2_hub70c3df55df6f4f2b8fb68ff07d9a5f0_58255_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;557&#34; height=&#34;332&#34;&gt;
-
-
-
-  
-  
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-    Residual blocks
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
+ 
+ 
+ 
+ 
+   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;figure id=&#34;figure-residual-blocks&#34;&gt;
+ 
+ 
+ 
+   &lt;img data-src=&#34;https://archana1998.github.io/post/rahul-sukthankar/2_hub70c3df55df6f4f2b8fb68ff07d9a5f0_58255_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;557&#34; height=&#34;332&#34;&gt;
+ 
+ 
+ 
+   
+   
+   &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+     Residual blocks
+   &lt;/figcaption&gt;
+ 
+ 
+ &lt;/figure&gt;
 
 &lt;h3 id=&#34;object-detection-in-images&#34;&gt;Object Detection in Images&lt;/h3&gt;
 &lt;ul&gt;
@@ -376,39 +376,39 @@ $$ \text{Intersection over Union} = \frac{\text{Area of Overlap}}{\text{Area of 
 &lt;p&gt;Other applications of a fully convolutional net are : Residual Encoding Decoding, Dense Prediction, Superresolution, Colorization (self supervised)&lt;/p&gt;
 &lt;h3 id=&#34;last-layer-activation-function-and-loss-function-summary&#34;&gt;Last-Layer Activation function and Loss Function Summary&lt;/h3&gt;
 
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure id=&#34;figure-functions-to-use&#34;&gt;
-
-
-
-  &lt;img data-src=&#34;https://archana1998.github.io/post/rahul-sukthankar/3_hu44f5fe12bf2e14613e9c883ade35e838_85577_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;712&#34; height=&#34;219&#34;&gt;
-
-
-
-  
-  
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-    Functions to use
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
+ 
+ 
+ 
+ 
+   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;figure id=&#34;figure-functions-to-use&#34;&gt;
+ 
+ 
+ 
+   &lt;img data-src=&#34;https://archana1998.github.io/post/rahul-sukthankar/3_hu44f5fe12bf2e14613e9c883ade35e838_85577_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;712&#34; height=&#34;219&#34;&gt;
+ 
+ 
+ 
+   
+   
+   &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+     Functions to use
+   &lt;/figcaption&gt;
+ 
+ 
+ &lt;/figure&gt;
 
 &lt;p&gt;Any differentiable function can be used as a loss function: even another neural net! (perceptual loss, GAN loss, differentiable renderer etc)&lt;/p&gt;
 &lt;p&gt;Rahul concluded this introduction lecture focused in Computer Vision using fully supervised deep learning, with key concepts on CNNs and their extensions and the importance of choosing the right loss function. It was a wonderful lecture with all the concepts beautifully explained.&lt;/p&gt;
@@ -475,7 +475,7 @@ GHUM is the moderate generative model with 10168 vertices and GHUML is the light
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/1_hu5ce619d08456037865eced6552c42e7e_329781_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/1_hu5ce619d08456037865eced6552c42e7e_329781_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
 
 
 
@@ -519,7 +519,7 @@ GHUM is the moderate generative model with 10168 vertices and GHUML is the light
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/2_huf2e22827a723675b2a79947a570691ce_140050_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;869&#34; height=&#34;244&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/2_huf2e22827a723675b2a79947a570691ce_140050_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;869&#34; height=&#34;244&#34;&gt;
 
 
 
@@ -562,7 +562,7 @@ $$\max _{\phi} \sum _{\partial \in \mathcal{D}} \log p _{\phi}(\theta)$$&lt;/li&
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/3_hu125e7c529aa96451d645ff796805a88a_150708_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/3_hu125e7c529aa96451d645ff796805a88a_150708_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
 
 
 
@@ -582,7 +582,8 @@ $$\max _{\phi} \sum _{\partial \in \mathcal{D}} \log p _{\phi}(\theta)$$&lt;/li&
 &lt;h3 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;An effective Deep Learning Pipeline to build generative, articulated 3D human shape models&lt;/li&gt;
-&lt;li&gt;GHUM and GHUM are two full body human models that are available for research:(&lt;a href=&#34;https://github.com/google-research/google-research/tree/master/ghum)&#34;&gt;https://github.com/google-research/google-research/tree/master/ghum)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;GHUM and GHUM are two full body human models that are available for research:(
+&lt;a href=&#34;https://github.com/google-research/google-research/tree/master/ghum%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/google-research/google-research/tree/master/ghum)&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;We can jointly sample shape, facial expressions (VAEs) and pose (normalizing flows)&lt;/li&gt;
 &lt;li&gt;We have low res and high res models, that are non-linear (linear as special case)&lt;/li&gt;
 &lt;/ul&gt;
@@ -621,7 +622,7 @@ $$\max _{\phi} \sum _{\partial \in \mathcal{D}} \log p _{\phi}(\theta)$$&lt;/li&
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/4_hud88f9b9f04f1033960e9f73ca89377df_196249_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;930&#34; height=&#34;315&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/cristian-sminchisescu/4_hud88f9b9f04f1033960e9f73ca89377df_196249_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;930&#34; height=&#34;315&#34;&gt;
 
 
 
@@ -729,7 +730,7 @@ This is also called the matrix direct product, and is a $(mp)*(nq)$ matrix (ever
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/vineet-gupta/1_hu82cf2efea7539d0f27dd878118672ff1_8584_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/vineet-gupta/1_hu82cf2efea7539d0f27dd878118672ff1_8584_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
 
 
 
@@ -870,7 +871,7 @@ While testing with OOD, increasing datset size with a fixed model and increasing
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/fig1_hu2361eef24ba1250aaf0d087e444736ee_322268_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1166&#34; height=&#34;626&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/fig1_hu2361eef24ba1250aaf0d087e444736ee_322268_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1166&#34; height=&#34;626&#34;&gt;
 
 
 
@@ -931,7 +932,7 @@ While testing with OOD, increasing datset size with a fixed model and increasing
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/2_huacbb429b45f880db3bfef78880895f1e_33174_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1021&#34; height=&#34;294&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/2_huacbb429b45f880db3bfef78880895f1e_33174_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1021&#34; height=&#34;294&#34;&gt;
 
 
 
@@ -1008,7 +1009,7 @@ $$&lt;/p&gt;
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/fig3_hu5c4a640c4ff8ae0e0520f62ab190a639_28338_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;528&#34; height=&#34;371&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/fig3_hu5c4a640c4ff8ae0e0520f62ab190a639_28338_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;528&#34; height=&#34;371&#34;&gt;
 
 
 
@@ -1050,7 +1051,7 @@ $$&lt;/p&gt;
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/4_hud40178e92a0e11db369c09c80b6c13e7_135667_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;485&#34; height=&#34;356&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/4_hud40178e92a0e11db369c09c80b6c13e7_135667_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;485&#34; height=&#34;356&#34;&gt;
 
 
 
@@ -1066,7 +1067,7 @@ $$&lt;/p&gt;
 &lt;h4 id=&#34;2b-pertubation&#34;&gt;2b. Pertubation&lt;/h4&gt;
 &lt;p&gt;Let $G=\left(G_{1}, \ldots, G_{n}\right)$ be i.i.d. Gumbel (0,1) random variables. Then we have (exercice):
 $$
-\operatorname{softmax}_{\epsilon}(x)=E \underset{z \in \Delta_{n-1}}{\operatorname{argmax}}\left[x^{\top}(z+\epsilon G)\right]
+\operatorname{softmax}&lt;em&gt;{\epsilon}(x)=E \underset{z \in \Delta&lt;/em&gt;{n-1}}{\operatorname{argmax}}\left[x^{\top}(z+\epsilon G)\right]
 $$&lt;/p&gt;
 &lt;h3 id=&#34;summary&#34;&gt;Summary&lt;/h3&gt;
 &lt;p&gt;From moving between argmax and softmax, we can:&lt;/p&gt;
@@ -1252,7 +1253,7 @@ This was done using a pretrained YOLOv3 model trained on the DeepFashion2 datase
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/1_hud8ee6b60bc41ae2f19ca216ed0cbf7e3_180328_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1265&#34; height=&#34;177&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/1_hud8ee6b60bc41ae2f19ca216ed0cbf7e3_180328_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1265&#34; height=&#34;177&#34;&gt;
 
 
 
@@ -1288,7 +1289,7 @@ This was done using a pretrained YOLOv3 model trained on the DeepFashion2 datase
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/2_huf8d20e2591676411ac2452c151a71b7c_32522_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;352&#34; height=&#34;613&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/2_huf8d20e2591676411ac2452c151a71b7c_32522_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;352&#34; height=&#34;613&#34;&gt;
 
 
 
@@ -1326,7 +1327,7 @@ We used this principle to come up with our own “Popularity Metric” which was
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/3_hua9d9b1a4f907d92d1804ac04cfd1acaa_208064_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1093&#34; height=&#34;234&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/3_hua9d9b1a4f907d92d1804ac04cfd1acaa_208064_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1093&#34; height=&#34;234&#34;&gt;
 
 
 
@@ -1363,7 +1364,7 @@ The architecture, simplified pipeline and a screenshot of the program in action 
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/4_hu67e707b293e8bb2e83945f78f4b29e05_7331_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;238&#34; height=&#34;51&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/4_hu67e707b293e8bb2e83945f78f4b29e05_7331_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;238&#34; height=&#34;51&#34;&gt;
 
 
 
@@ -1399,7 +1400,7 @@ The architecture, simplified pipeline and a screenshot of the program in action 
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/5_hu1fc31ec500f87e3d3c214e201fb0429c_18291_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;540&#34; height=&#34;306&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/5_hu1fc31ec500f87e3d3c214e201fb0429c_18291_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;540&#34; height=&#34;306&#34;&gt;
 
 
 
@@ -1437,7 +1438,7 @@ Hope you found this interesting, thanks for reading!&lt;/p&gt;
       <link>https://archana1998.github.io/post/regularization/</link>
       <pubDate>Sat, 18 Jul 2020 14:11:22 +0530</pubDate>
       <guid>https://archana1998.github.io/post/regularization/</guid>
-      <description>&lt;p&gt;This is a review of the ICLR 2017 paper by Zhang et. al. titled &amp;ldquo;Understanding Deep Learning requires rethinking generalization&amp;quot;&lt;a href = &#34;https://bengio.abracadoudou.com/cv/publications/pdf/zhang_2017_iclr.pdf&#34;&gt; Link to paper &lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;This is a review of the ICLR 2017 paper by Zhang et. al. titled &amp;ldquo;Understanding Deep Learning requires rethinking generalization&amp;rdquo;&lt;a href = &#34;https://bengio.abracadoudou.com/cv/publications/pdf/zhang_2017_iclr.pdf&#34;&gt; Link to paper &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The paper starts off with aiming to provide an introspection into what distinguishes networks that generalize well, from those who don’t.&lt;/p&gt;
 &lt;p&gt;One of the experiments conducted in the studies of the paper, is checking how well neural networks adapt to training when labels are randomized. Their findings establish that when the true data is completely randomly labelled, the training error that results is zero. Observations from this indicate that the effective capacity of neural networks is more than enough to memorize the entire dataset. Randomization of the labels is only a transformation of the data, and other learning parameters are constant and unchanged still. The resulting training time also increases by only a small factor. However, when this trained network is tested, it does badly. This indicates that just by randomizing labels, the generalization error can shoot up significantly without changing any other parameters of the experiment like the size of the model, the optimizer etc.&lt;/p&gt;
 &lt;p&gt;Another experiment conducted was that when the ground truth images were switched with random noise. This resulted in the networks training to zero training error, even faster than the case with the random labels. Varying the amount of randomization resulted in a steady deterioration of the generalization error, as the noise level increased. There were a wide variety of changes introduced into the dataset, that played with degrees and kinds of randomization with the pixels and labels. All of this still resulted in the networks able to fit the training data perfectly. A key takeaway from this is that the neural networks are able to capture the signals remaining in the data, while fitting the noise and randomization with brute force. The question that still remains unanswered after this is why some models generalize better than others, because it is evident that some decisions made while constructing model architectures do make a difference in its ability to generalize.&lt;/p&gt;

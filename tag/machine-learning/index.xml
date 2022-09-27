@@ -7,7 +7,7 @@
     <description>Machine Learning</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Archana Swaminathan, 2020 ©</copyright><lastBuildDate>Sun, 23 Aug 2020 15:53:16 +0530</lastBuildDate>
     <image>
-      <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_2.png</url>
+      <url>https://archana1998.github.io/images/icon_hu616effff6bc497e1f3ccd40e4a444d66_14554_512x512_fill_lanczos_center_3.png</url>
       <title>Machine Learning</title>
       <link>https://archana1998.github.io/tag/machine-learning/</link>
     </image>
@@ -95,7 +95,7 @@ This is also called the matrix direct product, and is a $(mp)*(nq)$ matrix (ever
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/vineet-gupta/1_hu82cf2efea7539d0f27dd878118672ff1_8584_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/vineet-gupta/1_hu82cf2efea7539d0f27dd878118672ff1_8584_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;500&#34; height=&#34;500&#34;&gt;
 
 
 
@@ -236,7 +236,7 @@ While testing with OOD, increasing datset size with a fixed model and increasing
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/fig1_hu2361eef24ba1250aaf0d087e444736ee_322268_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1166&#34; height=&#34;626&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/fig1_hu2361eef24ba1250aaf0d087e444736ee_322268_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1166&#34; height=&#34;626&#34;&gt;
 
 
 
@@ -297,7 +297,7 @@ While testing with OOD, increasing datset size with a fixed model and increasing
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/2_huacbb429b45f880db3bfef78880895f1e_33174_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1021&#34; height=&#34;294&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/2_huacbb429b45f880db3bfef78880895f1e_33174_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1021&#34; height=&#34;294&#34;&gt;
 
 
 
@@ -374,7 +374,7 @@ $$&lt;/p&gt;
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/fig3_hu5c4a640c4ff8ae0e0520f62ab190a639_28338_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;528&#34; height=&#34;371&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/fig3_hu5c4a640c4ff8ae0e0520f62ab190a639_28338_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;528&#34; height=&#34;371&#34;&gt;
 
 
 
@@ -416,7 +416,7 @@ $$&lt;/p&gt;
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/4_hud40178e92a0e11db369c09c80b6c13e7_135667_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;485&#34; height=&#34;356&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/jean-vert/4_hud40178e92a0e11db369c09c80b6c13e7_135667_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;485&#34; height=&#34;356&#34;&gt;
 
 
 
@@ -432,7 +432,7 @@ $$&lt;/p&gt;
 &lt;h4 id=&#34;2b-pertubation&#34;&gt;2b. Pertubation&lt;/h4&gt;
 &lt;p&gt;Let $G=\left(G_{1}, \ldots, G_{n}\right)$ be i.i.d. Gumbel (0,1) random variables. Then we have (exercice):
 $$
-\operatorname{softmax}_{\epsilon}(x)=E \underset{z \in \Delta_{n-1}}{\operatorname{argmax}}\left[x^{\top}(z+\epsilon G)\right]
+\operatorname{softmax}&lt;em&gt;{\epsilon}(x)=E \underset{z \in \Delta&lt;/em&gt;{n-1}}{\operatorname{argmax}}\left[x^{\top}(z+\epsilon G)\right]
 $$&lt;/p&gt;
 &lt;h3 id=&#34;summary&#34;&gt;Summary&lt;/h3&gt;
 &lt;p&gt;From moving between argmax and softmax, we can:&lt;/p&gt;
@@ -618,7 +618,7 @@ This was done using a pretrained YOLOv3 model trained on the DeepFashion2 datase
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/1_hud8ee6b60bc41ae2f19ca216ed0cbf7e3_180328_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1265&#34; height=&#34;177&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/1_hud8ee6b60bc41ae2f19ca216ed0cbf7e3_180328_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1265&#34; height=&#34;177&#34;&gt;
 
 
 
@@ -654,7 +654,7 @@ This was done using a pretrained YOLOv3 model trained on the DeepFashion2 datase
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/2_huf8d20e2591676411ac2452c151a71b7c_32522_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;352&#34; height=&#34;613&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/2_huf8d20e2591676411ac2452c151a71b7c_32522_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;352&#34; height=&#34;613&#34;&gt;
 
 
 
@@ -692,7 +692,7 @@ We used this principle to come up with our own “Popularity Metric” which was
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/3_hua9d9b1a4f907d92d1804ac04cfd1acaa_208064_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1093&#34; height=&#34;234&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/3_hua9d9b1a4f907d92d1804ac04cfd1acaa_208064_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1093&#34; height=&#34;234&#34;&gt;
 
 
 
@@ -729,7 +729,7 @@ The architecture, simplified pipeline and a screenshot of the program in action 
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/4_hu67e707b293e8bb2e83945f78f4b29e05_7331_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;238&#34; height=&#34;51&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/4_hu67e707b293e8bb2e83945f78f4b29e05_7331_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;238&#34; height=&#34;51&#34;&gt;
 
 
 
@@ -765,7 +765,7 @@ The architecture, simplified pipeline and a screenshot of the program in action 
 
 
 
-  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/5_hu1fc31ec500f87e3d3c214e201fb0429c_18291_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;540&#34; height=&#34;306&#34;&gt;
+  &lt;img data-src=&#34;https://archana1998.github.io/post/flipkart-grid/5_hu1fc31ec500f87e3d3c214e201fb0429c_18291_2000x2000_fit_lanczos_3.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;540&#34; height=&#34;306&#34;&gt;
 
 
 
@@ -1023,7 +1023,7 @@ the NPCR and UACI tests giving scores of 99.9665% and 0.34916 respectively. The 
       <link>https://archana1998.github.io/post/regularization/</link>
       <pubDate>Sat, 18 Jul 2020 14:11:22 +0530</pubDate>
       <guid>https://archana1998.github.io/post/regularization/</guid>
-      <description>&lt;p&gt;This is a review of the ICLR 2017 paper by Zhang et. al. titled &amp;ldquo;Understanding Deep Learning requires rethinking generalization&amp;quot;&lt;a href = &#34;https://bengio.abracadoudou.com/cv/publications/pdf/zhang_2017_iclr.pdf&#34;&gt; Link to paper &lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;This is a review of the ICLR 2017 paper by Zhang et. al. titled &amp;ldquo;Understanding Deep Learning requires rethinking generalization&amp;rdquo;&lt;a href = &#34;https://bengio.abracadoudou.com/cv/publications/pdf/zhang_2017_iclr.pdf&#34;&gt; Link to paper &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The paper starts off with aiming to provide an introspection into what distinguishes networks that generalize well, from those who don’t.&lt;/p&gt;
 &lt;p&gt;One of the experiments conducted in the studies of the paper, is checking how well neural networks adapt to training when labels are randomized. Their findings establish that when the true data is completely randomly labelled, the training error that results is zero. Observations from this indicate that the effective capacity of neural networks is more than enough to memorize the entire dataset. Randomization of the labels is only a transformation of the data, and other learning parameters are constant and unchanged still. The resulting training time also increases by only a small factor. However, when this trained network is tested, it does badly. This indicates that just by randomizing labels, the generalization error can shoot up significantly without changing any other parameters of the experiment like the size of the model, the optimizer etc.&lt;/p&gt;
 &lt;p&gt;Another experiment conducted was that when the ground truth images were switched with random noise. This resulted in the networks training to zero training error, even faster than the case with the random labels. Varying the amount of randomization resulted in a steady deterioration of the generalization error, as the noise level increased. There were a wide variety of changes introduced into the dataset, that played with degrees and kinds of randomization with the pixels and labels. All of this still resulted in the networks able to fit the training data perfectly. A key takeaway from this is that the neural networks are able to capture the signals remaining in the data, while fitting the noise and randomization with brute force. The question that still remains unanswered after this is why some models generalize better than others, because it is evident that some decisions made while constructing model architectures do make a difference in its ability to generalize.&lt;/p&gt;
