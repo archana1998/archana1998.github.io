@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+          text-align:center;
+      }
+      img {
+          width:900px;
+          height:200px;
+      }
+      video {
+  max-width: 50%;
+  height: auto;
+  outline: none;
+  border: none;
+}
+     iframe{
+		border: none;
+	}
+    .single-portfolio-item .fluidvids {
+        padding-top : 56.25% !important;
+        }
+    </style>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video Results</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+        <h2> LEIA Interpolation Results </h2>  
+        <h2> Real World Data Results </h2>
+        <h4> The following videos are from a real world storage object whose images we collected. </h4>
+        <video width="400" autoplay loop muted>
+            <source src="videos/rw_video_11.mp4" type="video/mp4", label="view 1">
+        </video>
+    
+        <video width="400" autoplay loop muted>
+            <source src="videos/rw_video_31.mp4" type="video/mp4">
+        </video>
+        <video width="400" autoplay loop muted>
+            <source src="videos/rw_video_47.mp4" type="video/mp4">
+        </video>
+        <h2> Synthetic Data Results</h2>
+        <h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  State 2    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GT Motion    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LEIA Motion </h3>
+
+        <!-- Note: These test samples are from the same object as the model was trained on. <br> -->
+        <video height="200" autoplay loop muted>
+            <source src="videos/103778_video_203.mp4" type="video/mp4">
+        </video>
+        <h4> washing machine, ID 103778, motion: revolute </h4>
+        <video height="200" autoplay loop muted>
+            <source src="videos/12085_video_35.mp4" type="video/mp4">
+        </video>
+        <h4> dishwasher, ID 12085, motion: prismatic </h4>
+        <video height="150" autoplay loop muted>
+            <source src="videos/45135_video_147.mp4" type="video/mp4">
+        </video>
+        <h4> storage, ID 45135, motion: prismatic </h4>
+        <video height="150" autoplay loop muted>
+            <source src="videos/44781_video_219.mp4" type="video/mp4">
+        </video>
+        <h4> storage, ID 44781, motion: revolute multi part </h4>
+        <video height="150" autoplay loop muted>
+            <source src="videos/45427_video_335.mp4" type="video/mp4">
+        </video>
+        <h4> storage, ID 45427, motion: prismatic multi part</h4>
+        <video height="150" autoplay loop muted>
+            <source src="videos/45575_video_219.mp4" type="video/mp4">
+        </video>
+        <h4> storage, ID 45575, motion: prismatic and revolute multi part</h4>
+        <video height="150" autoplay loop muted>
+            <source src="videos/101297_video_63.mp4" type="video/mp4">
+        </video>
+        <h4> sunglasses, ID 101297, motion: revolute multi part </h4>
+        <video height="150" autoplay loop muted>
+            <source src="videos/102377_video_139.mp4" type="video/mp4">
+        </video>
+        <h4> box, ID 102377, motion: prismatic and revolute multi part </h4>
+        <video height="150" autoplay loop muted>
+            <source src="videos/7187_video_327.mp4" type="video/mp4">
+        </video>
+        <h4> oven, ID 7187, motion: revolute multi part </h4>
+
+    <h2> PARIS Results and Failure Cases </h2>
+    <h3> State 1   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; State 2    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; GT Motion    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PARIS Motion </h3>
+    <image src="videos/103778_0015_RGB.gif" alt="103778_0015_RGB.gif"  />
+    <h4> washing machine, ID 103778, motion: revolute </h4>
+    <image src="videos/12085_0008_RGB.gif" alt="12085_0008_RGB.gif"  />
+    <h4> dishwasher, ID 12085, motion: prismatic </h4>
+    <image src="videos/45135_0036_RGB.gif" alt="45135_0008_RGB.gif"  />
+    <h4> storage, ID 45135, motion: prismatic </h4>
+    <image src="videos/44781_0054_RGB.gif" alt="44781_0015_RGB.gif"  />
+    <h4> storage, ID 44781, motion: revolute multi part </h4>
+    <image src="videos/45427_0083_RGB.gif" alt="45427_0008_RGB.gif"  />
+    <h4> storage, ID 45427, motion: prismatic multi part</h4>
+    <image src="videos/45575_pris_0054_RGB.gif" alt="45575_0015_RGB.gif"  />
+    <h4> storage, ID 45575, motion: prismatic and revolute multi part using prismatic model</h4>
+    <image src="videos/45575_rev_0054_RGB.gif" alt="45575_0015_RGB.gif"  />
+    <h4> storage, ID 45575, motion: prismatic and revolute multi part using revolute model</h4>
+    <image src="videos/101297_0015_RGB.gif" alt="101297_0008_RGB.gif"  />
+    <h4> sunglasses, ID 101297, motion: revolute multi part </h4>
+    <image src="videos/102377_0029_RGB.gif" alt="102377_0015_RGB.gif"  />
+    <h4> box, ID 102377, motion: prismatic and revolute multi part </h4>
+    <image src="videos/7187_0087_RGB.gif" alt="7187_0015_RGB.gif"  />
+    <h4> oven, ID 7187, motion: revolute multi part </h4>
+    </main>
+	<script src="index.js"></script>
+  </body>
+</html>
