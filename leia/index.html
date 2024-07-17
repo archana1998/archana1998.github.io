@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="LEIA: Latent View-invariant Embeddings for Implicit 3D Articulation">
+  <meta name="keywords" content="Articulated Objects · Neural Radiance Fields · 3D Vision">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LEIA: Latent View-invariant Embeddings for Implicit 3D Articulation</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">LEIA: Latent View-invariant Embeddings for Implicit 3D Articulation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://archana1998.github.io/">Archana Swaminathan</a>,</span>
+            <span class="author-block">
+              <a href="https://learn2phoenix.github.io/"> Anubhav Gupta</a>,</span>
+            <span class="author-block">
+              <a href="https://kampta.github.io/"> Kamal Gupta</a>,</span>
+            <span class="author-block">
+              <a href="https://www.cs.umd.edu/~shishira/"> Shishira R. Maiya</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://vatsalag99.github.io/">Vatsal Agarwal</a>,
+            </span>
+            <span class="author-block">
+             <a href="https://www.cs.umd.edu/~abhinav/"> Abhinav Shrivastava</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">University of Maryland, College Park</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block" style="color: #d337be;">ECCV 2024 </span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="coming_soon.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="coming_soon.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link.
+              <span class="link-block">
+                <a href="coming_soon.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="coming_soon.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link.
+              <span class="link-block">
+                <a href="coming_soon.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Neural Radiance Fields (NeRFs) have revolutionized the reconstruction of static scenes and objects in 3D, 
+            offering unprecedented quality. However, extending NeRFs to model dynamic objects or object articulations 
+            remains a challenging problem. Previous works have tackled this issue by focusing on part-level 
+            reconstruction and motion estimation for objects, but they often rely on heuristics regarding the 
+            number of moving parts or object categories, which can limit their practical use. In this work, we 
+            introduce <b>LEIA</b>, a novel approach for representing dynamic 3D objects. Our method involves observing 
+            the object at distinct time steps or "states" and conditioning a hypernetwork on the current state, using 
+            this to parameterize our NeRF. This approach allows us to learn a view-invariant latent representation for 
+            each state. We further demonstrate that by interpolating between these states, we can generate novel articulation 
+            configurations in 3D space that were previously unseen. Our experimental results highlight the effectiveness of 
+            our method in articulating objects in a manner that is independent of the viewing angle and joint configuration. 
+            Notably, our approach outperforms previous methods that rely on motion information for articulation registration.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <figure class="image">
+          <img src="static/images/teaser_new.jpg", alt="Description of the image">
+          <figcaption class="has-text-centered">
+            Our method <b>LEIA</b>, takes in multi-view images of an object in four articulation states and is able to learn a view-invariant latent embedding for the state. We show that we can interpolate between the latents to generate any number of intermediate unseen states for the object using <b>LEIA</b>, given the camera position
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</footer>
+
+</body>
+</html>
