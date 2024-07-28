@@ -110,15 +110,15 @@ h2 {
 }
 
 .one {
-  width: 160px;
-  height: 160px;
+  max-width: 160px;
+  max-height: 160px;
   position: relative;
 }
 
 .two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
+  max-width: 100%;
+  max-height: 600px;
+  position: relative;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   -webkit-transition: opacity .2s ease-in-out;
@@ -132,4 +132,61 @@ h2 {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+.paper-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.paper-image {
+  flex: 1 1 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.paper-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.paper-content {
+  flex: 1 1 100%;
+  padding: 1rem;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.authors {
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+
+.publication {
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+
+.description {
+  margin-bottom: 0.5em;
+}
+
+.links a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+@media screen and (min-width: 768px) {
+  .paper-image {
+    flex: 0 0 40%;
+  }
+  
+  .paper-content {
+    flex: 0 0 60%;
+  }
 }
