@@ -116,8 +116,7 @@ h2 {
 }
 
 .two {
-  max-width: 100%;
-  max-height: 600px;
+  max-width: 200%;
   position: relative;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
