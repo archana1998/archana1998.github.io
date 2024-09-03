@@ -1,197 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LEIA: Latent View-invariant Embeddings for Implicit 3D Articulation">
+  <meta name="keywords" content="Articulated Objects · Neural Radiance Fields · 3D Vision">
+  <title>LEIA: Latent View-invariant Embeddings for Implicit 3D Articulation</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <style>
+    body {
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    .container {
+        padding: 0 15px;
+    }
+    video {
+        max-width: 100%;
+        height: auto;
+        outline: none;
+        border: none;
+    }
+    input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 8px;
+        background: #d9cfcf;
+        outline: none;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #4CAF50;
+        cursor: pointer;
+        box-shadow: 0 0 2px 0 rgba(37, 19, 19, 0.5);
+    }
+    input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #0c130c;
+        cursor: pointer;
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+    }
+    .video-container {
+        margin: 20px 0;
+        width: 100%;
+    }
+    .title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .content {
+        font-size: 1rem;
+    }
+    .button {
+        margin: 5px;
+    }
+    @media (max-width: 768px) {
         body {
-            text-align: center;
+            font-size: 14px;
         }
-        video {
-            max-width: 100%;
-            height: auto;
-            outline: none;
-            border: none;
+        .title {
+            font-size: 1.5rem;
         }
-        input[type="range"] {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 100%;
-            height: 8px;
-            background: #d9cfcf;
-            outline: none;
-            border-radius: 5px;
-            margin-top: 10px;
+        .subtitle {
+            font-size: 1.2rem;
         }
-        input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #4CAF50;
-            cursor: pointer;
-            box-shadow: 0 0 2px 0 rgba(37, 19, 19, 0.5);
-        }
-        input[type="range"]::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #0c130c;
-            cursor: pointer;
-            box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+        .content {
+            font-size: 0.9rem;
         }
         .video-container {
-            display: inline-block;
-            margin: 20px;
-            width: 600px;
+            margin: 10px 0;
         }
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Video Results</title>
+        .button {
+            font-size: 0.8rem;
+            padding: 0.5em 1em;
+        }
+    }
+
+    .hero-body {
+      padding: 3rem 1.5rem;
+    }
+    .publication-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .publication-authors {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .author-block {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .publication-links {
+      margin-top: 1rem;
+    }
+    @media screen and (max-width: 768px) {
+      .publication-title {
+        font-size: 1.8rem;
+      }
+      .publication-authors {
+        font-size: 1rem;
+      }
+      .author-block {
+        display: inline-block;
+        margin-right: 5px;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .publication-title {
+        font-size: 1.5rem;
+      }
+      .publication-authors {
+        font-size: 0.9rem;
+      }
+      .author-block {
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <main>
-        <h2>LEIA Interpolation Results</h2>
-        <h2>Real World Data Results</h2>
-        <h4>The following videos are from a real-world storage object whose images we collected.</h4>
 
-        <!-- Container with video and custom slider -->
-        <div class="video-container">
-            <video id="video1" width="400">
-                <source src="static/videos/rw_video_11.mp4" type="video/mp4">
-            </video>
-            <input type="range" id="slider1" min="0" max="100" value="0">
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="publication-title">LEIA: Latent View-invariant Embeddings for Implicit 3D Articulation</h1>
+          <div class="publication-authors">
+            <span class="author-block">
+              <a href="https://archana1998.github.io/">Archana Swaminathan</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://learn2phoenix.github.io/">Anubhav Gupta</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://kampta.github.io/">Kamal Gupta</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.umd.edu/~shishira/">Shishira R. Maiya</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://vatsalag99.github.io/">Vatsal Agarwal</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.umd.edu/~abhinav/">Abhinav Shrivastava</a>
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">University of Maryland, College Park</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block" style="color: #d337be;">ECCV 2024</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="coming_soon.html" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="coming_soon.html" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="coming_soon.html" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
 
-        <div class="video-container">
-            <video id="video2" width="400">
-                <source src="static/videos/rw_video_31.mp4" type="video/mp4">
-            </video>
-            <input type="range" id="slider2" min="0" max="100" value="0">
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            <!-- Your abstract content here -->
+          </p>
         </div>
+      </div>
+    </div>
+    
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">How it works</h2>
+        <figure class="image">
+          <img src="static/images/main_method.png" alt="Description of the image">
+          <figcaption class="has-text-centered">
+            <b>Overview of our method.</b> 
+            <!-- Your figure caption here -->
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="video-container">
-            <video id="video3" width="400">
-                <source src="static/videos/rw_video_47.mp4" type="video/mp4">
-            </video>
-            <input type="range" id="slider3" min="0" max="100" value="0">
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            <!-- Your results content here -->
+          </p>
         </div>
-
-        <h2>Synthetic Data Results</h2>
- 
-
-        <div class="video-container">
-            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GT Motion &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEIA Motion</h3>
-            <video id="video4" height="400">
-                <source src="static/videos/103778_video_203.mp4" type="video/mp4">
-            </video>
-            <input type="range" id="slider4" min="0" max="100" value="0">
-            <h4>washing machine, motion: revolute</h4>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Real World Data Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            The following results show LEIA working for data from a real-world storage object whose images we collected. We show the start state and the motion generated by LEIA.
+          </p>
         </div>
-
+      </div>
+    </div>
+    <div class="columns is-multiline is-centered">
+      <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
         <div class="video-container">
-            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GT Motion &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEIA Motion</h3>
-            <video id="video5" height="400">
-                <source src="static/videos/12085_video_35.mp4" type="video/mp4">
-            </video>
-            <input type="range" id="slider5" min="0" max="100" value="0">
-            <h4>dishwasher, motion: prismatic</h4>
+          <video id="video1">
+            <source src="static/videos/rw_video_11.mp4" type="video/mp4">
+          </video>
+          <input type="range" id="slider1" min="0" max="100" value="0">
         </div>
-        <br> <!-- Forces a new line after this video and slider -->
-
-
+      </div>
+      <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
         <div class="video-container">
-
-            <video id="video6" height="400">
-                <source src="static/videos/45135_video_147.mp4" type="video/mp4">
-            </video>
-            <input type="range" id="slider6" min="0" max="100" value="0">
-            <h4>storage,  motion: prismatic</h4>
+          <video id="video2">
+            <source src="static/videos/rw_video_31.mp4" type="video/mp4">
+          </video>
+          <input type="range" id="slider2" min="0" max="100" value="0">
         </div>
-
+      </div>
+      <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
         <div class="video-container">
-            <video id="video7" height="400">
-                <source src="static/videos/44781_video_219.mp4" type="video/mp4">
-            </video>
-            <input type="range" id="slider7" min="0" max="100" value="0">
-            <h4>storage, motion: revolute multi part</h4>
+          <video id="video3">
+            <source src="static/videos/rw_video_47.mp4" type="video/mp4">
+          </video>
+          <input type="range" id="slider3" min="0" max="100" value="0">
         </div>
-        <br> <!-- Forces a new line after this video and slider -->
+      </div>
+    </div>
+    
+    <!-- Add more sections as needed -->
 
+  </div>
+</section>
 
-        <div class="video-container">
-            <video id="video8" height="400">
-                <source src="static/videos/45427_video_335.mp4" type="video/mp4">
-            </video>
-            <input type="range" id="slider8" min="0" max="100" value="0">
-            <h4>storage,  motion: prismatic multi part</h4>
-        </div>
+<script>
+  function syncVideoWithSlider(videoId, sliderId) {
+    const video = document.getElementById(videoId);
+    const slider = document.getElementById(sliderId);
+    
+    video.addEventListener('loadedmetadata', () => {
+      slider.max = Math.floor(video.duration);
+    });
 
-        <div class="video-container">
-            <video id="video9" height="400">
-                <source src="static/videos/45575_video_219.mp4" type="video/mp4">
-            </video>
-            <input type="range" id="slider9" min="0" max="100" value="0">
-            <h4>storage,  motion: prismatic and revolute multi part</h4>
-        </div>
-        <br> <!-- Forces a new line after this video and slider -->
+    video.addEventListener('timeupdate', () => {
+      slider.value = Math.floor(video.currentTime);
+    });
 
-        <div class="video-container">
-            <video id="video10" height="900">
-                <source src="static/videos/101297_video_63.mp4" type="video/mp4">
-            </video>
-            <input type="range" id="slider10" min="0" max="100" value="0">
-            <h4>sunglasses,  motion: revolute multi part</h4>
-        </div>
+    slider.addEventListener('input', () => {
+      video.currentTime = slider.value;
+    });
 
-        <div class="video-container">
-            <video id="video11" height="400">
-                <source src="static/videos/102377_video_139.mp4" type="video/mp4">
-            </video>
-            <input type="range" id="slider11" min="0" max="100" value="0">
-            <h4>box,  motion: prismatic and revolute multi part</h4>
-        </div>
+    // Add touch events for mobile
+    slider.addEventListener('touchstart', function(event) {
+      event.preventDefault();
+      video.pause();
+    });
 
-        <div class="video-container">
-            <video id="video12" height="400">
-                <source src="static/videos/7187_video_327.mp4" type="video/mp4">
-            </video>
-            <input type="range" id="slider12" min="0" max="100" value="0">
-            <h4>oven,  motion: revolute multi part</h4>
-        </div>
-    </main>
+    slider.addEventListener('touchend', function(event) {
+      event.preventDefault();
+      video.play();
+    });
+  }
 
-    <script>
-        // Function to add playback synchronization for each video and slider pair
-        function syncVideoWithSlider(videoId, sliderId) {
-            const video = document.getElementById(videoId);
-            const slider = document.getElementById(sliderId);
-            
-            video.addEventListener('timeupdate', () => {
-                const value = (video.currentTime / video.duration) * 100;
-                slider.value = value;
-            });
+  // Synchronize each video with its respective slider
+  syncVideoWithSlider('video1', 'slider1');
+  syncVideoWithSlider('video2', 'slider2');
+  syncVideoWithSlider('video3', 'slider3');
+  // Add more syncVideoWithSlider calls for other videos as needed
+</script>
 
-            slider.addEventListener('input', () => {
-                const time = (slider.value / 100) * video.duration;
-                video.currentTime = time;
-            });
-        }
-
-        // Synchronize each video with its respective slider
-        syncVideoWithSlider('video1', 'slider1');
-        syncVideoWithSlider('video2', 'slider2');
-        syncVideoWithSlider('video3', 'slider3');
-        syncVideoWithSlider('video4', 'slider4');
-        syncVideoWithSlider('video5', 'slider5');
-        syncVideoWithSlider('video6', 'slider6');
-        syncVideoWithSlider('video7', 'slider7');
-        syncVideoWithSlider('video8', 'slider8');
-        syncVideoWithSlider('video9', 'slider9');
-        syncVideoWithSlider('video10', 'slider10');
-        syncVideoWithSlider('video11', 'slider11');
-        syncVideoWithSlider('video12', 'slider12');
-    </script>
 </body>
 </html>
