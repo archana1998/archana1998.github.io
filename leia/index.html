@@ -19,13 +19,103 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <style>
+    body {
+        text-align: center;
+    }
+    video {
+        max-width: 100%;
+        height: auto;
+        outline: none;
+        border: none;
+    }
+    input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 8px;
+        background: #d9cfcf;
+        outline: none;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #4CAF50;
+        cursor: pointer;
+        box-shadow: 0 0 2px 0 rgba(37, 19, 19, 0.5);
+    }
+    input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #0c130c;
+        cursor: pointer;
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+    }
+    .video-container {
+        display: inline-block;
+        margin: 20px;
+        width: 800px;
+    }
+    .carousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .carousel {
+    overflow: hidden;
+    width: 50%;
+  }
+
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-item {
+    flex: 0 0 50%; /* Shows 2 items per slide (50% each) */
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-button {
+    background-color: #333;
+    color: rgb(1, 1, 1);
+    border: 1;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .prev-button {
+    left: 0;
+  }
+
+  .next-button {
+    right: 0;
+  }
+</style>
 </head>
 <body>
 
@@ -102,7 +192,7 @@
                   </a>
               </span>
               <!-- Dataset Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="results_index.html"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -110,12 +200,33 @@
                   </span>
                   <span>Video Results</span>
                   </a>
+              </span> -->
             </div>
 
           </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+      <video id="staticvideo0" width="180" autoplay loop muted>
+        <source src="static/videos/single_obj/101297_video_63.mp4" type="video/mp4">
+      </video>
+      <video id="staticvideo1" width="180" autoplay loop muted>
+        <source src="static/videos/single_obj/45575_video_219.mp4" type="video/mp4">
+      </video>
+      <video id="staticvideo2" width="180" autoplay loop muted>
+        <source src="static/videos/single_obj/103778_video_203.mp4" type="video/mp4">
+      </video>
+      <video id="staticvideo3" width="180" autoplay loop muted>
+        <source src="static/videos/single_obj/7187_video_327.mp4" type="video/mp4">
+      </video>
+      <video id="staticvideo4" width="180" autoplay loop muted>
+        <source src="static/videos/single_obj/44781_video_219.mp4" type="video/mp4">
+      </video>
+
   </div>
 </section>
 <section class="section">
@@ -144,7 +255,7 @@
     </div>
     <!--/ Abstract. -->
 
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <figure class="image">
           <img src="static/images/teaser_new.jpg", alt="Description of the image">
@@ -153,12 +264,312 @@
           </figcaption>
         </figure>
       </div>
+    </div> -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overview and Key Contributions</h2>
+        <div class="content has-text-justified">
+          <li>We introduce an end-to-end method LEIA for generating novel states for
+          articulated objects solely with multiview images captured at multiple states. </li>
+          <li>We demonstrate that interpolating between embeddings can generate states
+          of articulations of object not seen during training. The embedding space
+          becomes interpolable with a manifold loss that encourages the latents to
+          follow a structure that establishes a linear relationship between them, by
+          minimizing the distance between the nearest neighbours in the latent space. </li>
+          <li> Remarkably, LEIA achieves this without the need for any ground-truth 3D
+          supervision, motion information, or articulation codes, establishing its versatility 
+          and effectiveness in capturing complex articulations. </li>
+          <li>Our analyses demonstrate LEIA's robustness to single and multiple articulations,
+          as well as combinations of motions. We can disentangle articulations 
+          in different object parts if multiple are movable, making it scalable without
+          constraints on the number of parts or motion types, unlike prior work </li>
+          </p>
+        </div>
+      </div>
+    </div> -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">How it works</h2>
+        <figure class="image">
+          <img src="static/images/main_method.png", alt="Description of the image">
+          <figcaption class="has-text-centered">
+            <b> Overview of our method. </b> 
+            We take multi-view images in different states as
+            input. A learnable latent dictionary based off an autoencoder learns an embedding per
+            state id. The latent embedding is used as an input to the hypernet, that modulates
+            and generates weights of the NeRF to reconstruct the state that is fed in. At inference
+            time, we do a weighed interpolation of the learnt latents to obtain a corresponding
+            newly generated intermediate state.
+          </figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            We evaluate our method on both synthetic and real-world data. We show that our method can generate novel states for articulated objects that were not seen during training. We demonstrate the effectiveness of our method in capturing complex articulations and show that it outperforms previous methods that rely on motion information for articulation registration. We also show that our method is robust to single and multiple articulations, as well as combinations of motions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Real World Data Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            The following results show LEIA working for data from a real-world storage object whose images we collected. We show the start state and the motion generated by LEIA.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+        <div class="video-container">
+          <video id="video1" width="400">
+            <source src="static/videos/rw_video_11.mp4" type="video/mp4">
+          </video>
+          <input type="range" id="slider1" min="0" max="100" value="0">
+        </div>
+
+        <div class="video-container">
+          <video id="video2" width="400">
+            <source src="static/videos/rw_video_31.mp4" type="video/mp4">
+          </video>
+          <input type="range" id="slider2" min="0" max="100" value="0">
+        </div>
+    
+        <div class="video-container">
+          <video id="video3" width="400">
+            <source src="static/videos/rw_video_47.mp4" type="video/mp4">
+          </video>
+          <input type="range" id="slider3" min="0" max="100" value="0">
+        </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Synthetic Data Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            The following results show LEIA working for data from PartNet-Mobility, a synthetic dataset. We show the start and end states, the ground truth motion, and the motion generated by LEIA.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+        <div class="video-container">
+          <b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GT Motion &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEIA Motion</b>
+          <video id="video4" height="600">
+            <source src="static/videos/103778_video_203.mp4" type="video/mp4">
+          </video>
+          <input type="range" id="slider4" min="0" max="100" value="0">
+          <h4>washing machine, motion: revolute</h4>
+        </div>
+        <div class="video-container">
+          <b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GT Motion &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEIA Motion</b>
+            <video id="video5" height="600">
+              <source src="static/videos/12085_video_35.mp4" type="video/mp4">
+            </video>
+            <input type="range" id="slider5" min="0" max="100" value="0">
+            <h4>dishwasher, motion: prismatic</h4>
+        </div>
+     
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="video-container">
+
+          <video id="video6" height="600">
+            <source src="static/videos/45135_video_147.mp4" type="video/mp4">
+          </video>
+          <input type="range" id="slider6" min="0" max="100" value="0">
+          <h4>storage,  motion: prismatic</h4>
+        </div>
+        <div class="video-container">
+          <video id="video7" height="400">
+            <source src="static/videos/44781_video_219.mp4" type="video/mp4">
+          </video>
+          <input type="range" id="slider7" min="0" max="100" value="0">
+          <h4>storage, motion: revolute multi part</h4>
+        </div>
+    
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="video-container">
+          <video id="video8" height="400">
+            <source src="static/videos/45427_video_335.mp4" type="video/mp4">
+          </video>
+          <input type="range" id="slider8" min="0" max="100" value="0">
+          <h4>storage,  motion: prismatic multi part</h4>
+        </div>
+        <div class="video-container">
+          <video id="video9" height="400">
+            <source src="static/videos/45575_video_219.mp4" type="video/mp4">
+          </video>
+          <input type="range" id="slider9" min="0" max="100" value="0">
+          <h4>storage,  motion: prismatic and revolute multi part</h4>
+        </div>
+        </div>
+        <div class="columns is-centered has-text-centered">
+        <div class="video-container">
+          <video id="video10" height="900">
+            <source src="static/videos/101297_video_63.mp4" type="video/mp4">
+          </video>
+          <input type="range" id="slider10" min="0" max="100" value="0">
+          <h4>sunglasses, motion: revolute multi part</h4>
+        </div>
+        <div class="video-container">
+          <video id="video11" height="400">
+            <source src="static/videos/102377_video_139.mp4" type="video/mp4">
+          </video>
+          <input type="range" id="slider11" min="0" max="100" value="0">
+          <h4>box, motion: prismatic and revolute multi part</h4>
+        </div>
+        <!-- <div class="video-container">
+          <video id="video12" height="400">
+            <source src="static/videos/7187_video_327.mp4" type="video/mp4">
+          </video>
+          <input type="range" id="slider12" min="0" max="100" value="0">
+          <h4>oven, motion: revolute multi part</h4>
+      </div> -->
+    </div>
+  </div>
+  <!-- <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Synthetic Data Results</h2>
+      <div class="content has-text-justified">
+        <p>The following videos are from synthetic data.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="carousel-container">
+    <button class="carousel-button prev-button" onclick="showPreviousVideos()">❮</button>
+    <div class="carousel">
+      <div class="carousel-item">
+        <video id="video4" height="400">
+          <source src="static/videos/103778_video_203.mp4" type="video/mp4">
+        </video>
+        <input type="range" id="slider4" min="0" max="100" value="0">
+        <h4>washing machine, motion: revolute</h4>
+      </div>
+      <div class="carousel-item">
+        <video id="video5" height="400">
+          <source src="static/videos/12085_video_35.mp4" type="video/mp4">
+        </video>
+        <input type="range" id="slider5" min="0" max="100" value="0">
+        <h4>dishwasher, motion: prismatic</h4>
+      </div>
+      <div class="carousel-item">
+        <video id="video6" height="400">
+          <source src="static/videos/45135_video_147.mp4" type="video/mp4">
+        </video>
+        <input type="range" id="slider6" min="0" max="100" value="0">
+        <h4>storage, motion: prismatic</h4>
+      </div>
+      <div class="carousel-item">
+        <video id="video7" height="400">
+          <source src="static/videos/44781_video_219.mp4" type="video/mp4">
+        </video>
+        <input type="range" id="slider7" min="0" max="100" value="0">
+        <h4>storage, motion: revolute multi part</h4>
+      </div>
+      <div class="carousel-item">
+        <video id="video8" height="400">
+          <source src="static/videos/45427_video_335.mp4" type="video/mp4">
+        </video>
+        <input type="range" id="slider8" min="0" max="100" value="0">
+        <h4>storage, motion: prismatic multi part</h4>
+      </div>
+      <div class="carousel-item">
+        <video id="video9" height="400">
+          <source src="static/videos/45575_video_219.mp4" type="video/mp4">
+        </video>
+        <input type="range" id="slider9" min="0" max="100" value="0">
+        <h4>storage, motion: prismatic and revolute multi part</h4>
+      </div>
+      <div class="carousel-item">
+        <video id="video10" height="400">
+          <source src="static/videos/101297_video_63.mp4" type="video/mp4">
+        </video>
+        <input type="range" id="slider10" min="0" max="100" value="0">
+        <h4>sunglasses, motion: revolute multi part</h4>
+      </div>
+      <div class="carousel-item">
+        <video id="video11" height="400">
+          <source src="static/videos/102377_video_139.mp4" type="video/mp4">
+        </video>
+        <input type="range" id="slider11" min="0" max="100" value="0">
+        <h4>box, motion: prismatic and revolute multi part</h4>
+      </div>
+    </div>
+    <button class="carousel-button next-button" onclick="showNextVideos()">❯</button>
+  </div> -->
+</section>
 
 
-</footer>
+
+<script>
+  //  let currentStartIndex = 0;
+  // const itemsPerSlide = 2;
+  // const totalItems = document.querySelectorAll('.carousel-item').length;
+
+  // function showNextVideos() {
+  //   if (currentStartIndex + itemsPerSlide < totalItems) {
+  //     currentStartIndex += itemsPerSlide;
+  //     updateCarousel();
+  //   }
+  // }
+
+  // function showPreviousVideos() {
+  //   if (currentStartIndex - itemsPerSlide >= 0) {
+  //     currentStartIndex -= itemsPerSlide;
+  //     updateCarousel();
+  //   }
+  // }
+
+  // function updateCarousel() {
+  //   const carouselInner = document.querySelector('.carousel-inner');
+  //   const offset = -currentStartIndex * (100 / itemsPerSlide); // Calculate offset based on index
+  //   carouselInner.style.transform = `translateX(${offset}%)`;
+  // }
+
+  // // Initialize carousel to show the first set of items
+  // updateCarousel();
+  // Function to add playback synchronization for each video and slider pair
+  function syncVideoWithSlider(videoId, sliderId) {
+      const video = document.getElementById(videoId);
+      const slider = document.getElementById(sliderId);
+      
+      video.addEventListener('timeupdate', () => {
+          const value = (video.currentTime / video.duration) * 100;
+          slider.value = value;
+      });
+
+      slider.addEventListener('input', () => {
+          const time = (slider.value / 100) * video.duration;
+          video.currentTime = time;
+      });
+  }
+
+  // Synchronize each video with its respective slider
+  syncVideoWithSlider('video1', 'slider1');
+  syncVideoWithSlider('video2', 'slider2');
+  syncVideoWithSlider('video3', 'slider3');
+  syncVideoWithSlider('video4', 'slider4');
+  syncVideoWithSlider('video5', 'slider5');
+  syncVideoWithSlider('video6', 'slider6');
+  syncVideoWithSlider('video7', 'slider7');
+  syncVideoWithSlider('video8', 'slider8');
+  syncVideoWithSlider('video9', 'slider9');
+  syncVideoWithSlider('video10', 'slider10');
+  syncVideoWithSlider('video11', 'slider11');
+  // syncVideoWithSlider('video12', 'slider12');
+</script>
+
 
 </body>
 </html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+            outline: none;
+            border: none;
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 8px;
+            background: #d9cfcf;
+            outline: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+            box-shadow: 0 0 2px 0 rgba(37, 19, 19, 0.5);
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #0c130c;
+            cursor: pointer;
+            box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+        }
+        .video-container {
+            display: inline-block;
+            margin: 20px;
+            width: 600px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video Results</title>
+</head>
+<body>
+    <main>
+        <h2>LEIA Interpolation Results</h2>
+        <h2>Real World Data Results</h2>
+        <h4>The following videos are from a real-world storage object whose images we collected.</h4>
+
+        <!-- Container with video and custom slider -->
+        <div class="video-container">
+            <video id="video1" width="400">
+                <source src="static/videos/rw_video_11.mp4" type="video/mp4">
+            </video>
+            <input type="range" id="slider1" min="0" max="100" value="0">
+        </div>
+
+        <div class="video-container">
+            <video id="video2" width="400">
+                <source src="static/videos/rw_video_31.mp4" type="video/mp4">
+            </video>
+            <input type="range" id="slider2" min="0" max="100" value="0">
+        </div>
+
+        <div class="video-container">
+            <video id="video3" width="400">
+                <source src="static/videos/rw_video_47.mp4" type="video/mp4">
+            </video>
+            <input type="range" id="slider3" min="0" max="100" value="0">
+        </div>
+
+        <h2>Synthetic Data Results</h2>
+ 
+
+        <div class="video-container">
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GT Motion &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEIA Motion</h3>
+            <video id="video4" height="400">
+                <source src="static/videos/103778_video_203.mp4" type="video/mp4">
+            </video>
+            <input type="range" id="slider4" min="0" max="100" value="0">
+            <h4>washing machine, motion: revolute</h4>
+        </div>
+
+        <div class="video-container">
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GT Motion &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEIA Motion</h3>
+            <video id="video5" height="400">
+                <source src="static/videos/12085_video_35.mp4" type="video/mp4">
+            </video>
+            <input type="range" id="slider5" min="0" max="100" value="0">
+            <h4>dishwasher, motion: prismatic</h4>
+        </div>
+        <br> <!-- Forces a new line after this video and slider -->
+
+
+        <div class="video-container">
+
+            <video id="video6" height="400">
+                <source src="static/videos/45135_video_147.mp4" type="video/mp4">
+            </video>
+            <input type="range" id="slider6" min="0" max="100" value="0">
+            <h4>storage,  motion: prismatic</h4>
+        </div>
+
+        <div class="video-container">
+            <video id="video7" height="400">
+                <source src="static/videos/44781_video_219.mp4" type="video/mp4">
+            </video>
+            <input type="range" id="slider7" min="0" max="100" value="0">
+            <h4>storage, motion: revolute multi part</h4>
+        </div>
+        <br> <!-- Forces a new line after this video and slider -->
+
+
+        <div class="video-container">
+            <video id="video8" height="400">
+                <source src="static/videos/45427_video_335.mp4" type="video/mp4">
+            </video>
+            <input type="range" id="slider8" min="0" max="100" value="0">
+            <h4>storage,  motion: prismatic multi part</h4>
+        </div>
+
+        <div class="video-container">
+            <video id="video9" height="400">
+                <source src="static/videos/45575_video_219.mp4" type="video/mp4">
+            </video>
+            <input type="range" id="slider9" min="0" max="100" value="0">
+            <h4>storage,  motion: prismatic and revolute multi part</h4>
+        </div>
+        <br> <!-- Forces a new line after this video and slider -->
+
+        <div class="video-container">
+            <video id="video10" height="900">
+                <source src="static/videos/101297_video_63.mp4" type="video/mp4">
+            </video>
+            <input type="range" id="slider10" min="0" max="100" value="0">
+            <h4>sunglasses,  motion: revolute multi part</h4>
+        </div>
+
+        <div class="video-container">
+            <video id="video11" height="400">
+                <source src="static/videos/102377_video_139.mp4" type="video/mp4">
+            </video>
+            <input type="range" id="slider11" min="0" max="100" value="0">
+            <h4>box,  motion: prismatic and revolute multi part</h4>
+        </div>
+
+        <div class="video-container">
+            <video id="video12" height="400">
+                <source src="static/videos/7187_video_327.mp4" type="video/mp4">
+            </video>
+            <input type="range" id="slider12" min="0" max="100" value="0">
+            <h4>oven,  motion: revolute multi part</h4>
+        </div>
+    </main>
+
+    <script>
+        // Function to add playback synchronization for each video and slider pair
+        function syncVideoWithSlider(videoId, sliderId) {
+            const video = document.getElementById(videoId);
+            const slider = document.getElementById(sliderId);
+            
+            video.addEventListener('timeupdate', () => {
+                const value = (video.currentTime / video.duration) * 100;
+                slider.value = value;
+            });
+
+            slider.addEventListener('input', () => {
+                const time = (slider.value / 100) * video.duration;
+                video.currentTime = time;
+            });
+        }
+
+        // Synchronize each video with its respective slider
+        syncVideoWithSlider('video1', 'slider1');
+        syncVideoWithSlider('video2', 'slider2');
+        syncVideoWithSlider('video3', 'slider3');
+        syncVideoWithSlider('video4', 'slider4');
+        syncVideoWithSlider('video5', 'slider5');
+        syncVideoWithSlider('video6', 'slider6');
+        syncVideoWithSlider('video7', 'slider7');
+        syncVideoWithSlider('video8', 'slider8');
+        syncVideoWithSlider('video9', 'slider9');
+        syncVideoWithSlider('video10', 'slider10');
+        syncVideoWithSlider('video11', 'slider11');
+        syncVideoWithSlider('video12', 'slider12');
+    </script>
+</body>
+</html>
