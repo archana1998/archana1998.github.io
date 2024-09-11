@@ -33,13 +33,13 @@
     video {
         max-width: 100%;
         height: auto;
-        outline: none;
+        outline: rgb(231, 230, 230) solid 1px;
         border: none;
     }
     input[type="range"] {
         -webkit-appearance: none;
         appearance: none;
-        width: 100%;
+        width: 50%;
         height: 8px;
         background: #d9cfcf;
         outline: none;
@@ -199,7 +199,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="coming_soon.html"
+                <a href="https://arxiv.org/pdf/2409.06703"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -208,7 +208,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="coming_soon.html"
+                <a href="https://arxiv.org/abs/2409.06703"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -228,7 +228,7 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="coming_soon.html"
+                <a href="https://github.com/archana1998/LEIA/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -271,6 +271,7 @@
       <video id="staticvideo4" width="180" autoplay loop muted>
         <source src="static/videos/single_obj/44781_video_219.mp4" type="video/mp4">
       </video>
+      <h2 class="title is-5">LEIA can generate unseen articulated states of objects with multiple moving parts, using only start and end state as input!</h2>
 
   </div>
 </section>
@@ -279,7 +280,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
           <p>
             Neural Radiance Fields (NeRFs) have revolutionized the reconstruction of static scenes and objects in 3D, 
@@ -350,12 +351,10 @@
       </div>
     </div>
   </div>
-</section>
-<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Results</h2>
+        <h2 class="title is-2">Results</h2>
         <div class="content has-text-justified">
           <p>
             We evaluate our method on both synthetic and real-world data. We show that our method can generate novel states for articulated objects that were not seen during training. We demonstrate the effectiveness of our method in capturing complex articulations and show that it outperforms previous methods that rely on motion information for articulation registration. We also show that our method is robust to single and multiple articulations, as well as combinations of motions.
@@ -408,70 +407,76 @@
     <div class="columns is-centered has-text-centered">
         <div class="video-container">
           <b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GT Motion &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEIA Motion</b>
+          <h4>washing machine, motion: revolute</h4>
+
           <video id="video4" height="600">
+
             <source src="static/videos/103778_video_203.mp4" type="video/mp4">
           </video>
           <input type="range" id="slider4" min="0" max="100" value="0">
-          <h4>washing machine, motion: revolute</h4>
         </div>
         <div class="video-container">
           <b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GT Motion &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEIA Motion</b>
+          <h4>dishwasher, motion: prismatic</h4>
+
             <video id="video5" height="600">
               <source src="static/videos/12085_video_35.mp4" type="video/mp4">
             </video>
             <input type="range" id="slider5" min="0" max="100" value="0">
-            <h4>dishwasher, motion: prismatic</h4>
         </div>
      
       </div>
       <div class="columns is-centered has-text-centered">
         <div class="video-container">
+          <h4>storage,  motion: prismatic</h4>
 
           <video id="video6" height="600">
             <source src="static/videos/45135_video_147.mp4" type="video/mp4">
           </video>
           <input type="range" id="slider6" min="0" max="100" value="0">
-          <h4>storage,  motion: prismatic</h4>
         </div>
         <div class="video-container">
+          <h4>storage, motion: revolute multi part</h4>
           <video id="video7" height="400">
             <source src="static/videos/44781_video_219.mp4" type="video/mp4">
           </video>
           <input type="range" id="slider7" min="0" max="100" value="0">
-          <h4>storage, motion: revolute multi part</h4>
         </div>
     
       </div>
       <div class="columns is-centered has-text-centered">
         <div class="video-container">
+          <h4>storage,  motion: prismatic multi part</h4>
+
           <video id="video8" height="400">
             <source src="static/videos/45427_video_335.mp4" type="video/mp4">
           </video>
           <input type="range" id="slider8" min="0" max="100" value="0">
-          <h4>storage,  motion: prismatic multi part</h4>
         </div>
         <div class="video-container">
+          <h4>storage,  motion: prismatic and revolute multi part</h4>
+
           <video id="video9" height="400">
             <source src="static/videos/45575_video_219.mp4" type="video/mp4">
           </video>
           <input type="range" id="slider9" min="0" max="100" value="0">
-          <h4>storage,  motion: prismatic and revolute multi part</h4>
         </div>
         </div>
         <div class="columns is-centered has-text-centered">
         <div class="video-container">
+          <h4>sunglasses, motion: revolute multi part</h4>
           <video id="video10" height="900">
             <source src="static/videos/101297_video_63.mp4" type="video/mp4">
           </video>
           <input type="range" id="slider10" min="0" max="100" value="0">
-          <h4>sunglasses, motion: revolute multi part</h4>
         </div>
         <div class="video-container">
+          <h4>box, motion: prismatic and revolute multi part</h4>
+
           <video id="video11" height="400">
             <source src="static/videos/102377_video_139.mp4" type="video/mp4">
           </video>
           <input type="range" id="slider11" min="0" max="100" value="0">
-          <h4>box, motion: prismatic and revolute multi part</h4>
         </div>
         <!-- <div class="video-container">
           <video id="video12" height="400">
@@ -556,6 +561,44 @@
 </section>
 
 
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content has-text-justified">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @misc{swaminathan2024leialatentviewinvariantembeddings,
+        title={LEIA: Latent View-invariant Embeddings for Implicit 3D Articulation}, 
+        author={Archana Swaminathan and Anubhav Gupta and Kamal Gupta and Shishira R. Maiya and Vatsal Agarwal and Abhinav Shrivastava},
+        year={2024},
+        eprint={2409.06703},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2409.06703}, 
+  }
+    </code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p class="has-text-centered">
+            <!-- This website is licensed under a <a rel="license"
+              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>. -->
+            The source code of this webpage is based on the <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project webpage.
+          </p>
+          <p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <script>
   //  let currentStartIndex = 0;
