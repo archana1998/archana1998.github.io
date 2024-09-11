@@ -1,7 +1,7 @@
 body {
   font-family: 'Noto Sans', sans-serif;
+  text-align: center;
 }
-
 
 .footer .icon-link {
     font-size: 25px;
@@ -155,3 +155,38 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .column {
+    padding: 10px;
+  }
+  
+  .publication-title {
+    font-size: 1.5rem;
+  }
+  
+  .publication-authors {
+    font-size: 1rem;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .columns {
+    display: block;
+  }
+  
+  .column {
+    width: 100%;
+  }
+}
+
